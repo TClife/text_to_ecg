@@ -1,0 +1,43 @@
+# DALLE (Autoregressive Transformer) Configuration for Text-to-ECG
+# These are the default hyperparameters used in the paper
+
+model:
+  # Architecture
+  dim: 512                # Model dimension
+  depth: 12               # Number of transformer layers
+  heads: 8                # Number of attention heads
+  dim_head: 64            # Dimension per attention head
+
+  # Sequence lengths
+  text_seq_len: 104       # Maximum text sequence length
+  # Note: image_seq_len is determined by the VAE (312 tokens)
+
+  # Text tokenization
+  num_text_tokens: 3000   # BPE vocabulary size
+
+  # Loss weighting
+  loss_img_weight: 7      # Weight for ECG token prediction loss
+                          # Total loss = (text_loss + 7 * image_loss) / 8
+
+  # Optional features
+  reversible: false       # Use reversible layers for memory efficiency
+  attn_types: 'full'      # Attention type: 'full', 'sparse', 'axial_row', 'axial_col', 'conv_like'
+  ff_dropout: 0.2         # Feed-forward dropout
+  attn_dropout: 0.2       # Attention dropout
+  stable: false           # Use numerically stable operations
+  shift_tokens: true      # Use token shifting for local attention
+  rotary_emb: true        # Use rotary positional embeddings
+
+training:
+  epochs: 500
+  batch_size: 64          # Paper used batch size 64 on 4x A6000
+  learning_rate: 0.0002
+  clip_grad_norm: 0.5
+  lr_decay: true
+
+  # Checkpointing
+  save_every: 1           # Save checkpoint every epoch
+
+# Model uses DALLE_concat which prepends age/gender tokens to text
+# Age is discretized into 10-year bins (0-9, 10-19, ..., 90+)
+# Gender is encoded as 0 (female) or 1 (male)

@@ -1,0 +1,37 @@
+# VQ-VAE Configuration for ECG Tokenization
+# These are the default hyperparameters used in the paper
+
+model:
+  # ECG parameters
+  image_size: 5000        # ECG sequence length (10 seconds at 500Hz)
+  channels: 12            # Number of ECG leads (12-lead)
+
+  # Codebook parameters
+  num_tokens: 1024        # Codebook vocabulary size
+  codebook_dim: 512       # Codebook embedding dimension
+
+  # Architecture
+  num_layers: 4           # Number of encoder/decoder layers
+  num_resnet_blocks: 2    # Number of residual blocks
+  hidden_dim: 256         # Hidden layer dimension
+
+  # Training
+  smooth_l1_loss: false   # Use smooth L1 loss instead of MSE
+  kl_div_loss_weight: 0.0 # KL divergence loss weight (0 for VQ-VAE style)
+
+training:
+  epochs: 100
+  batch_size: 256
+  learning_rate: 0.002
+  lr_decay_rate: 0.98
+
+  # Gumbel-softmax temperature annealing
+  starting_temp: 1.0
+  temp_min: 0.5
+  anneal_rate: 0.000001
+
+  # Checkpointing
+  save_every: 10          # Save checkpoint every N epochs
+
+# After training, the VQ-VAE compresses 12x5000 ECG signals
+# to 312 discrete tokens (downsampling factor: 2^4 = 16)

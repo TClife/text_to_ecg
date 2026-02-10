@@ -1,0 +1,1916 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[CLS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[SEP]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "[MASK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Whitespace"
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": "[UNK]",
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[CLS]": 2,
+      "[SEP]": 3,
+      "[MASK]": 4,
+      ",": 5,
+      "-": 6,
+      "0": 7,
+      "1": 8,
+      "5": 9,
+      "6": 10,
+      "7": 11,
+      "8": 12,
+      "9": 13,
+      "<": 14,
+      ">": 15,
+      "A": 16,
+      "B": 17,
+      "C": 18,
+      "D": 19,
+      "E": 20,
+      "F": 21,
+      "G": 22,
+      "H": 23,
+      "I": 24,
+      "K": 25,
+      "L": 26,
+      "M": 27,
+      "N": 28,
+      "O": 29,
+      "P": 30,
+      "Q": 31,
+      "R": 32,
+      "S": 33,
+      "T": 34,
+      "U": 35,
+      "V": 36,
+      "W": 37,
+      "X": 38,
+      "Y": 39,
+      "a": 40,
+      "b": 41,
+      "c": 42,
+      "d": 43,
+      "e": 44,
+      "f": 45,
+      "g": 46,
+      "h": 47,
+      "i": 48,
+      "k": 49,
+      "l": 50,
+      "m": 51,
+      "n": 52,
+      "o": 53,
+      "p": 54,
+      "q": 55,
+      "r": 56,
+      "s": 57,
+      "t": 58,
+      "u": 59,
+      "v": 60,
+      "w": 61,
+      "x": 62,
+      "y": 63,
+      "al": 64,
+      "at": 65,
+      "mal": 66,
+      "no": 67,
+      "rmal": 68,
+      "normal": 69,
+      "ri": 70,
+      "er": 71,
+      "is": 72,
+      "on": 73,
+      "ar": 74,
+      "th": 75,
+      "ec": 76,
+      "ion": 77,
+      "ise": 78,
+      "oth": 79,
+      "wise": 80,
+      "erwise": 81,
+      "ecg": 82,
+      "otherwise": 83,
+      "hy": 84,
+      "nt": 85,
+      "re": 86,
+      "rat": 87,
+      "ve": 88,
+      "rate": 89,
+      "cu": 90,
+      "de": 91,
+      "lar": 92,
+      "ricu": 93,
+      "ntricu": 94,
+      "ventricu": 95,
+      "ventricular": 96,
+      "le": 97,
+      "lo": 98,
+      "atri": 99,
+      "AT": 100,
+      "blo": 101,
+      "ck": 102,
+      "in": 103,
+      "ra": 104,
+      "ation": 105,
+      "block": 106,
+      "RI": 107,
+      "ch": 108,
+      "car": 109,
+      "di": 110,
+      "cardi": 111,
+      "ON": 112,
+      "AR": 113,
+      "ax": 114,
+      "bra": 115,
+      "ct": 116,
+      "ft": 117,
+      "gh": 118,
+      "gre": 119,
+      "iation": 120,
+      "nd": 121,
+      "oventricular": 122,
+      "pre": 123,
+      "ro": 124,
+      "st": 125,
+      "ta": 126,
+      "viation": 127,
+      "righ": 128,
+      "degre": 129,
+      "deviation": 130,
+      "left": 131,
+      "atrial": 132,
+      "atrioventricular": 133,
+      "cardia": 134,
+      "axis": 135,
+      "ction": 136,
+      "right": 137,
+      "degree": 138,
+      "50": 139,
+      "99": 140,
+      "ION": 141,
+      "VE": 142,
+      "DE": 143,
+      "HY": 144,
+      "NT": 145,
+      "RE": 146,
+      "RAT": 147,
+      "as": 148,
+      "bu": 149,
+      "con": 150,
+      "chy": 151,
+      "em": 152,
+      "fi": 153,
+      "ge": 154,
+      "mat": 155,
+      "nch": 156,
+      "per": 157,
+      "phy": 158,
+      "rhy": 159,
+      "sion": 160,
+      "sin": 161,
+      "tra": 162,
+      "tro": 163,
+      "us": 164,
+      "ure": 165,
+      "wa": 166,
+      "isch": 167,
+      "thm": 168,
+      "hyper": 169,
+      "branch": 170,
+      "ndle": 171,
+      "premat": 172,
+      "tachy": 173,
+      "RATE": 174,
+      "ase": 175,
+      "bundle": 176,
+      "contra": 177,
+      "emi": 178,
+      "rhythm": 179,
+      "sinus": 180,
+      "trophy": 181,
+      "hypertrophy": 182,
+      "premature": 183,
+      "tachycardia": 184,
+      "contraction": 185,
+      "CU": 186,
+      "LAR": 187,
+      "RICU": 188,
+      "VENT": 189,
+      "RICULAR": 190,
+      "VENTRICULAR": 191,
+      "AL": 192,
+      "IS": 193,
+      "LE": 194,
+      "LO": 195,
+      "ATRI": 196,
+      "00": 197,
+      "100": 198,
+      "60": 199,
+      "70": 200,
+      "80": 201,
+      "90": 202,
+      "BLO": 203,
+      "CK": 204,
+      "IN": 205,
+      "RA": 206,
+      "ATION": 207,
+      "BLOCK": 208,
+      "CH": 209,
+      "CAR": 210,
+      "DI": 211,
+      "ER": 212,
+      "aemi": 213,
+      "bri": 214,
+      "base": 215,
+      "dy": 216,
+      "dise": 217,
+      "ear": 218,
+      "ele": 219,
+      "fl": 220,
+      "far": 221,
+      "hear": 222,
+      "ir": 223,
+      "int": 224,
+      "ll": 225,
+      "lon": 226,
+      "lin": 227,
+      "lta": 228,
+      "my": 229,
+      "ocardi": 230,
+      "olta": 231,
+      "pro": 232,
+      "qt": 233,
+      "rst": 234,
+      "sec": 235,
+      "ssion": 236,
+      "tt": 237,
+      "utt": 238,
+      "val": 239,
+      "ver": 240,
+      "vation": 241,
+      "volta": 242,
+      "erval": 243,
+      "ond": 244,
+      "thir": 245,
+      "depre": 246,
+      "low": 247,
+      "infar": 248,
+      "inver": 249,
+      "brady": 250,
+      "nder": 251,
+      "fibri": 252,
+      "first": 253,
+      "ged": 254,
+      "wave": 255,
+      "wander": 256,
+      "ischemi": 257,
+      "ischaemi": 258,
+      "CARDI": 259,
+      "baselin": 260,
+      "disease": 261,
+      "elevation": 262,
+      "flutt": 263,
+      "heart": 264,
+      "interval": 265,
+      "llation": 266,
+      "longed": 267,
+      "myocardi": 268,
+      "prolonged": 269,
+      "second": 270,
+      "voltage": 271,
+      "third": 272,
+      "depression": 273,
+      "infarction": 274,
+      "inversion": 275,
+      "bradycardia": 276,
+      "fibrillation": 277,
+      "ischemia": 278,
+      "ischaemic": 279,
+      "baseline": 280,
+      "flutter": 281,
+      "myocardial": 282,
+      "AX": 283,
+      "BRA": 284,
+      "CT": 285,
+      "CON": 286,
+      "FT": 287,
+      "GH": 288,
+      "GRE": 289,
+      "IATION": 290,
+      "OVENTRICULAR": 291,
+      "PRE": 292,
+      "RO": 293,
+      "SE": 294,
+      "ST": 295,
+      "TA": 296,
+      "TH": 297,
+      "VIATION": 298,
+      "RIGH": 299,
+      "DEGRE": 300,
+      "DEVIATION": 301,
+      "LEFT": 302,
+      "ATRIAL": 303,
+      "ATRIOVENTRICULAR": 304,
+      "CARDIA": 305,
+      "AXIS": 306,
+      "CTION": 307,
+      "RIGHT": 308,
+      "DEGREE": 309,
+      "ASE": 310,
+      "BU": 311,
+      "CHY": 312,
+      "DLE": 313,
+      "EM": 314,
+      "FI": 315,
+      "GE": 316,
+      "MAT": 317,
+      "NCH": 318,
+      "NDLE": 319,
+      "PHY": 320,
+      "PER": 321,
+      "RHY": 322,
+      "SION": 323,
+      "SIN": 324,
+      "TRA": 325,
+      "TRO": 326,
+      "US": 327,
+      "URE": 328,
+      "WA": 329,
+      "HYPER": 330,
+      "ISCH": 331,
+      "BRANCH": 332,
+      "CONTRA": 333,
+      "PREMAT": 334,
+      "TACHY": 335,
+      "THM": 336,
+      "BUNDLE": 337,
+      "EMI": 338,
+      "RHYTHM": 339,
+      "SINUS": 340,
+      "TROPHY": 341,
+      "HYPERTROPHY": 342,
+      "CONTRACTION": 343,
+      "PREMATURE": 344,
+      "TACHYCARDIA": 345,
+      "AEMI": 346,
+      "BRI": 347,
+      "BASE": 348,
+      "DY": 349,
+      "DIS": 350,
+      "EAR": 351,
+      "ELE": 352,
+      "EASE": 353,
+      "FL": 354,
+      "FAR": 355,
+      "HEAR": 356,
+      "IR": 357,
+      "INT": 358,
+      "LL": 359,
+      "LON": 360,
+      "LIN": 361,
+      "LTA": 362,
+      "MY": 363,
+      "MAL": 364,
+      "NO": 365,
+      "NDE": 366,
+      "OCARDI": 367,
+      "OLTA": 368,
+      "PRO": 369,
+      "QT": 370,
+      "RST": 371,
+      "RSION": 372,
+      "RMAL": 373,
+      "SSION": 374,
+      "TT": 375,
+      "UTT": 376,
+      "VAL": 377,
+      "VATION": 378,
+      "VOLTA": 379,
+      "VERSION": 380,
+      "DEPRE": 381,
+      "LOW": 382,
+      "INFAR": 383,
+      "INVERSION": 384,
+      "ERVAL": 385,
+      "BRADY": 386,
+      "COND": 387,
+      "SECOND": 388,
+      "THIR": 389,
+      "FIBRI": 390,
+      "FIRST": 391,
+      "GED": 392,
+      "WAVE": 393,
+      "WANDE": 394,
+      "ISCHEMI": 395,
+      "ISCHAEMI": 396,
+      "BASELIN": 397,
+      "DISEASE": 398,
+      "ELEVATION": 399,
+      "FLUTT": 400,
+      "HEART": 401,
+      "INTERVAL": 402,
+      "LLATION": 403,
+      "LONGED": 404,
+      "MYOCARDI": 405,
+      "NORMAL": 406,
+      "PROLONGED": 407,
+      "VOLTAGE": 408,
+      "DEPRESSION": 409,
+      "INFARCTION": 410,
+      "BRADYCARDIA": 411,
+      "THIRD": 412,
+      "FIBRILLATION": 413,
+      "WANDER": 414,
+      "ISCHEMIA": 415,
+      "ISCHAEMIC": 416,
+      "BASELINE": 417,
+      "FLUTTER": 418,
+      "MYOCARDIAL": 419
+    },
+    "merges": [
+      [
+        "a",
+        "l"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "m",
+        "al"
+      ],
+      [
+        "n",
+        "o"
+      ],
+      [
+        "r",
+        "mal"
+      ],
+      [
+        "no",
+        "rmal"
+      ],
+      [
+        "r",
+        "i"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "t",
+        "h"
+      ],
+      [
+        "e",
+        "c"
+      ],
+      [
+        "i",
+        "on"
+      ],
+      [
+        "is",
+        "e"
+      ],
+      [
+        "o",
+        "th"
+      ],
+      [
+        "w",
+        "ise"
+      ],
+      [
+        "er",
+        "wise"
+      ],
+      [
+        "ec",
+        "g"
+      ],
+      [
+        "oth",
+        "erwise"
+      ],
+      [
+        "h",
+        "y"
+      ],
+      [
+        "n",
+        "t"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "r",
+        "at"
+      ],
+      [
+        "v",
+        "e"
+      ],
+      [
+        "rat",
+        "e"
+      ],
+      [
+        "c",
+        "u"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "l",
+        "ar"
+      ],
+      [
+        "ri",
+        "cu"
+      ],
+      [
+        "nt",
+        "ricu"
+      ],
+      [
+        "ve",
+        "ntricu"
+      ],
+      [
+        "ventricu",
+        "lar"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "l",
+        "o"
+      ],
+      [
+        "at",
+        "ri"
+      ],
+      [
+        "A",
+        "T"
+      ],
+      [
+        "b",
+        "lo"
+      ],
+      [
+        "c",
+        "k"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "r",
+        "a"
+      ],
+      [
+        "at",
+        "ion"
+      ],
+      [
+        "blo",
+        "ck"
+      ],
+      [
+        "R",
+        "I"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "c",
+        "ar"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "car",
+        "di"
+      ],
+      [
+        "O",
+        "N"
+      ],
+      [
+        "A",
+        "R"
+      ],
+      [
+        "a",
+        "x"
+      ],
+      [
+        "b",
+        "ra"
+      ],
+      [
+        "c",
+        "t"
+      ],
+      [
+        "f",
+        "t"
+      ],
+      [
+        "g",
+        "h"
+      ],
+      [
+        "g",
+        "re"
+      ],
+      [
+        "i",
+        "ation"
+      ],
+      [
+        "n",
+        "d"
+      ],
+      [
+        "o",
+        "ventricular"
+      ],
+      [
+        "p",
+        "re"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "v",
+        "iation"
+      ],
+      [
+        "ri",
+        "gh"
+      ],
+      [
+        "de",
+        "gre"
+      ],
+      [
+        "de",
+        "viation"
+      ],
+      [
+        "le",
+        "ft"
+      ],
+      [
+        "atri",
+        "al"
+      ],
+      [
+        "atri",
+        "oventricular"
+      ],
+      [
+        "cardi",
+        "a"
+      ],
+      [
+        "ax",
+        "is"
+      ],
+      [
+        "ct",
+        "ion"
+      ],
+      [
+        "righ",
+        "t"
+      ],
+      [
+        "degre",
+        "e"
+      ],
+      [
+        "5",
+        "0"
+      ],
+      [
+        "9",
+        "9"
+      ],
+      [
+        "I",
+        "ON"
+      ],
+      [
+        "V",
+        "E"
+      ],
+      [
+        "D",
+        "E"
+      ],
+      [
+        "H",
+        "Y"
+      ],
+      [
+        "N",
+        "T"
+      ],
+      [
+        "R",
+        "E"
+      ],
+      [
+        "R",
+        "AT"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "b",
+        "u"
+      ],
+      [
+        "c",
+        "on"
+      ],
+      [
+        "c",
+        "hy"
+      ],
+      [
+        "e",
+        "m"
+      ],
+      [
+        "f",
+        "i"
+      ],
+      [
+        "g",
+        "e"
+      ],
+      [
+        "m",
+        "at"
+      ],
+      [
+        "n",
+        "ch"
+      ],
+      [
+        "p",
+        "er"
+      ],
+      [
+        "p",
+        "hy"
+      ],
+      [
+        "r",
+        "hy"
+      ],
+      [
+        "s",
+        "ion"
+      ],
+      [
+        "s",
+        "in"
+      ],
+      [
+        "t",
+        "ra"
+      ],
+      [
+        "t",
+        "ro"
+      ],
+      [
+        "u",
+        "s"
+      ],
+      [
+        "u",
+        "re"
+      ],
+      [
+        "w",
+        "a"
+      ],
+      [
+        "is",
+        "ch"
+      ],
+      [
+        "th",
+        "m"
+      ],
+      [
+        "hy",
+        "per"
+      ],
+      [
+        "bra",
+        "nch"
+      ],
+      [
+        "nd",
+        "le"
+      ],
+      [
+        "pre",
+        "mat"
+      ],
+      [
+        "ta",
+        "chy"
+      ],
+      [
+        "RAT",
+        "E"
+      ],
+      [
+        "as",
+        "e"
+      ],
+      [
+        "bu",
+        "ndle"
+      ],
+      [
+        "con",
+        "tra"
+      ],
+      [
+        "em",
+        "i"
+      ],
+      [
+        "rhy",
+        "thm"
+      ],
+      [
+        "sin",
+        "us"
+      ],
+      [
+        "tro",
+        "phy"
+      ],
+      [
+        "hyper",
+        "trophy"
+      ],
+      [
+        "premat",
+        "ure"
+      ],
+      [
+        "tachy",
+        "cardia"
+      ],
+      [
+        "contra",
+        "ction"
+      ],
+      [
+        "C",
+        "U"
+      ],
+      [
+        "L",
+        "AR"
+      ],
+      [
+        "RI",
+        "CU"
+      ],
+      [
+        "VE",
+        "NT"
+      ],
+      [
+        "RICU",
+        "LAR"
+      ],
+      [
+        "VENT",
+        "RICULAR"
+      ],
+      [
+        "A",
+        "L"
+      ],
+      [
+        "I",
+        "S"
+      ],
+      [
+        "L",
+        "E"
+      ],
+      [
+        "L",
+        "O"
+      ],
+      [
+        "AT",
+        "RI"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "00"
+      ],
+      [
+        "6",
+        "0"
+      ],
+      [
+        "7",
+        "0"
+      ],
+      [
+        "8",
+        "0"
+      ],
+      [
+        "9",
+        "0"
+      ],
+      [
+        "B",
+        "LO"
+      ],
+      [
+        "C",
+        "K"
+      ],
+      [
+        "I",
+        "N"
+      ],
+      [
+        "R",
+        "A"
+      ],
+      [
+        "AT",
+        "ION"
+      ],
+      [
+        "BLO",
+        "CK"
+      ],
+      [
+        "C",
+        "H"
+      ],
+      [
+        "C",
+        "AR"
+      ],
+      [
+        "D",
+        "I"
+      ],
+      [
+        "E",
+        "R"
+      ],
+      [
+        "a",
+        "emi"
+      ],
+      [
+        "b",
+        "ri"
+      ],
+      [
+        "b",
+        "ase"
+      ],
+      [
+        "d",
+        "y"
+      ],
+      [
+        "d",
+        "ise"
+      ],
+      [
+        "e",
+        "ar"
+      ],
+      [
+        "e",
+        "le"
+      ],
+      [
+        "f",
+        "l"
+      ],
+      [
+        "f",
+        "ar"
+      ],
+      [
+        "h",
+        "ear"
+      ],
+      [
+        "i",
+        "r"
+      ],
+      [
+        "i",
+        "nt"
+      ],
+      [
+        "l",
+        "l"
+      ],
+      [
+        "l",
+        "on"
+      ],
+      [
+        "l",
+        "in"
+      ],
+      [
+        "l",
+        "ta"
+      ],
+      [
+        "m",
+        "y"
+      ],
+      [
+        "o",
+        "cardi"
+      ],
+      [
+        "o",
+        "lta"
+      ],
+      [
+        "p",
+        "ro"
+      ],
+      [
+        "q",
+        "t"
+      ],
+      [
+        "r",
+        "st"
+      ],
+      [
+        "s",
+        "ec"
+      ],
+      [
+        "s",
+        "sion"
+      ],
+      [
+        "t",
+        "t"
+      ],
+      [
+        "u",
+        "tt"
+      ],
+      [
+        "v",
+        "al"
+      ],
+      [
+        "v",
+        "er"
+      ],
+      [
+        "v",
+        "ation"
+      ],
+      [
+        "v",
+        "olta"
+      ],
+      [
+        "er",
+        "val"
+      ],
+      [
+        "on",
+        "d"
+      ],
+      [
+        "th",
+        "ir"
+      ],
+      [
+        "de",
+        "pre"
+      ],
+      [
+        "lo",
+        "w"
+      ],
+      [
+        "in",
+        "far"
+      ],
+      [
+        "in",
+        "ver"
+      ],
+      [
+        "bra",
+        "dy"
+      ],
+      [
+        "nd",
+        "er"
+      ],
+      [
+        "fi",
+        "bri"
+      ],
+      [
+        "fi",
+        "rst"
+      ],
+      [
+        "ge",
+        "d"
+      ],
+      [
+        "wa",
+        "ve"
+      ],
+      [
+        "wa",
+        "nder"
+      ],
+      [
+        "isch",
+        "emi"
+      ],
+      [
+        "isch",
+        "aemi"
+      ],
+      [
+        "CAR",
+        "DI"
+      ],
+      [
+        "base",
+        "lin"
+      ],
+      [
+        "dise",
+        "ase"
+      ],
+      [
+        "ele",
+        "vation"
+      ],
+      [
+        "fl",
+        "utt"
+      ],
+      [
+        "hear",
+        "t"
+      ],
+      [
+        "int",
+        "erval"
+      ],
+      [
+        "ll",
+        "ation"
+      ],
+      [
+        "lon",
+        "ged"
+      ],
+      [
+        "my",
+        "ocardi"
+      ],
+      [
+        "pro",
+        "longed"
+      ],
+      [
+        "sec",
+        "ond"
+      ],
+      [
+        "volta",
+        "ge"
+      ],
+      [
+        "thir",
+        "d"
+      ],
+      [
+        "depre",
+        "ssion"
+      ],
+      [
+        "infar",
+        "ction"
+      ],
+      [
+        "inver",
+        "sion"
+      ],
+      [
+        "brady",
+        "cardia"
+      ],
+      [
+        "fibri",
+        "llation"
+      ],
+      [
+        "ischemi",
+        "a"
+      ],
+      [
+        "ischaemi",
+        "c"
+      ],
+      [
+        "baselin",
+        "e"
+      ],
+      [
+        "flutt",
+        "er"
+      ],
+      [
+        "myocardi",
+        "al"
+      ],
+      [
+        "A",
+        "X"
+      ],
+      [
+        "B",
+        "RA"
+      ],
+      [
+        "C",
+        "T"
+      ],
+      [
+        "C",
+        "ON"
+      ],
+      [
+        "F",
+        "T"
+      ],
+      [
+        "G",
+        "H"
+      ],
+      [
+        "G",
+        "RE"
+      ],
+      [
+        "I",
+        "ATION"
+      ],
+      [
+        "O",
+        "VENTRICULAR"
+      ],
+      [
+        "P",
+        "RE"
+      ],
+      [
+        "R",
+        "O"
+      ],
+      [
+        "S",
+        "E"
+      ],
+      [
+        "S",
+        "T"
+      ],
+      [
+        "T",
+        "A"
+      ],
+      [
+        "T",
+        "H"
+      ],
+      [
+        "V",
+        "IATION"
+      ],
+      [
+        "RI",
+        "GH"
+      ],
+      [
+        "DE",
+        "GRE"
+      ],
+      [
+        "DE",
+        "VIATION"
+      ],
+      [
+        "LE",
+        "FT"
+      ],
+      [
+        "ATRI",
+        "AL"
+      ],
+      [
+        "ATRI",
+        "OVENTRICULAR"
+      ],
+      [
+        "CARDI",
+        "A"
+      ],
+      [
+        "AX",
+        "IS"
+      ],
+      [
+        "CT",
+        "ION"
+      ],
+      [
+        "RIGH",
+        "T"
+      ],
+      [
+        "DEGRE",
+        "E"
+      ],
+      [
+        "A",
+        "SE"
+      ],
+      [
+        "B",
+        "U"
+      ],
+      [
+        "C",
+        "HY"
+      ],
+      [
+        "D",
+        "LE"
+      ],
+      [
+        "E",
+        "M"
+      ],
+      [
+        "F",
+        "I"
+      ],
+      [
+        "G",
+        "E"
+      ],
+      [
+        "M",
+        "AT"
+      ],
+      [
+        "N",
+        "CH"
+      ],
+      [
+        "N",
+        "DLE"
+      ],
+      [
+        "P",
+        "HY"
+      ],
+      [
+        "P",
+        "ER"
+      ],
+      [
+        "R",
+        "HY"
+      ],
+      [
+        "S",
+        "ION"
+      ],
+      [
+        "S",
+        "IN"
+      ],
+      [
+        "T",
+        "RA"
+      ],
+      [
+        "T",
+        "RO"
+      ],
+      [
+        "U",
+        "S"
+      ],
+      [
+        "U",
+        "RE"
+      ],
+      [
+        "W",
+        "A"
+      ],
+      [
+        "HY",
+        "PER"
+      ],
+      [
+        "IS",
+        "CH"
+      ],
+      [
+        "BRA",
+        "NCH"
+      ],
+      [
+        "CON",
+        "TRA"
+      ],
+      [
+        "PRE",
+        "MAT"
+      ],
+      [
+        "TA",
+        "CHY"
+      ],
+      [
+        "TH",
+        "M"
+      ],
+      [
+        "BU",
+        "NDLE"
+      ],
+      [
+        "EM",
+        "I"
+      ],
+      [
+        "RHY",
+        "THM"
+      ],
+      [
+        "SIN",
+        "US"
+      ],
+      [
+        "TRO",
+        "PHY"
+      ],
+      [
+        "HYPER",
+        "TROPHY"
+      ],
+      [
+        "CONTRA",
+        "CTION"
+      ],
+      [
+        "PREMAT",
+        "URE"
+      ],
+      [
+        "TACHY",
+        "CARDIA"
+      ],
+      [
+        "A",
+        "EMI"
+      ],
+      [
+        "B",
+        "RI"
+      ],
+      [
+        "B",
+        "ASE"
+      ],
+      [
+        "D",
+        "Y"
+      ],
+      [
+        "D",
+        "IS"
+      ],
+      [
+        "E",
+        "AR"
+      ],
+      [
+        "E",
+        "LE"
+      ],
+      [
+        "E",
+        "ASE"
+      ],
+      [
+        "F",
+        "L"
+      ],
+      [
+        "F",
+        "AR"
+      ],
+      [
+        "H",
+        "EAR"
+      ],
+      [
+        "I",
+        "R"
+      ],
+      [
+        "I",
+        "NT"
+      ],
+      [
+        "L",
+        "L"
+      ],
+      [
+        "L",
+        "ON"
+      ],
+      [
+        "L",
+        "IN"
+      ],
+      [
+        "L",
+        "TA"
+      ],
+      [
+        "M",
+        "Y"
+      ],
+      [
+        "M",
+        "AL"
+      ],
+      [
+        "N",
+        "O"
+      ],
+      [
+        "N",
+        "DE"
+      ],
+      [
+        "O",
+        "CARDI"
+      ],
+      [
+        "O",
+        "LTA"
+      ],
+      [
+        "P",
+        "RO"
+      ],
+      [
+        "Q",
+        "T"
+      ],
+      [
+        "R",
+        "ST"
+      ],
+      [
+        "R",
+        "SION"
+      ],
+      [
+        "R",
+        "MAL"
+      ],
+      [
+        "S",
+        "SION"
+      ],
+      [
+        "T",
+        "T"
+      ],
+      [
+        "U",
+        "TT"
+      ],
+      [
+        "V",
+        "AL"
+      ],
+      [
+        "V",
+        "ATION"
+      ],
+      [
+        "V",
+        "OLTA"
+      ],
+      [
+        "VE",
+        "RSION"
+      ],
+      [
+        "DE",
+        "PRE"
+      ],
+      [
+        "LO",
+        "W"
+      ],
+      [
+        "IN",
+        "FAR"
+      ],
+      [
+        "IN",
+        "VERSION"
+      ],
+      [
+        "ER",
+        "VAL"
+      ],
+      [
+        "BRA",
+        "DY"
+      ],
+      [
+        "CON",
+        "D"
+      ],
+      [
+        "SE",
+        "COND"
+      ],
+      [
+        "TH",
+        "IR"
+      ],
+      [
+        "FI",
+        "BRI"
+      ],
+      [
+        "FI",
+        "RST"
+      ],
+      [
+        "GE",
+        "D"
+      ],
+      [
+        "WA",
+        "VE"
+      ],
+      [
+        "WA",
+        "NDE"
+      ],
+      [
+        "ISCH",
+        "EMI"
+      ],
+      [
+        "ISCH",
+        "AEMI"
+      ],
+      [
+        "BASE",
+        "LIN"
+      ],
+      [
+        "DIS",
+        "EASE"
+      ],
+      [
+        "ELE",
+        "VATION"
+      ],
+      [
+        "FL",
+        "UTT"
+      ],
+      [
+        "HEAR",
+        "T"
+      ],
+      [
+        "INT",
+        "ERVAL"
+      ],
+      [
+        "LL",
+        "ATION"
+      ],
+      [
+        "LON",
+        "GED"
+      ],
+      [
+        "MY",
+        "OCARDI"
+      ],
+      [
+        "NO",
+        "RMAL"
+      ],
+      [
+        "PRO",
+        "LONGED"
+      ],
+      [
+        "VOLTA",
+        "GE"
+      ],
+      [
+        "DEPRE",
+        "SSION"
+      ],
+      [
+        "INFAR",
+        "CTION"
+      ],
+      [
+        "BRADY",
+        "CARDIA"
+      ],
+      [
+        "THIR",
+        "D"
+      ],
+      [
+        "FIBRI",
+        "LLATION"
+      ],
+      [
+        "WANDE",
+        "R"
+      ],
+      [
+        "ISCHEMI",
+        "A"
+      ],
+      [
+        "ISCHAEMI",
+        "C"
+      ],
+      [
+        "BASELIN",
+        "E"
+      ],
+      [
+        "FLUTT",
+        "ER"
+      ],
+      [
+        "MYOCARDI",
+        "AL"
+      ]
+    ]
+  }
+}
