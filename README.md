@@ -18,7 +18,7 @@
 <sup>1</sup>KAIST <sup>2</sup>Ajou University School of Medicine
 
 <p align="center">
-    <img src="figure/figure_auto_tte.png" width="95%">
+    <img src="figures/figure_auto_tte.png" width="95%">
 </p>
 
 </h5>

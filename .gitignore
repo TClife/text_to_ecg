@@ -130,7 +130,6 @@ wandb/
 runs/
 
 # Generated images
-*.png
 *.jpg
 *.jpeg
 *.gif
