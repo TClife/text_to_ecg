@@ -15,7 +15,7 @@
 [Min Sung Lee](https://scholar.google.com/citations?user=726DHOwAAAAJ&hl=ko)<sup>2</sup>,
 [Edward Choi](https://mp2893.com/)<sup>1</sup>
 
-<sup>1</sup>KAIST <sup>2</sup>Ajou University School of Medicine
+<sup>1</sup>KAIST <sup>2</sup>Medical AI <sup>3</sup>Seoul National University Bundang Hospital <sup>4</sup>Sejong Hospital
 
 <p align="center">
     <img src="figures/figure_auto_tte.png" width="95%">
