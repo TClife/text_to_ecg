@@ -39,8 +39,10 @@ setup(
         "rotary-embedding-torch>=0.2.0",
         "tqdm>=4.60.0",
         "omegaconf>=2.0.0",
+        "PyYAML>=5.4.0",
         "librosa>=0.8.0",
         "scipy>=1.7.0",
+        "matplotlib>=3.4.0",
         "ftfy>=6.0.0",
         "regex>=2021.0.0",
     ],
@@ -52,6 +54,7 @@ setup(
         ],
         "wandb": ["wandb>=0.12.0"],
         "distributed": ["deepspeed>=0.5.0", "horovod>=0.22.0"],
+        "ptbxl": ["wfdb>=4.0.0", "pandas>=1.3.0"],
     },
     entry_points={
         "console_scripts": [

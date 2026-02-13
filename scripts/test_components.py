@@ -306,22 +306,22 @@ def test_end_to_end():
     print("TESTING END-TO-END PIPELINE")
     print("="*60)
 
-    from text_to_ecg.models.vae import DiscreteVAE
+    from text_to_ecg.models.vae import VQVAE
     from text_to_ecg.models.dalle import DALLE_concat
     from text_to_ecg.models.hifi_gan import CodeGenerator
     from text_to_ecg.utils.helpers import AttrDict
 
     # Create VAE
     print("\n1. Creating VQ-VAE...")
-    vae = DiscreteVAE(
+    vae = VQVAE(
         image_size=5000,
         num_tokens=1024,
         codebook_dim=512,
         num_layers=4,
         hidden_dim=256,
         channels=12,
-        temperature=0.9,
-        straight_through=True,
+        vq_decay=0.8,
+        commitment_weight=0.25,
     )
 
     # Create DALLE

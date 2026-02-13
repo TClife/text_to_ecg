@@ -14,7 +14,7 @@ from torch import nn, einsum
 import torch.nn.functional as F
 from einops import rearrange, repeat
 
-from text_to_ecg.models.vae import DiscreteVAE
+from text_to_ecg.models.vae import DiscreteVAE, VQVAE
 from text_to_ecg.models.transformer import Transformer, DivideMax
 from text_to_ecg.utils.helpers import exists, default, eval_decorator, set_requires_grad, top_k
 
@@ -80,7 +80,7 @@ class DALLE(nn.Module):
         rotary_emb=True
     ):
         super().__init__()
-        assert isinstance(vae, DiscreteVAE), 'vae must be an instance of DiscreteVAE'
+        assert isinstance(vae, (DiscreteVAE, VQVAE)), 'vae must be an instance of DiscreteVAE or VQVAE'
 
         image_size = vae.image_size
         num_image_tokens = vae.num_tokens
@@ -426,12 +426,8 @@ class DALLE_concat(DALLE):
 
         img_seq = out[:, -image_seq_len:]
 
-        # Decode
-        if decoder_model == "vqvae":
-            images = vae.decode(img_seq)
-        else:
-            # HiFi-GAN needs to be loaded externally
-            images = vae.decode(img_seq)  # Fallback to VQ-VAE
+        # Decode with VQ-VAE (for HiFi-GAN decoding, use generate.py --decoder hifi)
+        images = vae.decode(img_seq)
 
         if exists(clip):
             text_seq = out[:, :text_seq_len]

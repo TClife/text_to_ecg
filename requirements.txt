@@ -8,16 +8,12 @@ tokenizers>=0.10.0
 transformers>=4.0.0
 ftfy>=6.0.0
 regex>=2021.0.0
-youtokentome>=1.0.6
 
 # Einops for tensor operations
 einops>=0.3.0
 
 # Rotary embeddings
 rotary-embedding-torch>=0.2.0
-
-# gMLP
-g-mlp-pytorch>=0.1.0
 
 # Configuration
 omegaconf>=2.0.0
@@ -29,21 +25,10 @@ scipy>=1.7.0
 
 # Visualization
 matplotlib>=3.4.0
-Pillow>=8.0.0
 
 # Training utilities
 tqdm>=4.60.0
-wandb>=0.12.0
 
-# Distributed training (optional)
-deepspeed>=0.5.0
-horovod>=0.22.0
-
-# Web dataset support (optional)
-webdataset>=0.1.0
-
-# PyTorch Lightning (optional)
-pytorch-lightning>=1.5.0
-
-# ECG plotting (optional)
-ecg-plot>=0.3.0
+# Data preparation (for PTB-XL dataset)
+wfdb>=4.0.0
+pandas>=1.3.0

@@ -90,6 +90,25 @@ class VectorQuantize(nn.Module):
         self.register_buffer('embed', embed)
         self.register_buffer('cluster_size', torch.zeros(codebook_size))
         self.register_buffer('embed_avg', embed.clone())
+        self.register_buffer('inited', torch.tensor([False]))
+
+    def _init_from_data(self, data):
+        """Initialize codebook from encoder outputs (first batch)."""
+        # data: [N, D]
+        n, d = data.shape
+        if n >= self.codebook_size:
+            indices = torch.randperm(n, device=data.device)[:self.codebook_size]
+            embed = data[indices].transpose(0, 1)  # [D, K]
+        else:
+            # Repeat data to fill codebook, add small noise
+            repeats = (self.codebook_size // n) + 1
+            embed = data.repeat(repeats, 1)[:self.codebook_size]
+            embed = embed + torch.randn_like(embed) * embed.std() * 0.1
+            embed = embed.transpose(0, 1)
+        self.embed.data.copy_(embed)
+        self.embed_avg.data.copy_(embed)
+        self.cluster_size.data.fill_(1.0)
+        self.inited.fill_(True)
 
     def forward(self, x):
         """Quantize input tensor.
@@ -101,6 +120,10 @@ class VectorQuantize(nn.Module):
             Tuple of (quantized, indices, commitment_loss)
         """
         flatten = rearrange(x, 'b t d -> (b t) d')
+
+        # Initialize codebook from first batch of encoder outputs
+        if self.training and not self.inited:
+            self._init_from_data(flatten.detach())
 
         # Find nearest codebook entries
         dist = (
@@ -129,6 +152,17 @@ class VectorQuantize(nn.Module):
             cluster_size = (self.cluster_size + 1e-5) / (n + self.codebook_size * 1e-5) * n
             embed_normalized = self.embed_avg / cluster_size.unsqueeze(0)
             self.embed.data.copy_(embed_normalized)
+
+            # Reset unused codebook entries to random encoder outputs
+            # An entry is "unused" if its EMA cluster size is very small
+            avg_usage = self.cluster_size.sum() / self.codebook_size
+            unused = (self.cluster_size < avg_usage * 0.01)
+            num_unused = unused.sum().item()
+            if num_unused > 0 and flatten.shape[0] > 0:
+                rand_idx = torch.randint(0, flatten.shape[0], (int(num_unused),), device=flatten.device)
+                self.embed.data[:, unused] = flatten[rand_idx].transpose(0, 1)
+                self.embed_avg.data[:, unused] = flatten[rand_idx].transpose(0, 1)
+                self.cluster_size.data[unused] = avg_usage
 
         # Commitment loss
         commitment_loss = F.mse_loss(quantize.detach(), x) * self.commitment_weight

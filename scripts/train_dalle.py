@@ -20,7 +20,7 @@ from torch.nn.utils import clip_grad_norm_
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from text_to_ecg.models.vae import DiscreteVAE
+from text_to_ecg.models.vae import DiscreteVAE, VQVAE
 from text_to_ecg.models.dalle import DALLE_concat
 from text_to_ecg.data.dataset import TextImageDataset
 from text_to_ecg.data.tokenizer import HugTokenizer
@@ -116,7 +116,12 @@ def main():
     print(f"Loading VAE from {args.vae_path}")
     vae_checkpoint = torch.load(args.vae_path, map_location='cpu')
     vae_params = vae_checkpoint['hparams']
-    vae = DiscreteVAE(**vae_params)
+    vae_model_class = vae_checkpoint.get('model_class', 'DiscreteVAE')
+    if vae_model_class == 'VQVAE':
+        vae = VQVAE(**vae_params)
+    else:
+        vae = DiscreteVAE(**vae_params)
+    print(f"VAE type: {vae_model_class}")
     vae.load_state_dict(vae_checkpoint['weights'])
     vae = vae.to(device)
     vae.eval()
@@ -155,6 +160,14 @@ def main():
     dalle = dalle.to(device)
     print(f"DALLE parameters: {sum(p.numel() for p in dalle.parameters() if p.requires_grad):,}")
 
+    # Multi-GPU support
+    if torch.cuda.device_count() > 1:
+        print(f"Using DataParallel on {torch.cuda.device_count()} GPUs")
+        dalle = torch.nn.DataParallel(dalle)
+        dalle_module = dalle.module
+    else:
+        dalle_module = dalle
+
     # Load dataset
     print(f"Loading dataset from {args.data_path}")
     dataset = TextImageDataset(
@@ -178,7 +191,7 @@ def main():
 
     # Optimizer
     optimizer = Adam(
-        [p for p in dalle.parameters() if p.requires_grad],
+        [p for p in dalle_module.parameters() if p.requires_grad],
         lr=args.learning_rate
     )
 
@@ -194,7 +207,8 @@ def main():
         save_obj = {
             'hparams': dalle_params,
             'vae_params': vae_params,
-            'weights': dalle.state_dict(),
+            'vae_model_class': vae_model_class,
+            'weights': dalle_module.state_dict(),
             'opt_state': optimizer.state_dict(),
             'epoch': epoch,
         }
@@ -219,10 +233,12 @@ def main():
             gender = gender.float().to(device)
 
             loss = dalle(text, images, age, gender, return_loss=True)
+            if loss.dim() > 0:
+                loss = loss.mean()
 
             optimizer.zero_grad()
             loss.backward()
-            clip_grad_norm_(dalle.parameters(), args.clip_grad_norm)
+            clip_grad_norm_(dalle_module.parameters(), args.clip_grad_norm)
             optimizer.step()
 
             train_loss += loss.item()
@@ -244,6 +260,8 @@ def main():
                 gender = gender.float().to(device)
 
                 loss = dalle(text, images, age, gender, return_loss=True)
+                if loss.dim() > 0:
+                    loss = loss.mean()
                 val_loss += loss.item()
                 val_batches += 1
 

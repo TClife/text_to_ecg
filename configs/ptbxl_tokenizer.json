@@ -1,0 +1,10013 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[CLS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[SEP]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "[MASK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Whitespace"
+  },
+  "post_processor": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "decoder": null,
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": "[UNK]",
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[CLS]": 2,
+      "[SEP]": 3,
+      "[MASK]": 4,
+      "!": 5,
+      "\"": 6,
+      "#": 7,
+      "%": 8,
+      "&": 9,
+      "'": 10,
+      "(": 11,
+      ")": 12,
+      "*": 13,
+      "+": 14,
+      ",": 15,
+      "-": 16,
+      ".": 17,
+      "/": 18,
+      "0": 19,
+      "1": 20,
+      "2": 21,
+      "3": 22,
+      "4": 23,
+      "5": 24,
+      "6": 25,
+      "7": 26,
+      "8": 27,
+      "9": 28,
+      ":": 29,
+      "<": 30,
+      "=": 31,
+      ">": 32,
+      "?": 33,
+      "A": 34,
+      "B": 35,
+      "C": 36,
+      "D": 37,
+      "E": 38,
+      "F": 39,
+      "G": 40,
+      "H": 41,
+      "I": 42,
+      "J": 43,
+      "K": 44,
+      "L": 45,
+      "M": 46,
+      "N": 47,
+      "O": 48,
+      "P": 49,
+      "Q": 50,
+      "R": 51,
+      "S": 52,
+      "T": 53,
+      "U": 54,
+      "V": 55,
+      "W": 56,
+      "X": 57,
+      "Y": 58,
+      "Z": 59,
+      "[": 60,
+      "\\": 61,
+      "]": 62,
+      "_": 63,
+      "`": 64,
+      "a": 65,
+      "b": 66,
+      "c": 67,
+      "d": 68,
+      "e": 69,
+      "f": 70,
+      "g": 71,
+      "h": 72,
+      "i": 73,
+      "j": 74,
+      "k": 75,
+      "l": 76,
+      "m": 77,
+      "n": 78,
+      "o": 79,
+      "p": 80,
+      "q": 81,
+      "r": 82,
+      "s": 83,
+      "t": 84,
+      "u": 85,
+      "v": 86,
+      "w": 87,
+      "x": 88,
+      "y": 89,
+      "z": 90,
+      "{": 91,
+      "|": 92,
+      "}": 93,
+      "©": 94,
+      "¬": 95,
+      "½": 96,
+      "¿": 97,
+      "Ä": 98,
+      "Å": 99,
+      "Ö": 100,
+      "ß": 101,
+      "á": 102,
+      "ä": 103,
+      "ó": 104,
+      "ö": 105,
+      "in": 106,
+      "or": 107,
+      "al": 108,
+      "on": 109,
+      "th": 110,
+      "er": 111,
+      "le": 112,
+      "hy": 113,
+      "orm": 114,
+      "norm": 115,
+      "normal": 116,
+      "sin": 117,
+      "us": 118,
+      "ar": 119,
+      "sinus": 120,
+      "thm": 121,
+      "rhy": 122,
+      "rhythm": 123,
+      "pe": 124,
+      "ion": 125,
+      "tr": 126,
+      "tion": 127,
+      "ed": 128,
+      "fi": 129,
+      "re": 130,
+      "ty": 131,
+      "type": 132,
+      "is": 133,
+      "un": 134,
+      "oc": 135,
+      "ter": 136,
+      "ft": 137,
+      "an": 138,
+      "con": 139,
+      "left": 140,
+      "ab": 141,
+      "en": 142,
+      "loc": 143,
+      "46": 144,
+      "fir": 145,
+      "med": 146,
+      "confir": 147,
+      "confirmed": 148,
+      "unconfirmed": 149,
+      "rep": 150,
+      "ort": 151,
+      "report": 152,
+      "inf": 153,
+      "ol": 154,
+      "abnormal": 155,
+      "ia": 156,
+      "av": 157,
+      "os": 158,
+      "ch": 159,
+      "st": 160,
+      "tri": 161,
+      "ge": 162,
+      "ard": 163,
+      "ation": 164,
+      "pos": 165,
+      "de": 166,
+      "ction": 167,
+      "ior": 168,
+      "pr": 169,
+      "lock": 170,
+      "block": 171,
+      "tra": 172,
+      "br": 173,
+      "anter": 174,
+      "ec": 175,
+      "ul": 176,
+      "ad": 177,
+      "em": 178,
+      "cul": 179,
+      "ecg": 180,
+      "ig": 181,
+      "infar": 182,
+      "cular": 183,
+      "ardi": 184,
+      "age": 185,
+      "ci": 186,
+      "igh": 187,
+      "infarction": 188,
+      "ek": 189,
+      "ekg": 190,
+      "rs": 191,
+      "es": 192,
+      "ardial": 193,
+      "ocardial": 194,
+      "qrs": 195,
+      "infer": 196,
+      "te": 197,
+      "location": 198,
+      "entri": 199,
+      "entricular": 200,
+      "ition": 201,
+      "per": 202,
+      "ii": 203,
+      "ater": 204,
+      "ateral": 205,
+      "isch": 206,
+      "lead": 207,
+      "fic": 208,
+      "peci": 209,
+      "speci": 210,
+      "are": 211,
+      "position": 212,
+      "pro": 213,
+      "specific": 214,
+      "inferior": 215,
+      "leads": 216,
+      "non": 217,
+      "emia": 218,
+      "ly": 219,
+      "bab": 220,
+      "probab": 221,
+      "am": 222,
+      "ex": 223,
+      "wav": 224,
+      "ise": 225,
+      "at": 226,
+      "ent": 227,
+      "ight": 228,
+      "si": 229,
+      "hyper": 230,
+      "pre": 231,
+      "und": 232,
+      "ing": 233,
+      "trial": 234,
+      "ther": 235,
+      "bund": 236,
+      "anch": 237,
+      "branch": 238,
+      "bundle": 239,
+      "right": 240,
+      "wise": 241,
+      "other": 242,
+      "my": 243,
+      "stra": 244,
+      "possi": 245,
+      "otherwise": 246,
+      "strain": 247,
+      "se": 248,
+      "possib": 249,
+      "myocardial": 250,
+      "atrial": 251,
+      "ted": 252,
+      "ac": 253,
+      "anterior": 254,
+      "possible": 255,
+      "li": 256,
+      "to": 257,
+      "fl": 258,
+      "old": 259,
+      "olateral": 260,
+      "min": 261,
+      "ow": 262,
+      "ventricular": 263,
+      "waves": 264,
+      "be": 265,
+      "ischemia": 266,
+      "tal": 267,
+      "su": 268,
+      "probable": 269,
+      "ardia": 270,
+      "cardia": 271,
+      "aventricular": 272,
+      "no": 273,
+      "ll": 274,
+      "ss": 275,
+      "wi": 276,
+      "co": 277,
+      "ut": 278,
+      "low": 279,
+      "ptal": 280,
+      "du": 281,
+      "ill": 282,
+      "brill": 283,
+      "brillation": 284,
+      "fibrillation": 285,
+      "ment": 286,
+      "com": 287,
+      "trocardial": 288,
+      "ischa": 289,
+      "sinis": 290,
+      "ose": 291,
+      "sinistrocardial": 292,
+      "vol": 293,
+      "anterose": 294,
+      "anteroseptal": 295,
+      "tage": 296,
+      "voltage": 297,
+      "lateral": 298,
+      "tro": 299,
+      "phy": 300,
+      "depre": 301,
+      "depress": 302,
+      "hypertro": 303,
+      "hypertrophy": 304,
+      "ten": 305,
+      "comp": 306,
+      "high": 307,
+      "with": 308,
+      "avl": 309,
+      "gment": 310,
+      "segment": 311,
+      "achy": 312,
+      "sy": 313,
+      "tachy": 314,
+      "sto": 315,
+      "systo": 316,
+      "systole": 317,
+      "extra": 318,
+      "termin": 319,
+      "normales": 320,
+      "extrasystole": 321,
+      "comple": 322,
+      "determin": 323,
+      "ver": 324,
+      "team": 325,
+      "pa": 326,
+      "ic": 327,
+      "anterolateral": 328,
+      "path": 329,
+      "flat": 330,
+      "der": 331,
+      "intr": 332,
+      "og": 333,
+      "and": 334,
+      "ax": 335,
+      "axis": 336,
+      "olog": 337,
+      "ay": 338,
+      "dam": 339,
+      "damage": 340,
+      "patholog": 341,
+      "segments": 342,
+      "lv": 343,
+      "due": 344,
+      "undetermin": 345,
+      "undetermined": 346,
+      "v2": 347,
+      "fin": 348,
+      "arrhythm": 349,
+      "arrhythmia": 350,
+      "probably": 351,
+      "iii": 352,
+      "ischaemia": 353,
+      "depressed": 354,
+      "tachycardia": 355,
+      "dev": 356,
+      "avf": 357,
+      "complete": 358,
+      "lim": 359,
+      "as": 360,
+      "devia": 361,
+      "intraventricular": 362,
+      "ded": 363,
+      "ist": 364,
+      "ure": 365,
+      "nonspecific": 366,
+      "this": 367,
+      "v4": 368,
+      "wave": 369,
+      "the": 370,
+      "ature": 371,
+      "hyperex": 372,
+      "incomplete": 373,
+      "ong": 374,
+      "sug": 375,
+      "mature": 376,
+      "gest": 377,
+      "suggest": 378,
+      "premature": 379,
+      "cted": 380,
+      "sus": 381,
+      "suspe": 382,
+      "suspected": 383,
+      "olong": 384,
+      "prolong": 385,
+      "deviation": 386,
+      "contra": 387,
+      "not": 388,
+      "contraction": 389,
+      "ph": 390,
+      "inver": 391,
+      "iph": 392,
+      "v5": 393,
+      "brad": 394,
+      "brady": 395,
+      "it": 396,
+      "may": 397,
+      "bradycardia": 398,
+      "limb": 399,
+      "supr": 400,
+      "sist": 401,
+      "ele": 402,
+      "est": 403,
+      "supraventricular": 404,
+      ").": 405,
+      "eral": 406,
+      "sistent": 407,
+      "chan": 408,
+      "consistent": 409,
+      "tended": 410,
+      "hyperextended": 411,
+      "periph": 412,
+      "peripheral": 413,
+      "ce": 414,
+      "utter": 415,
+      "flutter": 416,
+      "of": 417,
+      "change": 418,
+      "ite": 419,
+      "defin": 420,
+      "definite": 421,
+      "fas": 422,
+      "cicular": 423,
+      "fascicular": 424,
+      "inverted": 425,
+      "can": 426,
+      "inferolateral": 427,
+      "dis": 428,
+      "pathology": 429,
+      "suggesting": 430,
+      "cannot": 431,
+      "voltages": 432,
+      "order": 433,
+      "ru": 434,
+      "out": 435,
+      "10": 436,
+      "ude": 437,
+      "lvh": 438,
+      "changes": 439,
+      "ely": 440,
+      "OR": 441,
+      "art": 442,
+      "ri": 443,
+      "100": 444,
+      "v3": 445,
+      "NOR": 446,
+      "NORM": 447,
+      "emi": 448,
+      "Ed": 449,
+      "Edit": 450,
+      "inter": 451,
+      "lik": 452,
+      "likely": 453,
+      "prolonged": 454,
+      "emiblock": 455,
+      "hemiblock": 456,
+      "ase": 457,
+      "qt": 458,
+      "v1": 459,
+      "only": 460,
+      "led": 461,
+      "ate": 462,
+      "condu": 463,
+      "he": 464,
+      "conduction": 465,
+      "ruled": 466,
+      "for": 467,
+      "flatten": 468,
+      "ischaem": 469,
+      "ical": 470,
+      "heart": 471,
+      "ischaemic": 472,
+      "lit": 473,
+      "disorder": 474,
+      "flattening": 475,
+      "plit": 476,
+      "amplit": 477,
+      "amplitude": 478,
+      "dise": 479,
+      "val": 480,
+      "disease": 481,
+      "elev": 482,
+      "interval": 483,
+      "cri": 484,
+      "sh": 485,
+      "teria": 486,
+      "criteria": 487,
+      "ening": 488,
+      "qu": 489,
+      "depression": 490,
+      "mo": 491,
+      "derate": 492,
+      "moderate": 493,
+      "pathological": 494,
+      "ding": 495,
+      "v6": 496,
+      "requ": 497,
+      "chest": 498,
+      "trace": 499,
+      "finding": 500,
+      "ct": 501,
+      "lin": 502,
+      "ested": 503,
+      "requested": 504,
+      "pac": 505,
+      "infarct": 506,
+      "id": 507,
+      "findings": 508,
+      "ak": 509,
+      "elevation": 510,
+      "cardi": 511,
+      "ans": 512,
+      "trans": 513,
+      "transition": 514,
+      "but": 515,
+      "sion": 516,
+      "over": 517,
+      "gre": 518,
+      "tachycardi": 519,
+      "tachycardic": 520,
+      "prolongation": 521,
+      "emak": 522,
+      "pacemak": 523,
+      "pacemaker": 524,
+      "ff": 525,
+      "lay": 526,
+      "elec": 527,
+      "bi": 528,
+      "minor": 529,
+      "sl": 530,
+      "tw": 531,
+      "oad": 532,
+      "isted": 533,
+      "complex": 534,
+      "twisted": 535,
+      "exc": 536,
+      "complexes": 537,
+      "sp": 538,
+      "ne": 539,
+      "excl": 540,
+      "dening": 541,
+      "widening": 542,
+      "ap": 543,
+      "qs": 544,
+      "ur": 545,
+      "ect": 546,
+      "eff": 547,
+      "slight": 548,
+      "effect": 549,
+      "BB": 550,
+      "neg": 551,
+      "lar": 552,
+      "ssion": 553,
+      "progre": 554,
+      "progression": 555,
+      "if": 556,
+      "resp": 557,
+      "entr": 558,
+      "line": 559,
+      "enlar": 560,
+      "gement": 561,
+      "enlargement": 562,
+      "respon": 563,
+      "ta": 564,
+      "cited": 565,
+      "slightly": 566,
+      "response": 567,
+      "MI": 568,
+      "ance": 569,
+      "rap": 570,
+      "rapid": 571,
+      "cer": 572,
+      "aventr": 573,
+      "Atrial": 574,
+      "ated": 575,
+      "tain": 576,
+      "certain": 577,
+      "delay": 578,
+      "dig": 579,
+      "ok": 580,
+      "typ": 581,
+      "tric": 582,
+      "CG": 583,
+      "ECG": 584,
+      "electric": 585,
+      "gemin": 586,
+      "intraventr": 587,
+      "uncertain": 588,
+      "rhythmus": 589,
+      "II": 590,
+      "ca": 591,
+      "ital": 592,
+      "),": 593,
+      "sinusrhythmus": 594,
+      "digital": 595,
+      "load": 596,
+      "bifascicular": 597,
+      "digitalis": 598,
+      "limit": 599,
+      "border": 600,
+      "borderline": 601,
+      "ift": 602,
+      "shift": 603,
+      "use": 604,
+      "shifted": 605,
+      "one": 606,
+      "tension": 607,
+      "unspecific": 608,
+      "ute": 609,
+      "lac": 610,
+      "inversion": 611,
+      "exclu": 612,
+      "excluded": 613,
+      "hyperexcited": 614,
+      "AS": 615,
+      "zone": 616,
+      "plac": 617,
+      "placed": 618,
+      "dist": 619,
+      "extr": 620,
+      "acute": 621,
+      "displaced": 622,
+      "distur": 623,
+      "cing": 624,
+      "ve": 625,
+      "thes": 626,
+      "tracing": 627,
+      "disturb": 628,
+      "50": 629,
+      "these": 630,
+      "ost": 631,
+      "ro": 632,
+      "disturbance": 633,
+      "tin": 634,
+      "ant": 635,
+      "cause": 636,
+      "IN": 637,
+      "tiny": 638,
+      "AV": 639,
+      "dif": 640,
+      "ficul": 641,
+      "difficul": 642,
+      "difficult": 643,
+      "urs": 644,
+      "determine": 645,
+      "urse": 646,
+      "ron": 647,
+      "BBB": 648,
+      "trol": 649,
+      "broad": 650,
+      "course": 651,
+      "bigemin": 652,
+      "extrem": 653,
+      "INJ": 654,
+      "vid": 655,
+      "evid": 656,
+      "most": 657,
+      "broadening": 658,
+      "dru": 659,
+      "up": 660,
+      "sider": 661,
+      "drug": 662,
+      "normally": 663,
+      "chron": 664,
+      "layer": 665,
+      "RBBB": 666,
+      "sha": 667,
+      "electrol": 668,
+      "exclude": 669,
+      "VH": 670,
+      "monly": 671,
+      "yte": 672,
+      "reg": 673,
+      "commonly": 674,
+      "link": 675,
+      "electrolyte": 676,
+      "consider": 677,
+      "ular": 678,
+      "llt": 679,
+      "upper": 680,
+      "regular": 681,
+      "ign": 682,
+      "gh": 683,
+      "ugh": 684,
+      "ari": 685,
+      "ared": 686,
+      "shaft": 687,
+      "ven": 688,
+      "possibly": 689,
+      "sinistrocardiale": 690,
+      "compared": 691,
+      "15": 692,
+      "cre": 693,
+      "dri": 694,
+      "ting": 695,
+      "overdri": 696,
+      "alt": 697,
+      "deviating": 698,
+      "sign": 699,
+      "hyp": 700,
+      "92": 701,
+      "aemia": 702,
+      "septal": 703,
+      "overdriven": 704,
+      "hypok": 705,
+      "ive": 706,
+      "alaemia": 707,
+      "act": 708,
+      "rough": 709,
+      "hypokalaemia": 710,
+      "through": 711,
+      "LVH": 712,
+      "links": 713,
+      "biph": 714,
+      "80": 715,
+      "IS": 716,
+      "elevated": 717,
+      "throughout": 718,
+      "ific": 719,
+      "olow": 720,
+      "okolow": 721,
+      "signific": 722,
+      "ISC": 723,
+      "evident": 724,
+      "asi": 725,
+      "linkstyp": 726,
+      "all": 727,
+      "III": 728,
+      "Sokolow": 729,
+      "sub": 730,
+      "po": 731,
+      "ASMI": 732,
+      "hypertwisted": 733,
+      "extreme": 734,
+      "agetyp": 735,
+      "electrical": 736,
+      "asic": 737,
+      "sent": 738,
+      "rec": 739,
+      "uld": 740,
+      "lagetyp": 741,
+      "beat": 742,
+      "overload": 743,
+      "chronic": 744,
+      "IRBBB": 745,
+      "now": 746,
+      "biphasic": 747,
+      "ity": 748,
+      "el": 749,
+      "terior": 750,
+      "posterior": 751,
+      "poor": 752,
+      "vari": 753,
+      "degre": 754,
+      "recent": 755,
+      "Sin": 756,
+      "ould": 757,
+      "degree": 758,
+      "Sinus": 759,
+      "ind": 760,
+      "end": 761,
+      "abnormality": 762,
+      "there": 763,
+      "bigeminus": 764,
+      "INJAS": 765,
+      "sm": 766,
+      "AL": 767,
+      "fied": 768,
+      "present": 769,
+      "should": 770,
+      "IMI": 771,
+      "trigemin": 772,
+      "considered": 773,
+      "subend": 774,
+      "lt": 775,
+      "leg": 776,
+      "unspeci": 777,
+      "subendocardial": 778,
+      "unspecified": 779,
+      "FB": 780,
+      "LA": 781,
+      "part": 782,
+      "bigeminy": 783,
+      "significance": 784,
+      "ep": 785,
+      "decre": 786,
+      "variant": 787,
+      "decrease": 788,
+      "bad": 789,
+      "pat": 790,
+      "able": 791,
+      "excited": 792,
+      "noted": 793,
+      "active": 794,
+      "delayed": 795,
+      "gr": 796,
+      "ial": 797,
+      "ous": 798,
+      "ence": 799,
+      "hyperactive": 800,
+      "overexcited": 801,
+      "ury": 802,
+      "lower": 803,
+      "LMI": 804,
+      "me": 805,
+      "tation": 806,
+      "ves": 807,
+      "unction": 808,
+      "small": 809,
+      "mi": 810,
+      "avr": 811,
+      "posed": 812,
+      "interposed": 813,
+      "ner": 814,
+      "wh": 815,
+      "inner": 816,
+      "erated": 817,
+      "sing": 818,
+      "des": 819,
+      "iform": 820,
+      "INJAL": 821,
+      "beats": 822,
+      "Age": 823,
+      "mis": 824,
+      "ward": 825,
+      "repol": 826,
+      "show": 827,
+      "extremely": 828,
+      "lowering": 829,
+      "missing": 830,
+      "1st": 831,
+      "CRBBB": 832,
+      "mlt": 833,
+      "um": 834,
+      "jury": 835,
+      "injury": 836,
+      "extrasystoles": 837,
+      "lerated": 838,
+      "rate": 839,
+      "vi": 840,
+      "acce": 841,
+      "indic": 842,
+      "accelerated": 843,
+      "ik": 844,
+      "ich": 845,
+      "terminal": 846,
+      "partial": 847,
+      "ear": 848,
+      "fe": 849,
+      "tec": 850,
+      "zation": 851,
+      "ark": 852,
+      "detec": 853,
+      "trigeminal": 854,
+      "LAFB": 855,
+      "detected": 856,
+      "ND": 857,
+      "has": 858,
+      "arization": 859,
+      "repolarization": 860,
+      "bs": 861,
+      "ber": 862,
+      "im": 863,
+      "so": 864,
+      "uniform": 865,
+      "contractions": 866,
+      "discre": 867,
+      "artif": 868,
+      "which": 869,
+      "NDT": 870,
+      "artifact": 871,
+      "chang": 872,
+      "paced": 873,
+      "spik": 874,
+      "discrete": 875,
+      "SIII": 876,
+      "pw": 877,
+      "red": 878,
+      "wpw": 879,
+      "oss": 880,
+      "very": 881,
+      "considering": 882,
+      "significant": 883,
+      "spikes": 884,
+      "ient": 885,
+      "uction": 886,
+      "ung": 887,
+      "peric": 888,
+      "simi": 889,
+      "evidence": 890,
+      "patient": 891,
+      "early": 892,
+      "similar": 893,
+      "CB": 894,
+      "IV": 895,
+      "aV": 896,
+      "la": 897,
+      "par": 898,
+      "sa": 899,
+      "ue": 900,
+      "antero": 901,
+      "changed": 902,
+      "IVCB": 903,
+      "dre": 904,
+      "gn": 905,
+      "hter": 906,
+      "mark": 907,
+      "slow": 908,
+      "node": 909,
+      "pathologic": 910,
+      "drehter": 911,
+      "dia": 912,
+      "function": 913,
+      "ir": 914,
+      "pear": 915,
+      "repe": 916,
+      "ult": 917,
+      "sided": 918,
+      "slt": 919,
+      "appear": 920,
+      "berdrehter": 921,
+      "ueberdrehter": 922,
+      "diagn": 923,
+      "bb": 924,
+      "di": 925,
+      "know": 926,
+      "ned": 927,
+      "obs": 928,
+      "tur": 929,
+      "unknow": 930,
+      "rightward": 931,
+      "marked": 932,
+      "repeat": 933,
+      "turned": 934,
+      "unknown": 935,
+      "kardi": 936,
+      "ton": 937,
+      "ste": 938,
+      "deep": 939,
+      "hyperton": 940,
+      "determinable": 941,
+      "ostic": 942,
+      "ISC_": 943,
+      "reduction": 944,
+      "diagnostic": 945,
+      "kardie": 946,
+      "hypertonic": 947,
+      "gen": 948,
+      "err": 949,
+      "esca": 950,
+      "ative": 951,
+      "ently": 952,
+      "appar": 953,
+      "loading": 954,
+      "legal": 955,
+      "gross": 956,
+      "escape": 957,
+      "apparently": 958,
+      "do": 959,
+      "ound": 960,
+      "ore": 961,
+      "that": 962,
+      "aberr": 963,
+      "ological": 964,
+      "emity": 965,
+      "overw": 966,
+      "extremity": 967,
+      "lah": 968,
+      "aberrant": 969,
+      "atri": 970,
+      "cor": 971,
+      "ra": 972,
+      "indetermin": 973,
+      "sive": 974,
+      "flattened": 975,
+      "negative": 976,
+      "rotation": 977,
+      "safe": 978,
+      "steep": 979,
+      "general": 980,
+      "indeterminate": 981,
+      "V1": 982,
+      "cure": 983,
+      "fur": 984,
+      "found": 985,
+      "lder": 986,
+      "ory": 987,
+      "tern": 988,
+      "ess": 989,
+      "enti": 990,
+      "pread": 991,
+      "pretation": 992,
+      "previ": 993,
+      "wides": 994,
+      "interpretation": 995,
+      "amplitudes": 996,
+      "gra": 997,
+      "obscure": 998,
+      "atrium": 999,
+      "further": 1000,
+      "previous": 1001,
+      "widespread": 1002,
+      "obscures": 1003,
+      "aff": 1004,
+      "ection": 1005,
+      "fa": 1006,
+      "ful": 1007,
+      "junction": 1008,
+      "nature": 1009,
+      "rSIII": 1010,
+      "sr": 1011,
+      "ual": 1012,
+      "ventr": 1013,
+      "rely": 1014,
+      "atory": 1015,
+      "new": 1016,
+      "overwind": 1017,
+      "entirely": 1018,
+      "affection": 1019,
+      "junctional": 1020,
+      "12": 1021,
+      "91": 1022,
+      "AO": 1023,
+      "RVH": 1024,
+      "RAO": 1025,
+      "ces": 1026,
+      "ew": 1027,
+      "nar": 1028,
+      "ox": 1029,
+      "pul": 1030,
+      "row": 1031,
+      "ub": 1032,
+      "normoc": 1033,
+      "ped": 1034,
+      "persist": 1035,
+      "suggests": 1036,
+      "overturned": 1037,
+      "biphas": 1038,
+      "subacute": 1039,
+      "view": 1040,
+      "some": 1041,
+      "significantly": 1042,
+      "aVL": 1043,
+      "doub": 1044,
+      "lahb": 1045,
+      "narrow": 1046,
+      "35": 1047,
+      "EK": 1048,
+      "LP": 1049,
+      "dle": 1050,
+      "ke": 1051,
+      "mid": 1052,
+      "more": 1053,
+      "sves": 1054,
+      "upr": 1055,
+      "uous": 1056,
+      "wall": 1057,
+      "incon": 1058,
+      "peak": 1059,
+      "ane": 1060,
+      "sure": 1061,
+      "icuous": 1062,
+      "devel": 1063,
+      "spicuous": 1064,
+      "elong": 1065,
+      "trigeminy": 1066,
+      "indicate": 1067,
+      "indicated": 1068,
+      "pericardial": 1069,
+      "fault": 1070,
+      "EKG": 1071,
+      "LPFB": 1072,
+      "middle": 1073,
+      "inconspicuous": 1074,
+      "develo": 1075,
+      "Over": 1076,
+      "ach": 1077,
+      "clock": 1078,
+      "fre": 1079,
+      "ili": 1080,
+      "qiii": 1081,
+      "sec": 1082,
+      "stro": 1083,
+      "leftward": 1084,
+      "repre": 1085,
+      "infero": 1086,
+      "possibili": 1087,
+      "such": 1088,
+      "ically": 1089,
+      "respir": 1090,
+      "pattern": 1091,
+      "diff": 1092,
+      "cord": 1093,
+      "clockwise": 1094,
+      "fresh": 1095,
+      "possibility": 1096,
+      "respiratory": 1097,
+      "30": 1098,
+      "PLMI": 1099,
+      "dd": 1100,
+      "frequ": 1101,
+      "ls": 1102,
+      "pol": 1103,
+      "str": 1104,
+      "ti": 1105,
+      "tful": 1106,
+      "incre": 1107,
+      "than": 1108,
+      "normocardial": 1109,
+      "sinusbrady": 1110,
+      "essive": 1111,
+      "ased": 1112,
+      "excessive": 1113,
+      "typical": 1114,
+      "LAO": 1115,
+      "pericardi": 1116,
+      "generally": 1117,
+      "previously": 1118,
+      "doubtful": 1119,
+      "represent": 1120,
+      "lsb": 1121,
+      "increased": 1122,
+      "Le": 1123,
+      "TOR": 1124,
+      "ced": 1125,
+      "dro": 1126,
+      "mon": 1127,
+      "ove": 1128,
+      "rS": 1129,
+      "sence": 1130,
+      "tis": 1131,
+      "we": 1132,
+      "usual": 1133,
+      "ances": 1134,
+      "above": 1135,
+      "first": 1136,
+      "trifascicular": 1137,
+      "myoc": 1138,
+      "minim": 1139,
+      "suggestive": 1140,
+      "supraventr": 1141,
+      "short": 1142,
+      "shows": 1143,
+      "bbb": 1144,
+      "stroke": 1145,
+      "sinusbradykardie": 1146,
+      "pericarditis": 1147,
+      "minimal": 1148,
+      "11": 1149,
+      "Older": 1150,
+      "QSIII": 1151,
+      "Supr": 1152,
+      "V2": 1153,
+      "V5": 1154,
+      "clin": 1155,
+      "hav": 1156,
+      "was": 1157,
+      "thigh": 1158,
+      "review": 1159,
+      "unusual": 1160,
+      "rsb": 1161,
+      "isches": 1162,
+      "hyperlink": 1163,
+      "they": 1164,
+      "interpol": 1165,
+      "lining": 1166,
+      "cardiological": 1167,
+      "digox": 1168,
+      "tracings": 1169,
+      "aVF": 1170,
+      "irregular": 1171,
+      "appearances": 1172,
+      "rather": 1173,
+      "grades": 1174,
+      "diffuse": 1175,
+      "stress": 1176,
+      "Left": 1177,
+      "Supraventricular": 1178,
+      "have": 1179,
+      "interpolated": 1180,
+      "digoxin": 1181,
+      "!!": 1182,
+      ",,": 1183,
+      "29": 1184,
+      "AN": 1185,
+      "ag": 1186,
+      "cl": 1187,
+      "cle": 1188,
+      "kung": 1189,
+      "mult": 1190,
+      "ris": 1191,
+      "sen": 1192,
+      "vp": 1193,
+      "wan": 1194,
+      "len": 1195,
+      "less": 1196,
+      "blocker": 1197,
+      "siological": 1198,
+      "flach": 1199,
+      "trough": 1200,
+      "physiological": 1201,
+      "off": 1202,
+      "infarcts": 1203,
+      "variable": 1204,
+      "grossly": 1205,
+      "elongated": 1206,
+      "develop": 1207,
+      "clinically": 1208,
+      "risk": 1209,
+      "wander": 1210,
+      "19": 1211,
+      "28": 1212,
+      "EH": 1213,
+      "IL": 1214,
+      "ST": 1215,
+      "SEH": 1216,
+      "YP": 1217,
+      "af": 1218,
+      "ain": 1219,
+      "fro": 1220,
+      "fron": 1221,
+      "iz": 1222,
+      "ld": 1223,
+      "lbbb": 1224,
+      "mus": 1225,
+      "rIII": 1226,
+      "thing": 1227,
+      "ary": 1228,
+      "tionable": 1229,
+      "iso": 1230,
+      "control": 1231,
+      "olter": 1232,
+      "ardium": 1233,
+      "estionable": 1234,
+      "under": 1235,
+      "therap": 1236,
+      "sele": 1237,
+      "beta": 1238,
+      "could": 1239,
+      "pag": 1240,
+      "pathologisches": 1241,
+      "questionable": 1242,
+      "overtwisted": 1243,
+      "mild": 1244,
+      "impul": 1245,
+      "persists": 1246,
+      "frequent": 1247,
+      "rSrIII": 1248,
+      "hyperlinked": 1249,
+      "multiform": 1250,
+      "senkung": 1251,
+      "developing": 1252,
+      "SEHYP": 1253,
+      "after": 1254,
+      "from": 1255,
+      "front": 1256,
+      "muscle": 1257,
+      "controlled": 1258,
+      "therapy": 1259,
+      "impulse": 1260,
+      "%,": 1261,
+      ")(": 1262,
+      "24": 1263,
+      "27": 1264,
+      "Elder": 1265,
+      "ILMI": 1266,
+      "Tachy": 1267,
+      "bec": 1268,
+      "cy": 1269,
+      "day": 1270,
+      "gth": 1271,
+      "holter": 1272,
+      "loss": 1273,
+      "main": 1274,
+      "ndro": 1275,
+      "sch": 1276,
+      "ts": 1277,
+      "uter": 1278,
+      "vw": 1279,
+      "xtrocardial": 1280,
+      "incl": 1281,
+      "alk": 1282,
+      "rever": 1283,
+      "ocia": 1284,
+      "chalk": 1285,
+      "dextrocardial": 1286,
+      "emb": 1287,
+      "propag": 1288,
+      "precord": 1289,
+      "nothing": 1290,
+      "compl": 1291,
+      "computer": 1292,
+      "syndro": 1293,
+      "tachyarrhythmia": 1294,
+      "completely": 1295,
+      "asc": 1296,
+      "ricular": 1297,
+      "ISCAS": 1298,
+      "ISCAL": 1299,
+      "urysm": 1300,
+      "appears": 1301,
+      "grade": 1302,
+      "pulmon": 1303,
+      "normocard": 1304,
+      "aneous": 1305,
+      "aneurysm": 1306,
+      "Overturned": 1307,
+      "length": 1308,
+      "flache": 1309,
+      "wandering": 1310,
+      "selected": 1311,
+      "Elderly": 1312,
+      "propagation": 1313,
+      "precordial": 1314,
+      "syndrome": 1315,
+      "pulmonary": 1316,
+      "lengthening": 1317,
+      "17": 1318,
+      "18": 1319,
+      "1AV": 1320,
+      "20": 1321,
+      "22": 1322,
+      "23": 1323,
+      "In": 1324,
+      "Pr": 1325,
+      "QS": 1326,
+      "Tneg": 1327,
+      "au": 1328,
+      "ass": 1329,
+      "by": 1330,
+      "bung": 1331,
+      "cardial": 1332,
+      "ds": 1333,
+      "fasi": 1334,
+      "gi": 1335,
+      "gl": 1336,
+      "hor": 1337,
+      "ie": 1338,
+      "io": 1339,
+      "long": 1340,
+      "ob": 1341,
+      "ope": 1342,
+      "pq": 1343,
+      "pt": 1344,
+      "ple": 1345,
+      "qIII": 1346,
+      "rv": 1347,
+      "stri": 1348,
+      "sokolow": 1349,
+      "tab": 1350,
+      "taneous": 1351,
+      "would": 1352,
+      "ally": 1353,
+      "ontal": 1354,
+      "ontaneous": 1355,
+      "ery": 1356,
+      "since": 1357,
+      "ref": 1358,
+      "rest": 1359,
+      "remain": 1360,
+      "unlikely": 1361,
+      "contri": 1362,
+      "conto": 1363,
+      "ency": 1364,
+      "cha": 1365,
+      "exce": 1366,
+      "hyperrotation": 1367,
+      "presence": 1368,
+      "secon": 1369,
+      "lich": 1370,
+      "minute": 1371,
+      "been": 1372,
+      "atures": 1373,
+      "susp": 1374,
+      "iti": 1375,
+      "hebung": 1376,
+      "query": 1377,
+      "spontaneous": 1378,
+      "INJIN": 1379,
+      "shaped": 1380,
+      "ISCIN": 1381,
+      "partially": 1382,
+      "features": 1383,
+      "uniforme": 1384,
+      "markedly": 1385,
+      "normocardium": 1386,
+      "time": 1387,
+      "vpbs": 1388,
+      "izontal": 1389,
+      "multiforme": 1390,
+      "1AVB": 1391,
+      "cardiale": 1392,
+      "fasicular": 1393,
+      "horizontal": 1394,
+      "rvh": 1395,
+      "resting": 1396,
+      "contour": 1397,
+      "except": 1398,
+      "hyperrotational": 1399,
+      "14": 1400,
+      "21": 1401,
+      "AMI": 1402,
+      "QIII": 1403,
+      "RIII": 1404,
+      "ause": 1405,
+      "bre": 1406,
+      "form": 1407,
+      "fall": 1408,
+      "fra": 1409,
+      "iv": 1410,
+      "ici": 1411,
+      "kele": 1412,
+      "lat": 1413,
+      "mit": 1414,
+      "om": 1415,
+      "ot": 1416,
+      "qI": 1417,
+      "rlt": 1418,
+      "sal": 1419,
+      "skele": 1420,
+      "tle": 1421,
+      "uding": 1422,
+      "udi": 1423,
+      "uced": 1424,
+      "yme": 1425,
+      "zyme": 1426,
+      "orded": 1427,
+      "ale": 1428,
+      "also": 1429,
+      "les": 1430,
+      "lect": 1431,
+      "sinustachy": 1432,
+      "truction": 1433,
+      "ism": 1434,
+      "isation": 1435,
+      "occ": 1436,
+      "ocal": 1437,
+      "any": 1438,
+      "absence": 1439,
+      "ending": 1440,
+      "enzyme": 1441,
+      "olism": 1442,
+      "studi": 1443,
+      "gether": 1444,
+      "persistent": 1445,
+      "exten": 1446,
+      "lier": 1447,
+      "today": 1448,
+      "together": 1449,
+      "tall": 1450,
+      "volv": 1451,
+      "little": 1452,
+      "slope": 1453,
+      "apart": 1454,
+      "caus": 1455,
+      "ignore": 1456,
+      "recorded": 1457,
+      "earlier": 1458,
+      "reduced": 1459,
+      "obstruction": 1460,
+      "elongation": 1461,
+      "developed": 1462,
+      "because": 1463,
+      "including": 1464,
+      "embolism": 1465,
+      "ascending": 1466,
+      "Inf": 1467,
+      "auricular": 1468,
+      "please": 1469,
+      "reflect": 1470,
+      "ities": 1471,
+      "skeletal": 1472,
+      "sinustachykardie": 1473,
+      "studies": 1474,
+      "\",": 1475,
+      ".)": 1476,
+      "25": 1477,
+      "26": 1478,
+      "Ab": 1479,
+      "Base": 1480,
+      "Con": 1481,
+      "Ele": 1482,
+      "V3": 1483,
+      "atypical": 1484,
+      "basic": 1485,
+      "ever": 1486,
+      "efe": 1487,
+      "gerated": 1488,
+      "hf": 1489,
+      "how": 1490,
+      "hand": 1491,
+      "ives": 1492,
+      "king": 1493,
+      "mu": 1494,
+      "oun": 1495,
+      "pped": 1496,
+      "slower": 1497,
+      "socia": 1498,
+      "tim": 1499,
+      "vd": 1500,
+      "wa": 1501,
+      "wer": 1502,
+      "whe": 1503,
+      "ysm": 1504,
+      "inted": 1505,
+      "ors": 1506,
+      "onoun": 1507,
+      "lech": 1508,
+      "arisation": 1509,
+      "eding": 1510,
+      "fici": 1511,
+      "rel": 1512,
+      "isc": 1513,
+      "ised": 1514,
+      "unc": 1515,
+      "ened": 1516,
+      "abnormalities": 1517,
+      "pronoun": 1518,
+      "ement": 1519,
+      "infark": 1520,
+      "citation": 1521,
+      "exag": 1522,
+      "excitation": 1523,
+      "ating": 1524,
+      "set": 1525,
+      "lift": 1526,
+      "tox": 1527,
+      "without": 1528,
+      "pause": 1529,
+      "icion": 1530,
+      "asion": 1531,
+      "sistant": 1532,
+      "esting": 1533,
+      "definitely": 1534,
+      "dissocia": 1535,
+      "rift": 1536,
+      "electro": 1537,
+      "two": 1538,
+      "qsIII": 1539,
+      "limits": 1540,
+      "AVF": 1541,
+      "chronically": 1542,
+      "overdrive": 1543,
+      "ISCIL": 1544,
+      "pointed": 1545,
+      "elle": 1546,
+      "ALMI": 1547,
+      "desc": 1548,
+      "repolarisation": 1549,
+      "parox": 1550,
+      "upright": 1551,
+      "frequency": 1552,
+      "tiefe": 1553,
+      "dropped": 1554,
+      "!!!": 1555,
+      "Tachykardie": 1556,
+      "schlech": 1557,
+      "reverted": 1558,
+      "given": 1559,
+      "chaot": 1560,
+      "suspicion": 1561,
+      "breeding": 1562,
+      "fragl": 1563,
+      "occasion": 1564,
+      "extensive": 1565,
+      "Consider": 1566,
+      "however": 1567,
+      "much": 1568,
+      "times": 1569,
+      "ysmal": 1570,
+      "pronounced": 1571,
+      "exaggerated": 1572,
+      "dissociation": 1573,
+      "paroxysmal": 1574,
+      "chaotic": 1575,
+      ",(": 1576,
+      "..": 1577,
+      "13": 1578,
+      "112": 1579,
+      "2n": 1580,
+      "31": 1581,
+      "70": 1582,
+      "90": 1583,
+      "Co": 1584,
+      "Hy": 1585,
+      "If": 1586,
+      "Knot": 1587,
+      "NST": 1588,
+      "PMI": 1589,
+      "QI": 1590,
+      "Qual": 1591,
+      "QV5": 1592,
+      "Resting": 1593,
+      "aur": 1594,
+      "cal": 1595,
+      "cise": 1596,
+      "dy": 1597,
+      "dated": 1598,
+      "eg": 1599,
+      "et": 1600,
+      "ein": 1601,
+      "eab": 1602,
+      "ffici": 1603,
+      "go": 1604,
+      "ging": 1605,
+      "gital": 1606,
+      "hr": 1607,
+      "hrs": 1608,
+      "hoff": 1609,
+      "icular": 1610,
+      "iff": 1611,
+      "lp": 1612,
+      "lta": 1613,
+      "mm": 1614,
+      "ns": 1615,
+      "park": 1616,
+      "run": 1617,
+      "rbbb": 1618,
+      "sfunction": 1619,
+      "tas": 1620,
+      "vo": 1621,
+      "via": 1622,
+      "vect": 1623,
+      "vated": 1624,
+      "welle": 1625,
+      "än": 1626,
+      "ät": 1627,
+      "ality": 1628,
+      "erte": 1629,
+      "erence": 1630,
+      "ercise": 1631,
+      "ergo": 1632,
+      "arse": 1633,
+      "trem": 1634,
+      "res": 1635,
+      "reci": 1636,
+      "ression": 1637,
+      "unre": 1638,
+      "uncer": 1639,
+      "unchanged": 1640,
+      "ank": 1641,
+      "ange": 1642,
+      "consistant": 1643,
+      "about": 1644,
+      "chec": 1645,
+      "chein": 1646,
+      "post": 1647,
+      "delta": 1648,
+      "procal": 1649,
+      "blocks": 1650,
+      "adv": 1651,
+      "igi": 1652,
+      "especi": 1653,
+      "inferol": 1654,
+      "peri": 1655,
+      "positional": 1656,
+      "extended": 1657,
+      "exercise": 1658,
+      "sium": 1659,
+      "seen": 1660,
+      "sehr": 1661,
+      "befor": 1662,
+      "suffici": 1663,
+      "coup": 1664,
+      "coarse": 1665,
+      "volage": 1666,
+      "laterally": 1667,
+      "highly": 1668,
+      "within": 1669,
+      "verz": 1670,
+      "verging": 1671,
+      "icle": 1672,
+      "iceab": 1673,
+      "anterolaterally": 1674,
+      "deriv": 1675,
+      "ogression": 1676,
+      "olonged": 1677,
+      "noticeab": 1678,
+      "itz": 1679,
+      "itor": 1680,
+      "itung": 1681,
+      "ität": 1682,
+      "fluttering": 1683,
+      "cant": 1684,
+      "rule": 1685,
+      "hear": 1686,
+      "help": 1687,
+      "valve": 1688,
+      "quality": 1689,
+      "infarcti": 1690,
+      "progress": 1691,
+      "certainly": 1692,
+      "lack": 1693,
+      "INJAN": 1694,
+      "signs": 1695,
+      "ISCAN": 1696,
+      "submit": 1697,
+      "potas": 1698,
+      "indiff": 1699,
+      "particular": 1700,
+      "episo": 1701,
+      "mitr": 1702,
+      "arkt": 1703,
+      "beri": 1704,
+      "changing": 1705,
+      "sagital": 1706,
+      "appearance": 1707,
+      "deeply": 1708,
+      "double": 1709,
+      "differ": 1710,
+      "monitor": 1711,
+      "rSRIII": 1712,
+      "well": 1713,
+      "myocar": 1714,
+      "vpb": 1715,
+      "190": 1716,
+      "isoelectric": 1717,
+      "Tachycardia": 1718,
+      "ociated": 1719,
+      "Progression": 1720,
+      "Prolonged": 1721,
+      "TnegIII": 1722,
+      "assess": 1723,
+      "associated": 1724,
+      "striking": 1725,
+      "contrib": 1726,
+      "contribut": 1727,
+      "second": 1728,
+      "seconds": 1729,
+      "former": 1730,
+      "icity": 1731,
+      "latter": 1732,
+      "volving": 1733,
+      "caused": 1734,
+      "Infarkt": 1735,
+      "Elevated": 1736,
+      "basically": 1737,
+      "wahrs": 1738,
+      "were": 1739,
+      "whether": 1740,
+      "toxicity": 1741,
+      "occasional": 1742,
+      "2nd": 1743,
+      "Course": 1744,
+      "Hyper": 1745,
+      "Knotung": 1746,
+      "Qualität": 1747,
+      "auricle": 1748,
+      "dysfunction": 1749,
+      "vector": 1750,
+      "tremors": 1751,
+      "reciprocal": 1752,
+      "check": 1753,
+      "cheinlich": 1754,
+      "especially": 1755,
+      "before": 1756,
+      "couple": 1757,
+      "noticeably": 1758,
+      "helpful": 1759,
+      "submitted": 1760,
+      "potassium": 1761,
+      "episode": 1762,
+      "wahrscheinlich": 1763,
+      "(<": 1764,
+      ".,": 1765,
+      ".-": 1766,
+      ".),": 1767,
+      "16": 1768,
+      "2x": 1769,
+      "34": 1770,
+      "40": 1771,
+      "60": 1772,
+      "74": 1773,
+      "82": 1774,
+      "910": 1775,
+      "Al": 1776,
+      "As": 1777,
+      "Ch": 1778,
+      "Drift": 1779,
+      "ES": 1780,
+      "EU": 1781,
+      "LT": 1782,
+      "St": 1783,
+      "V4": 1784,
+      "V6": 1785,
+      "aort": 1786,
+      "bo": 1787,
+      "ble": 1788,
+      "ben": 1789,
+      "bia": 1790,
+      "base": 1791,
+      "dal": 1792,
+      "dition": 1793,
+      "eper": 1794,
+      "evolving": 1795,
+      "fb": 1796,
+      "foc": 1797,
+      "ged": 1798,
+      "grs": 1799,
+      "gent": 1800,
+      "gän": 1801,
+      "hik": 1802,
+      "il": 1803,
+      "ium": 1804,
+      "kes": 1805,
+      "knot": 1806,
+      "kom": 1807,
+      "mul": 1808,
+      "mam": 1809,
+      "mand": 1810,
+      "male": 1811,
+      "nal": 1812,
+      "nec": 1813,
+      "pl": 1814,
+      "pto": 1815,
+      "pfl": 1816,
+      "ptin": 1817,
+      "qaVF": 1818,
+      "rr": 1819,
+      "ry": 1820,
+      "rise": 1821,
+      "s1": 1822,
+      "son": 1823,
+      "sed": 1824,
+      "sem": 1825,
+      "sse": 1826,
+      "ssure": 1827,
+      "tent": 1828,
+      "tac": 1829,
+      "ture": 1830,
+      "tak": 1831,
+      "uf": 1832,
+      "vor": 1833,
+      "vag": 1834,
+      "wol": 1835,
+      "wat": 1836,
+      "yes": 1837,
+      "zwe": 1838,
+      "ini": 1839,
+      "into": 1840,
+      "insuffici": 1841,
+      "inson": 1842,
+      "alter": 1843,
+      "almost": 1844,
+      "altern": 1845,
+      "thi": 1846,
+      "them": 1847,
+      "leitung": 1848,
+      "norma": 1849,
+      "usion": 1850,
+      "arm": 1851,
+      "arge": 1852,
+      "sinusrhythm": 1853,
+      "pens": 1854,
+      "try": 1855,
+      "edrift": 1856,
+      "isol": 1857,
+      "unb": 1858,
+      "uness": 1859,
+      "term": 1860,
+      "terday": 1861,
+      "ante": 1862,
+      "cons": 1863,
+      "confi": 1864,
+      "ablt": 1865,
+      "ende": 1866,
+      "ended": 1867,
+      "ences": 1868,
+      "media": 1869,
+      "medium": 1870,
+      "replac": 1871,
+      "iav": 1872,
+      "osis": 1873,
+      "stat": 1874,
+      "stand": 1875,
+      "poss": 1876,
+      "dep": 1877,
+      "deeper": 1878,
+      "demand": 1879,
+      "blocked": 1880,
+      "addition": 1881,
+      "emphy": 1882,
+      "infarc": 1883,
+      "perior": 1884,
+      "ateric": 1885,
+      "promin": 1886,
+      "progr": 1887,
+      "progrs": 1888,
+      "probabl": 1889,
+      "extension": 1890,
+      "ates": 1891,
+      "atic": 1892,
+      "atives": 1893,
+      "attac": 1894,
+      "sich": 1895,
+      "side": 1896,
+      "siqiii": 1897,
+      "pressure": 1898,
+      "myo": 1899,
+      "sever": 1900,
+      "anteriorer": 1901,
+      "superior": 1902,
+      "cardiac": 1903,
+      "nodal": 1904,
+      "compens": 1905,
+      "ischaemi": 1906,
+      "depresse": 1907,
+      "hypertroph": 1908,
+      "derives": 1909,
+      "intrav": 1910,
+      "pathologisch": 1911,
+      "tachycardiac": 1912,
+      "asz": 1913,
+      "bradyk": 1914,
+      "bradycardi": 1915,
+      "fascular": 1916,
+      "inferolaterally": 1917,
+      "intermit": 1918,
+      "likel": 1919,
+      "shin": 1920,
+      "quite": 1921,
+      "moderately": 1922,
+      "linedrift": 1923,
+      "pacing": 1924,
+      "overall": 1925,
+      "bipol": 1926,
+      "bifascular": 1927,
+      "spitz": 1928,
+      "apik": 1929,
+      "urgent": 1930,
+      "effe": 1931,
+      "ifocal": 1932,
+      "linewander": 1933,
+      "responding": 1934,
+      "okard": 1935,
+      "vel": 1936,
+      "broadened": 1937,
+      "bigeminie": 1938,
+      "INJIL": 1939,
+      "arily": 1940,
+      "actual": 1941,
+      "activ": 1942,
+      "ISCLA": 1943,
+      "trigeminus": 1944,
+      "partly": 1945,
+      "ially": 1946,
+      "metry": 1947,
+      "when": 1948,
+      "white": 1949,
+      "indicating": 1950,
+      "indicates": 1951,
+      "ichin": 1952,
+      "feh": 1953,
+      "immedia": 1954,
+      "uniformly": 1955,
+      "lafb": 1956,
+      "lauf": 1957,
+      "markable": 1958,
+      "diagnosis": 1959,
+      "does": 1960,
+      "overwound": 1961,
+      "corre": 1962,
+      "corresponding": 1963,
+      "generaliz": 1964,
+      "essarily": 1965,
+      "normocardia": 1966,
+      "biphasisch": 1967,
+      "sometimes": 1968,
+      "keg": 1969,
+      "peaked": 1970,
+      "Overexcited": 1971,
+      "strokes": 1972,
+      "cordant": 1973,
+      "cordichin": 1974,
+      "tip": 1975,
+      "week": 1976,
+      "weak": 1977,
+      "myocard": 1978,
+      "myocardium": 1979,
+      "shortened": 1980,
+      "111": 1981,
+      "ANEU": 1982,
+      "offset": 1983,
+      "ILBBB": 1984,
+      "isoptin": 1985,
+      "mildly": 1986,
+      "schmale": 1987,
+      "include": 1988,
+      "reversed": 1989,
+      "embles": 1990,
+      "normocardes": 1991,
+      "QSaVL": 1992,
+      "TnegV1": 1993,
+      "longer": 1994,
+      "strip": 1995,
+      "tablauf": 1996,
+      "liche": 1997,
+      "suspici": 1998,
+      "falls": 1999,
+      "salve": 2000,
+      "volvement": 2001,
+      "causes": 2002,
+      "Abgän": 2003,
+      "Baselinedrift": 2004,
+      "Baselinewander": 2005,
+      "related": 2006,
+      "infarkt": 2007,
+      "infarktablauf": 2008,
+      "electrode": 2009,
+      "electrodes": 2010,
+      "descend": 2011,
+      "schlecht": 2012,
+      "schlechte": 2013,
+      "NST_": 2014,
+      "calc": 2015,
+      "egk": 2016,
+      "parkinson": 2017,
+      "ergometry": 2018,
+      "resembles": 2019,
+      "unremarkable": 2020,
+      "ankle": 2021,
+      "advised": 2022,
+      "igipfl": 2023,
+      "inferolateric": 2024,
+      "derivatives": 2025,
+      "mitral": 2026,
+      "differences": 2027,
+      "assessed": 2028,
+      "strikingly": 2029,
+      "contribu": 2030,
+      "contributing": 2031,
+      "Hypertwisted": 2032,
+      "KnotungIII": 2033,
+      "couplets": 2034,
+      "2x1": 2035,
+      "Alter": 2036,
+      "Change": 2037,
+      "aortic": 2038,
+      "both": 2039,
+      "benign": 2040,
+      "biatrial": 2041,
+      "baseline": 2042,
+      "focus": 2043,
+      "kompl": 2044,
+      "mamm": 2045,
+      "necessarily": 2046,
+      "sema": 2047,
+      "vagal": 2048,
+      "wolff": 2049,
+      "watts": 2050,
+      "yesterday": 2051,
+      "zweigipfl": 2052,
+      "alternating": 2053,
+      "leitungs": 2054,
+      "isolated": 2055,
+      "replacement": 2056,
+      "status": 2057,
+      "additional": 2058,
+      "emphysema": 2059,
+      "prominent": 2060,
+      "progrssion": 2061,
+      "attack": 2062,
+      "compensatory": 2063,
+      "intermittent": 2064,
+      "apikal": 2065,
+      "immediate": 2066,
+      "generalized": 2067,
+      "ANEUR": 2068,
+      "suspicious": 2069,
+      "Abgänge": 2070,
+      "zweigipflig": 2071
+    },
+    "merges": [
+      [
+        "i",
+        "n"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "t",
+        "h"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "h",
+        "y"
+      ],
+      [
+        "or",
+        "m"
+      ],
+      [
+        "n",
+        "orm"
+      ],
+      [
+        "norm",
+        "al"
+      ],
+      [
+        "s",
+        "in"
+      ],
+      [
+        "u",
+        "s"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "sin",
+        "us"
+      ],
+      [
+        "th",
+        "m"
+      ],
+      [
+        "r",
+        "hy"
+      ],
+      [
+        "rhy",
+        "thm"
+      ],
+      [
+        "p",
+        "e"
+      ],
+      [
+        "i",
+        "on"
+      ],
+      [
+        "t",
+        "r"
+      ],
+      [
+        "t",
+        "ion"
+      ],
+      [
+        "e",
+        "d"
+      ],
+      [
+        "f",
+        "i"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "t",
+        "y"
+      ],
+      [
+        "ty",
+        "pe"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "u",
+        "n"
+      ],
+      [
+        "o",
+        "c"
+      ],
+      [
+        "t",
+        "er"
+      ],
+      [
+        "f",
+        "t"
+      ],
+      [
+        "a",
+        "n"
+      ],
+      [
+        "c",
+        "on"
+      ],
+      [
+        "le",
+        "ft"
+      ],
+      [
+        "a",
+        "b"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "l",
+        "oc"
+      ],
+      [
+        "4",
+        "6"
+      ],
+      [
+        "fi",
+        "r"
+      ],
+      [
+        "m",
+        "ed"
+      ],
+      [
+        "con",
+        "fir"
+      ],
+      [
+        "confir",
+        "med"
+      ],
+      [
+        "un",
+        "confirmed"
+      ],
+      [
+        "re",
+        "p"
+      ],
+      [
+        "or",
+        "t"
+      ],
+      [
+        "rep",
+        "ort"
+      ],
+      [
+        "in",
+        "f"
+      ],
+      [
+        "o",
+        "l"
+      ],
+      [
+        "ab",
+        "normal"
+      ],
+      [
+        "i",
+        "a"
+      ],
+      [
+        "a",
+        "v"
+      ],
+      [
+        "o",
+        "s"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "tr",
+        "i"
+      ],
+      [
+        "g",
+        "e"
+      ],
+      [
+        "ar",
+        "d"
+      ],
+      [
+        "a",
+        "tion"
+      ],
+      [
+        "p",
+        "os"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "c",
+        "tion"
+      ],
+      [
+        "i",
+        "or"
+      ],
+      [
+        "p",
+        "r"
+      ],
+      [
+        "loc",
+        "k"
+      ],
+      [
+        "b",
+        "lock"
+      ],
+      [
+        "tr",
+        "a"
+      ],
+      [
+        "b",
+        "r"
+      ],
+      [
+        "an",
+        "ter"
+      ],
+      [
+        "e",
+        "c"
+      ],
+      [
+        "u",
+        "l"
+      ],
+      [
+        "a",
+        "d"
+      ],
+      [
+        "e",
+        "m"
+      ],
+      [
+        "c",
+        "ul"
+      ],
+      [
+        "ec",
+        "g"
+      ],
+      [
+        "i",
+        "g"
+      ],
+      [
+        "inf",
+        "ar"
+      ],
+      [
+        "cul",
+        "ar"
+      ],
+      [
+        "ard",
+        "i"
+      ],
+      [
+        "a",
+        "ge"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "ig",
+        "h"
+      ],
+      [
+        "infar",
+        "ction"
+      ],
+      [
+        "e",
+        "k"
+      ],
+      [
+        "ek",
+        "g"
+      ],
+      [
+        "r",
+        "s"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "ardi",
+        "al"
+      ],
+      [
+        "oc",
+        "ardial"
+      ],
+      [
+        "q",
+        "rs"
+      ],
+      [
+        "inf",
+        "er"
+      ],
+      [
+        "t",
+        "e"
+      ],
+      [
+        "loc",
+        "ation"
+      ],
+      [
+        "en",
+        "tri"
+      ],
+      [
+        "entri",
+        "cular"
+      ],
+      [
+        "i",
+        "tion"
+      ],
+      [
+        "p",
+        "er"
+      ],
+      [
+        "i",
+        "i"
+      ],
+      [
+        "a",
+        "ter"
+      ],
+      [
+        "ater",
+        "al"
+      ],
+      [
+        "is",
+        "ch"
+      ],
+      [
+        "le",
+        "ad"
+      ],
+      [
+        "fi",
+        "c"
+      ],
+      [
+        "pe",
+        "ci"
+      ],
+      [
+        "s",
+        "peci"
+      ],
+      [
+        "ar",
+        "e"
+      ],
+      [
+        "pos",
+        "ition"
+      ],
+      [
+        "pr",
+        "o"
+      ],
+      [
+        "speci",
+        "fic"
+      ],
+      [
+        "infer",
+        "ior"
+      ],
+      [
+        "lead",
+        "s"
+      ],
+      [
+        "n",
+        "on"
+      ],
+      [
+        "em",
+        "ia"
+      ],
+      [
+        "l",
+        "y"
+      ],
+      [
+        "b",
+        "ab"
+      ],
+      [
+        "pro",
+        "bab"
+      ],
+      [
+        "a",
+        "m"
+      ],
+      [
+        "e",
+        "x"
+      ],
+      [
+        "w",
+        "av"
+      ],
+      [
+        "is",
+        "e"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "en",
+        "t"
+      ],
+      [
+        "igh",
+        "t"
+      ],
+      [
+        "s",
+        "i"
+      ],
+      [
+        "hy",
+        "per"
+      ],
+      [
+        "p",
+        "re"
+      ],
+      [
+        "un",
+        "d"
+      ],
+      [
+        "in",
+        "g"
+      ],
+      [
+        "tri",
+        "al"
+      ],
+      [
+        "th",
+        "er"
+      ],
+      [
+        "b",
+        "und"
+      ],
+      [
+        "an",
+        "ch"
+      ],
+      [
+        "br",
+        "anch"
+      ],
+      [
+        "bund",
+        "le"
+      ],
+      [
+        "r",
+        "ight"
+      ],
+      [
+        "w",
+        "ise"
+      ],
+      [
+        "o",
+        "ther"
+      ],
+      [
+        "m",
+        "y"
+      ],
+      [
+        "s",
+        "tra"
+      ],
+      [
+        "pos",
+        "si"
+      ],
+      [
+        "other",
+        "wise"
+      ],
+      [
+        "stra",
+        "in"
+      ],
+      [
+        "s",
+        "e"
+      ],
+      [
+        "possi",
+        "b"
+      ],
+      [
+        "my",
+        "ocardial"
+      ],
+      [
+        "a",
+        "trial"
+      ],
+      [
+        "t",
+        "ed"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "anter",
+        "ior"
+      ],
+      [
+        "possib",
+        "le"
+      ],
+      [
+        "l",
+        "i"
+      ],
+      [
+        "t",
+        "o"
+      ],
+      [
+        "f",
+        "l"
+      ],
+      [
+        "ol",
+        "d"
+      ],
+      [
+        "ol",
+        "ateral"
+      ],
+      [
+        "m",
+        "in"
+      ],
+      [
+        "o",
+        "w"
+      ],
+      [
+        "v",
+        "entricular"
+      ],
+      [
+        "wav",
+        "es"
+      ],
+      [
+        "b",
+        "e"
+      ],
+      [
+        "isch",
+        "emia"
+      ],
+      [
+        "t",
+        "al"
+      ],
+      [
+        "s",
+        "u"
+      ],
+      [
+        "probab",
+        "le"
+      ],
+      [
+        "ard",
+        "ia"
+      ],
+      [
+        "c",
+        "ardia"
+      ],
+      [
+        "av",
+        "entricular"
+      ],
+      [
+        "n",
+        "o"
+      ],
+      [
+        "l",
+        "l"
+      ],
+      [
+        "s",
+        "s"
+      ],
+      [
+        "w",
+        "i"
+      ],
+      [
+        "c",
+        "o"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "l",
+        "ow"
+      ],
+      [
+        "p",
+        "tal"
+      ],
+      [
+        "d",
+        "u"
+      ],
+      [
+        "i",
+        "ll"
+      ],
+      [
+        "br",
+        "ill"
+      ],
+      [
+        "brill",
+        "ation"
+      ],
+      [
+        "fi",
+        "brillation"
+      ],
+      [
+        "m",
+        "ent"
+      ],
+      [
+        "co",
+        "m"
+      ],
+      [
+        "tr",
+        "ocardial"
+      ],
+      [
+        "isch",
+        "a"
+      ],
+      [
+        "sin",
+        "is"
+      ],
+      [
+        "os",
+        "e"
+      ],
+      [
+        "sinis",
+        "trocardial"
+      ],
+      [
+        "v",
+        "ol"
+      ],
+      [
+        "anter",
+        "ose"
+      ],
+      [
+        "anterose",
+        "ptal"
+      ],
+      [
+        "t",
+        "age"
+      ],
+      [
+        "vol",
+        "tage"
+      ],
+      [
+        "l",
+        "ateral"
+      ],
+      [
+        "tr",
+        "o"
+      ],
+      [
+        "p",
+        "hy"
+      ],
+      [
+        "de",
+        "pre"
+      ],
+      [
+        "depre",
+        "ss"
+      ],
+      [
+        "hyper",
+        "tro"
+      ],
+      [
+        "hypertro",
+        "phy"
+      ],
+      [
+        "t",
+        "en"
+      ],
+      [
+        "com",
+        "p"
+      ],
+      [
+        "h",
+        "igh"
+      ],
+      [
+        "wi",
+        "th"
+      ],
+      [
+        "av",
+        "l"
+      ],
+      [
+        "g",
+        "ment"
+      ],
+      [
+        "se",
+        "gment"
+      ],
+      [
+        "ac",
+        "hy"
+      ],
+      [
+        "s",
+        "y"
+      ],
+      [
+        "t",
+        "achy"
+      ],
+      [
+        "st",
+        "o"
+      ],
+      [
+        "sy",
+        "sto"
+      ],
+      [
+        "systo",
+        "le"
+      ],
+      [
+        "ex",
+        "tra"
+      ],
+      [
+        "ter",
+        "min"
+      ],
+      [
+        "normal",
+        "es"
+      ],
+      [
+        "extra",
+        "systole"
+      ],
+      [
+        "comp",
+        "le"
+      ],
+      [
+        "de",
+        "termin"
+      ],
+      [
+        "v",
+        "er"
+      ],
+      [
+        "te",
+        "am"
+      ],
+      [
+        "p",
+        "a"
+      ],
+      [
+        "i",
+        "c"
+      ],
+      [
+        "anter",
+        "olateral"
+      ],
+      [
+        "pa",
+        "th"
+      ],
+      [
+        "fl",
+        "at"
+      ],
+      [
+        "d",
+        "er"
+      ],
+      [
+        "in",
+        "tr"
+      ],
+      [
+        "o",
+        "g"
+      ],
+      [
+        "an",
+        "d"
+      ],
+      [
+        "a",
+        "x"
+      ],
+      [
+        "ax",
+        "is"
+      ],
+      [
+        "ol",
+        "og"
+      ],
+      [
+        "a",
+        "y"
+      ],
+      [
+        "d",
+        "am"
+      ],
+      [
+        "dam",
+        "age"
+      ],
+      [
+        "path",
+        "olog"
+      ],
+      [
+        "segment",
+        "s"
+      ],
+      [
+        "l",
+        "v"
+      ],
+      [
+        "du",
+        "e"
+      ],
+      [
+        "un",
+        "determin"
+      ],
+      [
+        "undetermin",
+        "ed"
+      ],
+      [
+        "v",
+        "2"
+      ],
+      [
+        "f",
+        "in"
+      ],
+      [
+        "ar",
+        "rhythm"
+      ],
+      [
+        "arrhythm",
+        "ia"
+      ],
+      [
+        "probab",
+        "ly"
+      ],
+      [
+        "ii",
+        "i"
+      ],
+      [
+        "ischa",
+        "emia"
+      ],
+      [
+        "depress",
+        "ed"
+      ],
+      [
+        "tachy",
+        "cardia"
+      ],
+      [
+        "de",
+        "v"
+      ],
+      [
+        "av",
+        "f"
+      ],
+      [
+        "comple",
+        "te"
+      ],
+      [
+        "li",
+        "m"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "dev",
+        "ia"
+      ],
+      [
+        "intr",
+        "aventricular"
+      ],
+      [
+        "d",
+        "ed"
+      ],
+      [
+        "is",
+        "t"
+      ],
+      [
+        "u",
+        "re"
+      ],
+      [
+        "non",
+        "specific"
+      ],
+      [
+        "th",
+        "is"
+      ],
+      [
+        "v",
+        "4"
+      ],
+      [
+        "wav",
+        "e"
+      ],
+      [
+        "th",
+        "e"
+      ],
+      [
+        "at",
+        "ure"
+      ],
+      [
+        "hyper",
+        "ex"
+      ],
+      [
+        "in",
+        "complete"
+      ],
+      [
+        "on",
+        "g"
+      ],
+      [
+        "su",
+        "g"
+      ],
+      [
+        "m",
+        "ature"
+      ],
+      [
+        "ge",
+        "st"
+      ],
+      [
+        "sug",
+        "gest"
+      ],
+      [
+        "pre",
+        "mature"
+      ],
+      [
+        "c",
+        "ted"
+      ],
+      [
+        "s",
+        "us"
+      ],
+      [
+        "sus",
+        "pe"
+      ],
+      [
+        "suspe",
+        "cted"
+      ],
+      [
+        "ol",
+        "ong"
+      ],
+      [
+        "pr",
+        "olong"
+      ],
+      [
+        "devia",
+        "tion"
+      ],
+      [
+        "con",
+        "tra"
+      ],
+      [
+        "no",
+        "t"
+      ],
+      [
+        "contra",
+        "ction"
+      ],
+      [
+        "p",
+        "h"
+      ],
+      [
+        "in",
+        "ver"
+      ],
+      [
+        "i",
+        "ph"
+      ],
+      [
+        "v",
+        "5"
+      ],
+      [
+        "br",
+        "ad"
+      ],
+      [
+        "brad",
+        "y"
+      ],
+      [
+        "i",
+        "t"
+      ],
+      [
+        "m",
+        "ay"
+      ],
+      [
+        "brady",
+        "cardia"
+      ],
+      [
+        "lim",
+        "b"
+      ],
+      [
+        "su",
+        "pr"
+      ],
+      [
+        "s",
+        "ist"
+      ],
+      [
+        "e",
+        "le"
+      ],
+      [
+        "e",
+        "st"
+      ],
+      [
+        "supr",
+        "aventricular"
+      ],
+      [
+        ")",
+        "."
+      ],
+      [
+        "er",
+        "al"
+      ],
+      [
+        "sist",
+        "ent"
+      ],
+      [
+        "ch",
+        "an"
+      ],
+      [
+        "con",
+        "sistent"
+      ],
+      [
+        "ten",
+        "ded"
+      ],
+      [
+        "hyperex",
+        "tended"
+      ],
+      [
+        "per",
+        "iph"
+      ],
+      [
+        "periph",
+        "eral"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "ut",
+        "ter"
+      ],
+      [
+        "fl",
+        "utter"
+      ],
+      [
+        "o",
+        "f"
+      ],
+      [
+        "chan",
+        "ge"
+      ],
+      [
+        "i",
+        "te"
+      ],
+      [
+        "de",
+        "fin"
+      ],
+      [
+        "defin",
+        "ite"
+      ],
+      [
+        "f",
+        "as"
+      ],
+      [
+        "ci",
+        "cular"
+      ],
+      [
+        "fas",
+        "cicular"
+      ],
+      [
+        "inver",
+        "ted"
+      ],
+      [
+        "c",
+        "an"
+      ],
+      [
+        "infer",
+        "olateral"
+      ],
+      [
+        "d",
+        "is"
+      ],
+      [
+        "patholog",
+        "y"
+      ],
+      [
+        "suggest",
+        "ing"
+      ],
+      [
+        "can",
+        "not"
+      ],
+      [
+        "voltage",
+        "s"
+      ],
+      [
+        "or",
+        "der"
+      ],
+      [
+        "r",
+        "u"
+      ],
+      [
+        "o",
+        "ut"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "u",
+        "de"
+      ],
+      [
+        "lv",
+        "h"
+      ],
+      [
+        "change",
+        "s"
+      ],
+      [
+        "e",
+        "ly"
+      ],
+      [
+        "O",
+        "R"
+      ],
+      [
+        "ar",
+        "t"
+      ],
+      [
+        "r",
+        "i"
+      ],
+      [
+        "10",
+        "0"
+      ],
+      [
+        "v",
+        "3"
+      ],
+      [
+        "N",
+        "OR"
+      ],
+      [
+        "NOR",
+        "M"
+      ],
+      [
+        "em",
+        "i"
+      ],
+      [
+        "E",
+        "d"
+      ],
+      [
+        "Ed",
+        "it"
+      ],
+      [
+        "in",
+        "ter"
+      ],
+      [
+        "li",
+        "k"
+      ],
+      [
+        "lik",
+        "ely"
+      ],
+      [
+        "prolong",
+        "ed"
+      ],
+      [
+        "emi",
+        "block"
+      ],
+      [
+        "h",
+        "emiblock"
+      ],
+      [
+        "a",
+        "se"
+      ],
+      [
+        "q",
+        "t"
+      ],
+      [
+        "v",
+        "1"
+      ],
+      [
+        "on",
+        "ly"
+      ],
+      [
+        "le",
+        "d"
+      ],
+      [
+        "a",
+        "te"
+      ],
+      [
+        "con",
+        "du"
+      ],
+      [
+        "h",
+        "e"
+      ],
+      [
+        "condu",
+        "ction"
+      ],
+      [
+        "ru",
+        "led"
+      ],
+      [
+        "f",
+        "or"
+      ],
+      [
+        "flat",
+        "ten"
+      ],
+      [
+        "ischa",
+        "em"
+      ],
+      [
+        "ic",
+        "al"
+      ],
+      [
+        "he",
+        "art"
+      ],
+      [
+        "ischaem",
+        "ic"
+      ],
+      [
+        "li",
+        "t"
+      ],
+      [
+        "dis",
+        "order"
+      ],
+      [
+        "flatten",
+        "ing"
+      ],
+      [
+        "p",
+        "lit"
+      ],
+      [
+        "am",
+        "plit"
+      ],
+      [
+        "amplit",
+        "ude"
+      ],
+      [
+        "d",
+        "ise"
+      ],
+      [
+        "v",
+        "al"
+      ],
+      [
+        "dise",
+        "ase"
+      ],
+      [
+        "ele",
+        "v"
+      ],
+      [
+        "inter",
+        "val"
+      ],
+      [
+        "c",
+        "ri"
+      ],
+      [
+        "s",
+        "h"
+      ],
+      [
+        "ter",
+        "ia"
+      ],
+      [
+        "cri",
+        "teria"
+      ],
+      [
+        "en",
+        "ing"
+      ],
+      [
+        "q",
+        "u"
+      ],
+      [
+        "depress",
+        "ion"
+      ],
+      [
+        "m",
+        "o"
+      ],
+      [
+        "der",
+        "ate"
+      ],
+      [
+        "mo",
+        "derate"
+      ],
+      [
+        "patholog",
+        "ical"
+      ],
+      [
+        "d",
+        "ing"
+      ],
+      [
+        "v",
+        "6"
+      ],
+      [
+        "re",
+        "qu"
+      ],
+      [
+        "ch",
+        "est"
+      ],
+      [
+        "tra",
+        "ce"
+      ],
+      [
+        "fin",
+        "ding"
+      ],
+      [
+        "c",
+        "t"
+      ],
+      [
+        "l",
+        "in"
+      ],
+      [
+        "est",
+        "ed"
+      ],
+      [
+        "requ",
+        "ested"
+      ],
+      [
+        "p",
+        "ac"
+      ],
+      [
+        "infar",
+        "ct"
+      ],
+      [
+        "i",
+        "d"
+      ],
+      [
+        "finding",
+        "s"
+      ],
+      [
+        "a",
+        "k"
+      ],
+      [
+        "elev",
+        "ation"
+      ],
+      [
+        "c",
+        "ardi"
+      ],
+      [
+        "an",
+        "s"
+      ],
+      [
+        "tr",
+        "ans"
+      ],
+      [
+        "trans",
+        "ition"
+      ],
+      [
+        "b",
+        "ut"
+      ],
+      [
+        "s",
+        "ion"
+      ],
+      [
+        "o",
+        "ver"
+      ],
+      [
+        "g",
+        "re"
+      ],
+      [
+        "tachy",
+        "cardi"
+      ],
+      [
+        "tachycardi",
+        "c"
+      ],
+      [
+        "prolong",
+        "ation"
+      ],
+      [
+        "em",
+        "ak"
+      ],
+      [
+        "pac",
+        "emak"
+      ],
+      [
+        "pacemak",
+        "er"
+      ],
+      [
+        "f",
+        "f"
+      ],
+      [
+        "l",
+        "ay"
+      ],
+      [
+        "ele",
+        "c"
+      ],
+      [
+        "b",
+        "i"
+      ],
+      [
+        "min",
+        "or"
+      ],
+      [
+        "s",
+        "l"
+      ],
+      [
+        "t",
+        "w"
+      ],
+      [
+        "o",
+        "ad"
+      ],
+      [
+        "is",
+        "ted"
+      ],
+      [
+        "comple",
+        "x"
+      ],
+      [
+        "tw",
+        "isted"
+      ],
+      [
+        "ex",
+        "c"
+      ],
+      [
+        "complex",
+        "es"
+      ],
+      [
+        "s",
+        "p"
+      ],
+      [
+        "n",
+        "e"
+      ],
+      [
+        "exc",
+        "l"
+      ],
+      [
+        "d",
+        "ening"
+      ],
+      [
+        "wi",
+        "dening"
+      ],
+      [
+        "a",
+        "p"
+      ],
+      [
+        "q",
+        "s"
+      ],
+      [
+        "u",
+        "r"
+      ],
+      [
+        "ec",
+        "t"
+      ],
+      [
+        "e",
+        "ff"
+      ],
+      [
+        "sl",
+        "ight"
+      ],
+      [
+        "eff",
+        "ect"
+      ],
+      [
+        "B",
+        "B"
+      ],
+      [
+        "ne",
+        "g"
+      ],
+      [
+        "l",
+        "ar"
+      ],
+      [
+        "ss",
+        "ion"
+      ],
+      [
+        "pro",
+        "gre"
+      ],
+      [
+        "progre",
+        "ssion"
+      ],
+      [
+        "i",
+        "f"
+      ],
+      [
+        "re",
+        "sp"
+      ],
+      [
+        "en",
+        "tr"
+      ],
+      [
+        "lin",
+        "e"
+      ],
+      [
+        "en",
+        "lar"
+      ],
+      [
+        "ge",
+        "ment"
+      ],
+      [
+        "enlar",
+        "gement"
+      ],
+      [
+        "resp",
+        "on"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "ci",
+        "ted"
+      ],
+      [
+        "slight",
+        "ly"
+      ],
+      [
+        "respon",
+        "se"
+      ],
+      [
+        "M",
+        "I"
+      ],
+      [
+        "an",
+        "ce"
+      ],
+      [
+        "r",
+        "ap"
+      ],
+      [
+        "rap",
+        "id"
+      ],
+      [
+        "c",
+        "er"
+      ],
+      [
+        "av",
+        "entr"
+      ],
+      [
+        "A",
+        "trial"
+      ],
+      [
+        "at",
+        "ed"
+      ],
+      [
+        "ta",
+        "in"
+      ],
+      [
+        "cer",
+        "tain"
+      ],
+      [
+        "de",
+        "lay"
+      ],
+      [
+        "d",
+        "ig"
+      ],
+      [
+        "o",
+        "k"
+      ],
+      [
+        "ty",
+        "p"
+      ],
+      [
+        "tri",
+        "c"
+      ],
+      [
+        "C",
+        "G"
+      ],
+      [
+        "E",
+        "CG"
+      ],
+      [
+        "elec",
+        "tric"
+      ],
+      [
+        "ge",
+        "min"
+      ],
+      [
+        "intr",
+        "aventr"
+      ],
+      [
+        "un",
+        "certain"
+      ],
+      [
+        "rhythm",
+        "us"
+      ],
+      [
+        "I",
+        "I"
+      ],
+      [
+        "c",
+        "a"
+      ],
+      [
+        "i",
+        "tal"
+      ],
+      [
+        ")",
+        ","
+      ],
+      [
+        "sinus",
+        "rhythmus"
+      ],
+      [
+        "dig",
+        "ital"
+      ],
+      [
+        "l",
+        "oad"
+      ],
+      [
+        "bi",
+        "fascicular"
+      ],
+      [
+        "digital",
+        "is"
+      ],
+      [
+        "lim",
+        "it"
+      ],
+      [
+        "b",
+        "order"
+      ],
+      [
+        "border",
+        "line"
+      ],
+      [
+        "i",
+        "ft"
+      ],
+      [
+        "sh",
+        "ift"
+      ],
+      [
+        "us",
+        "e"
+      ],
+      [
+        "shift",
+        "ed"
+      ],
+      [
+        "on",
+        "e"
+      ],
+      [
+        "ten",
+        "sion"
+      ],
+      [
+        "un",
+        "specific"
+      ],
+      [
+        "u",
+        "te"
+      ],
+      [
+        "l",
+        "ac"
+      ],
+      [
+        "inver",
+        "sion"
+      ],
+      [
+        "excl",
+        "u"
+      ],
+      [
+        "exclu",
+        "ded"
+      ],
+      [
+        "hyperex",
+        "cited"
+      ],
+      [
+        "A",
+        "S"
+      ],
+      [
+        "z",
+        "one"
+      ],
+      [
+        "p",
+        "lac"
+      ],
+      [
+        "plac",
+        "ed"
+      ],
+      [
+        "d",
+        "ist"
+      ],
+      [
+        "ex",
+        "tr"
+      ],
+      [
+        "ac",
+        "ute"
+      ],
+      [
+        "dis",
+        "placed"
+      ],
+      [
+        "dist",
+        "ur"
+      ],
+      [
+        "c",
+        "ing"
+      ],
+      [
+        "v",
+        "e"
+      ],
+      [
+        "th",
+        "es"
+      ],
+      [
+        "tra",
+        "cing"
+      ],
+      [
+        "distur",
+        "b"
+      ],
+      [
+        "5",
+        "0"
+      ],
+      [
+        "thes",
+        "e"
+      ],
+      [
+        "os",
+        "t"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "disturb",
+        "ance"
+      ],
+      [
+        "t",
+        "in"
+      ],
+      [
+        "an",
+        "t"
+      ],
+      [
+        "ca",
+        "use"
+      ],
+      [
+        "I",
+        "N"
+      ],
+      [
+        "tin",
+        "y"
+      ],
+      [
+        "A",
+        "V"
+      ],
+      [
+        "d",
+        "if"
+      ],
+      [
+        "fi",
+        "cul"
+      ],
+      [
+        "dif",
+        "ficul"
+      ],
+      [
+        "difficul",
+        "t"
+      ],
+      [
+        "u",
+        "rs"
+      ],
+      [
+        "determin",
+        "e"
+      ],
+      [
+        "urs",
+        "e"
+      ],
+      [
+        "r",
+        "on"
+      ],
+      [
+        "BB",
+        "B"
+      ],
+      [
+        "tr",
+        "ol"
+      ],
+      [
+        "br",
+        "oad"
+      ],
+      [
+        "co",
+        "urse"
+      ],
+      [
+        "bi",
+        "gemin"
+      ],
+      [
+        "extr",
+        "em"
+      ],
+      [
+        "IN",
+        "J"
+      ],
+      [
+        "v",
+        "id"
+      ],
+      [
+        "e",
+        "vid"
+      ],
+      [
+        "m",
+        "ost"
+      ],
+      [
+        "broad",
+        "ening"
+      ],
+      [
+        "d",
+        "ru"
+      ],
+      [
+        "u",
+        "p"
+      ],
+      [
+        "si",
+        "der"
+      ],
+      [
+        "dru",
+        "g"
+      ],
+      [
+        "normal",
+        "ly"
+      ],
+      [
+        "ch",
+        "ron"
+      ],
+      [
+        "lay",
+        "er"
+      ],
+      [
+        "R",
+        "BBB"
+      ],
+      [
+        "sh",
+        "a"
+      ],
+      [
+        "elec",
+        "trol"
+      ],
+      [
+        "excl",
+        "ude"
+      ],
+      [
+        "V",
+        "H"
+      ],
+      [
+        "m",
+        "only"
+      ],
+      [
+        "y",
+        "te"
+      ],
+      [
+        "re",
+        "g"
+      ],
+      [
+        "com",
+        "monly"
+      ],
+      [
+        "lin",
+        "k"
+      ],
+      [
+        "electrol",
+        "yte"
+      ],
+      [
+        "con",
+        "sider"
+      ],
+      [
+        "ul",
+        "ar"
+      ],
+      [
+        "ll",
+        "t"
+      ],
+      [
+        "up",
+        "per"
+      ],
+      [
+        "reg",
+        "ular"
+      ],
+      [
+        "ig",
+        "n"
+      ],
+      [
+        "g",
+        "h"
+      ],
+      [
+        "u",
+        "gh"
+      ],
+      [
+        "ar",
+        "i"
+      ],
+      [
+        "ar",
+        "ed"
+      ],
+      [
+        "sha",
+        "ft"
+      ],
+      [
+        "v",
+        "en"
+      ],
+      [
+        "possib",
+        "ly"
+      ],
+      [
+        "sinistrocardial",
+        "e"
+      ],
+      [
+        "comp",
+        "ared"
+      ],
+      [
+        "1",
+        "5"
+      ],
+      [
+        "c",
+        "re"
+      ],
+      [
+        "d",
+        "ri"
+      ],
+      [
+        "t",
+        "ing"
+      ],
+      [
+        "over",
+        "dri"
+      ],
+      [
+        "al",
+        "t"
+      ],
+      [
+        "devia",
+        "ting"
+      ],
+      [
+        "s",
+        "ign"
+      ],
+      [
+        "hy",
+        "p"
+      ],
+      [
+        "9",
+        "2"
+      ],
+      [
+        "a",
+        "emia"
+      ],
+      [
+        "se",
+        "ptal"
+      ],
+      [
+        "overdri",
+        "ven"
+      ],
+      [
+        "hyp",
+        "ok"
+      ],
+      [
+        "i",
+        "ve"
+      ],
+      [
+        "al",
+        "aemia"
+      ],
+      [
+        "ac",
+        "t"
+      ],
+      [
+        "ro",
+        "ugh"
+      ],
+      [
+        "hypok",
+        "alaemia"
+      ],
+      [
+        "th",
+        "rough"
+      ],
+      [
+        "L",
+        "VH"
+      ],
+      [
+        "link",
+        "s"
+      ],
+      [
+        "b",
+        "iph"
+      ],
+      [
+        "8",
+        "0"
+      ],
+      [
+        "I",
+        "S"
+      ],
+      [
+        "elev",
+        "ated"
+      ],
+      [
+        "through",
+        "out"
+      ],
+      [
+        "i",
+        "fic"
+      ],
+      [
+        "ol",
+        "ow"
+      ],
+      [
+        "ok",
+        "olow"
+      ],
+      [
+        "sign",
+        "ific"
+      ],
+      [
+        "IS",
+        "C"
+      ],
+      [
+        "evid",
+        "ent"
+      ],
+      [
+        "a",
+        "si"
+      ],
+      [
+        "links",
+        "typ"
+      ],
+      [
+        "al",
+        "l"
+      ],
+      [
+        "II",
+        "I"
+      ],
+      [
+        "S",
+        "okolow"
+      ],
+      [
+        "su",
+        "b"
+      ],
+      [
+        "p",
+        "o"
+      ],
+      [
+        "AS",
+        "MI"
+      ],
+      [
+        "hyper",
+        "twisted"
+      ],
+      [
+        "extrem",
+        "e"
+      ],
+      [
+        "age",
+        "typ"
+      ],
+      [
+        "electric",
+        "al"
+      ],
+      [
+        "asi",
+        "c"
+      ],
+      [
+        "s",
+        "ent"
+      ],
+      [
+        "re",
+        "c"
+      ],
+      [
+        "ul",
+        "d"
+      ],
+      [
+        "l",
+        "agetyp"
+      ],
+      [
+        "be",
+        "at"
+      ],
+      [
+        "over",
+        "load"
+      ],
+      [
+        "chron",
+        "ic"
+      ],
+      [
+        "I",
+        "RBBB"
+      ],
+      [
+        "n",
+        "ow"
+      ],
+      [
+        "biph",
+        "asic"
+      ],
+      [
+        "i",
+        "ty"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "ter",
+        "ior"
+      ],
+      [
+        "pos",
+        "terior"
+      ],
+      [
+        "po",
+        "or"
+      ],
+      [
+        "v",
+        "ari"
+      ],
+      [
+        "de",
+        "gre"
+      ],
+      [
+        "rec",
+        "ent"
+      ],
+      [
+        "S",
+        "in"
+      ],
+      [
+        "o",
+        "uld"
+      ],
+      [
+        "degre",
+        "e"
+      ],
+      [
+        "Sin",
+        "us"
+      ],
+      [
+        "in",
+        "d"
+      ],
+      [
+        "en",
+        "d"
+      ],
+      [
+        "abnormal",
+        "ity"
+      ],
+      [
+        "ther",
+        "e"
+      ],
+      [
+        "bigemin",
+        "us"
+      ],
+      [
+        "INJ",
+        "AS"
+      ],
+      [
+        "s",
+        "m"
+      ],
+      [
+        "A",
+        "L"
+      ],
+      [
+        "fi",
+        "ed"
+      ],
+      [
+        "pre",
+        "sent"
+      ],
+      [
+        "sh",
+        "ould"
+      ],
+      [
+        "I",
+        "MI"
+      ],
+      [
+        "tri",
+        "gemin"
+      ],
+      [
+        "consider",
+        "ed"
+      ],
+      [
+        "sub",
+        "end"
+      ],
+      [
+        "l",
+        "t"
+      ],
+      [
+        "le",
+        "g"
+      ],
+      [
+        "un",
+        "speci"
+      ],
+      [
+        "subend",
+        "ocardial"
+      ],
+      [
+        "unspeci",
+        "fied"
+      ],
+      [
+        "F",
+        "B"
+      ],
+      [
+        "L",
+        "A"
+      ],
+      [
+        "p",
+        "art"
+      ],
+      [
+        "bigemin",
+        "y"
+      ],
+      [
+        "signific",
+        "ance"
+      ],
+      [
+        "e",
+        "p"
+      ],
+      [
+        "de",
+        "cre"
+      ],
+      [
+        "vari",
+        "ant"
+      ],
+      [
+        "decre",
+        "ase"
+      ],
+      [
+        "b",
+        "ad"
+      ],
+      [
+        "p",
+        "at"
+      ],
+      [
+        "ab",
+        "le"
+      ],
+      [
+        "ex",
+        "cited"
+      ],
+      [
+        "no",
+        "ted"
+      ],
+      [
+        "act",
+        "ive"
+      ],
+      [
+        "delay",
+        "ed"
+      ],
+      [
+        "g",
+        "r"
+      ],
+      [
+        "i",
+        "al"
+      ],
+      [
+        "o",
+        "us"
+      ],
+      [
+        "en",
+        "ce"
+      ],
+      [
+        "hyper",
+        "active"
+      ],
+      [
+        "over",
+        "excited"
+      ],
+      [
+        "ur",
+        "y"
+      ],
+      [
+        "low",
+        "er"
+      ],
+      [
+        "L",
+        "MI"
+      ],
+      [
+        "m",
+        "e"
+      ],
+      [
+        "t",
+        "ation"
+      ],
+      [
+        "v",
+        "es"
+      ],
+      [
+        "un",
+        "ction"
+      ],
+      [
+        "sm",
+        "all"
+      ],
+      [
+        "m",
+        "i"
+      ],
+      [
+        "av",
+        "r"
+      ],
+      [
+        "pos",
+        "ed"
+      ],
+      [
+        "inter",
+        "posed"
+      ],
+      [
+        "n",
+        "er"
+      ],
+      [
+        "w",
+        "h"
+      ],
+      [
+        "in",
+        "ner"
+      ],
+      [
+        "er",
+        "ated"
+      ],
+      [
+        "sin",
+        "g"
+      ],
+      [
+        "de",
+        "s"
+      ],
+      [
+        "if",
+        "orm"
+      ],
+      [
+        "INJ",
+        "AL"
+      ],
+      [
+        "beat",
+        "s"
+      ],
+      [
+        "A",
+        "ge"
+      ],
+      [
+        "m",
+        "is"
+      ],
+      [
+        "w",
+        "ard"
+      ],
+      [
+        "rep",
+        "ol"
+      ],
+      [
+        "sh",
+        "ow"
+      ],
+      [
+        "extrem",
+        "ely"
+      ],
+      [
+        "lower",
+        "ing"
+      ],
+      [
+        "mis",
+        "sing"
+      ],
+      [
+        "1",
+        "st"
+      ],
+      [
+        "C",
+        "RBBB"
+      ],
+      [
+        "m",
+        "lt"
+      ],
+      [
+        "u",
+        "m"
+      ],
+      [
+        "j",
+        "ury"
+      ],
+      [
+        "in",
+        "jury"
+      ],
+      [
+        "extrasystole",
+        "s"
+      ],
+      [
+        "l",
+        "erated"
+      ],
+      [
+        "r",
+        "ate"
+      ],
+      [
+        "v",
+        "i"
+      ],
+      [
+        "ac",
+        "ce"
+      ],
+      [
+        "ind",
+        "ic"
+      ],
+      [
+        "acce",
+        "lerated"
+      ],
+      [
+        "i",
+        "k"
+      ],
+      [
+        "i",
+        "ch"
+      ],
+      [
+        "termin",
+        "al"
+      ],
+      [
+        "part",
+        "ial"
+      ],
+      [
+        "e",
+        "ar"
+      ],
+      [
+        "f",
+        "e"
+      ],
+      [
+        "t",
+        "ec"
+      ],
+      [
+        "z",
+        "ation"
+      ],
+      [
+        "ar",
+        "k"
+      ],
+      [
+        "de",
+        "tec"
+      ],
+      [
+        "trigemin",
+        "al"
+      ],
+      [
+        "LA",
+        "FB"
+      ],
+      [
+        "detec",
+        "ted"
+      ],
+      [
+        "N",
+        "D"
+      ],
+      [
+        "h",
+        "as"
+      ],
+      [
+        "ari",
+        "zation"
+      ],
+      [
+        "repol",
+        "arization"
+      ],
+      [
+        "b",
+        "s"
+      ],
+      [
+        "b",
+        "er"
+      ],
+      [
+        "i",
+        "m"
+      ],
+      [
+        "s",
+        "o"
+      ],
+      [
+        "un",
+        "iform"
+      ],
+      [
+        "contraction",
+        "s"
+      ],
+      [
+        "dis",
+        "cre"
+      ],
+      [
+        "art",
+        "if"
+      ],
+      [
+        "wh",
+        "ich"
+      ],
+      [
+        "ND",
+        "T"
+      ],
+      [
+        "artif",
+        "act"
+      ],
+      [
+        "chan",
+        "g"
+      ],
+      [
+        "pac",
+        "ed"
+      ],
+      [
+        "sp",
+        "ik"
+      ],
+      [
+        "discre",
+        "te"
+      ],
+      [
+        "S",
+        "III"
+      ],
+      [
+        "p",
+        "w"
+      ],
+      [
+        "r",
+        "ed"
+      ],
+      [
+        "w",
+        "pw"
+      ],
+      [
+        "os",
+        "s"
+      ],
+      [
+        "ver",
+        "y"
+      ],
+      [
+        "consider",
+        "ing"
+      ],
+      [
+        "signific",
+        "ant"
+      ],
+      [
+        "spik",
+        "es"
+      ],
+      [
+        "i",
+        "ent"
+      ],
+      [
+        "u",
+        "ction"
+      ],
+      [
+        "un",
+        "g"
+      ],
+      [
+        "per",
+        "ic"
+      ],
+      [
+        "si",
+        "mi"
+      ],
+      [
+        "evid",
+        "ence"
+      ],
+      [
+        "pat",
+        "ient"
+      ],
+      [
+        "ear",
+        "ly"
+      ],
+      [
+        "simi",
+        "lar"
+      ],
+      [
+        "C",
+        "B"
+      ],
+      [
+        "I",
+        "V"
+      ],
+      [
+        "a",
+        "V"
+      ],
+      [
+        "l",
+        "a"
+      ],
+      [
+        "p",
+        "ar"
+      ],
+      [
+        "s",
+        "a"
+      ],
+      [
+        "u",
+        "e"
+      ],
+      [
+        "anter",
+        "o"
+      ],
+      [
+        "chang",
+        "ed"
+      ],
+      [
+        "IV",
+        "CB"
+      ],
+      [
+        "d",
+        "re"
+      ],
+      [
+        "g",
+        "n"
+      ],
+      [
+        "h",
+        "ter"
+      ],
+      [
+        "m",
+        "ark"
+      ],
+      [
+        "s",
+        "low"
+      ],
+      [
+        "no",
+        "de"
+      ],
+      [
+        "patholog",
+        "ic"
+      ],
+      [
+        "dre",
+        "hter"
+      ],
+      [
+        "d",
+        "ia"
+      ],
+      [
+        "f",
+        "unction"
+      ],
+      [
+        "i",
+        "r"
+      ],
+      [
+        "pe",
+        "ar"
+      ],
+      [
+        "re",
+        "pe"
+      ],
+      [
+        "ul",
+        "t"
+      ],
+      [
+        "si",
+        "ded"
+      ],
+      [
+        "sl",
+        "t"
+      ],
+      [
+        "ap",
+        "pear"
+      ],
+      [
+        "ber",
+        "drehter"
+      ],
+      [
+        "ue",
+        "berdrehter"
+      ],
+      [
+        "dia",
+        "gn"
+      ],
+      [
+        "b",
+        "b"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "k",
+        "now"
+      ],
+      [
+        "n",
+        "ed"
+      ],
+      [
+        "o",
+        "bs"
+      ],
+      [
+        "t",
+        "ur"
+      ],
+      [
+        "un",
+        "know"
+      ],
+      [
+        "right",
+        "ward"
+      ],
+      [
+        "mark",
+        "ed"
+      ],
+      [
+        "repe",
+        "at"
+      ],
+      [
+        "tur",
+        "ned"
+      ],
+      [
+        "unknow",
+        "n"
+      ],
+      [
+        "k",
+        "ardi"
+      ],
+      [
+        "t",
+        "on"
+      ],
+      [
+        "st",
+        "e"
+      ],
+      [
+        "de",
+        "ep"
+      ],
+      [
+        "hyper",
+        "ton"
+      ],
+      [
+        "determin",
+        "able"
+      ],
+      [
+        "ost",
+        "ic"
+      ],
+      [
+        "ISC",
+        "_"
+      ],
+      [
+        "red",
+        "uction"
+      ],
+      [
+        "diagn",
+        "ostic"
+      ],
+      [
+        "kardi",
+        "e"
+      ],
+      [
+        "hyperton",
+        "ic"
+      ],
+      [
+        "g",
+        "en"
+      ],
+      [
+        "er",
+        "r"
+      ],
+      [
+        "es",
+        "ca"
+      ],
+      [
+        "at",
+        "ive"
+      ],
+      [
+        "ent",
+        "ly"
+      ],
+      [
+        "ap",
+        "par"
+      ],
+      [
+        "load",
+        "ing"
+      ],
+      [
+        "leg",
+        "al"
+      ],
+      [
+        "gr",
+        "oss"
+      ],
+      [
+        "esca",
+        "pe"
+      ],
+      [
+        "appar",
+        "ently"
+      ],
+      [
+        "d",
+        "o"
+      ],
+      [
+        "o",
+        "und"
+      ],
+      [
+        "or",
+        "e"
+      ],
+      [
+        "th",
+        "at"
+      ],
+      [
+        "ab",
+        "err"
+      ],
+      [
+        "olog",
+        "ical"
+      ],
+      [
+        "emi",
+        "ty"
+      ],
+      [
+        "over",
+        "w"
+      ],
+      [
+        "extr",
+        "emity"
+      ],
+      [
+        "la",
+        "h"
+      ],
+      [
+        "aberr",
+        "ant"
+      ],
+      [
+        "a",
+        "tri"
+      ],
+      [
+        "c",
+        "or"
+      ],
+      [
+        "r",
+        "a"
+      ],
+      [
+        "in",
+        "determin"
+      ],
+      [
+        "si",
+        "ve"
+      ],
+      [
+        "flatten",
+        "ed"
+      ],
+      [
+        "neg",
+        "ative"
+      ],
+      [
+        "ro",
+        "tation"
+      ],
+      [
+        "sa",
+        "fe"
+      ],
+      [
+        "ste",
+        "ep"
+      ],
+      [
+        "gen",
+        "eral"
+      ],
+      [
+        "indetermin",
+        "ate"
+      ],
+      [
+        "V",
+        "1"
+      ],
+      [
+        "c",
+        "ure"
+      ],
+      [
+        "f",
+        "ur"
+      ],
+      [
+        "f",
+        "ound"
+      ],
+      [
+        "l",
+        "der"
+      ],
+      [
+        "or",
+        "y"
+      ],
+      [
+        "ter",
+        "n"
+      ],
+      [
+        "es",
+        "s"
+      ],
+      [
+        "ent",
+        "i"
+      ],
+      [
+        "pre",
+        "ad"
+      ],
+      [
+        "pre",
+        "tation"
+      ],
+      [
+        "pre",
+        "vi"
+      ],
+      [
+        "wi",
+        "des"
+      ],
+      [
+        "inter",
+        "pretation"
+      ],
+      [
+        "amplitude",
+        "s"
+      ],
+      [
+        "gr",
+        "a"
+      ],
+      [
+        "obs",
+        "cure"
+      ],
+      [
+        "atri",
+        "um"
+      ],
+      [
+        "fur",
+        "ther"
+      ],
+      [
+        "previ",
+        "ous"
+      ],
+      [
+        "wides",
+        "pread"
+      ],
+      [
+        "obscure",
+        "s"
+      ],
+      [
+        "a",
+        "ff"
+      ],
+      [
+        "e",
+        "ction"
+      ],
+      [
+        "f",
+        "a"
+      ],
+      [
+        "f",
+        "ul"
+      ],
+      [
+        "j",
+        "unction"
+      ],
+      [
+        "n",
+        "ature"
+      ],
+      [
+        "r",
+        "SIII"
+      ],
+      [
+        "s",
+        "r"
+      ],
+      [
+        "u",
+        "al"
+      ],
+      [
+        "v",
+        "entr"
+      ],
+      [
+        "re",
+        "ly"
+      ],
+      [
+        "at",
+        "ory"
+      ],
+      [
+        "ne",
+        "w"
+      ],
+      [
+        "overw",
+        "ind"
+      ],
+      [
+        "enti",
+        "rely"
+      ],
+      [
+        "aff",
+        "ection"
+      ],
+      [
+        "junction",
+        "al"
+      ],
+      [
+        "1",
+        "2"
+      ],
+      [
+        "9",
+        "1"
+      ],
+      [
+        "A",
+        "O"
+      ],
+      [
+        "R",
+        "VH"
+      ],
+      [
+        "R",
+        "AO"
+      ],
+      [
+        "c",
+        "es"
+      ],
+      [
+        "e",
+        "w"
+      ],
+      [
+        "n",
+        "ar"
+      ],
+      [
+        "o",
+        "x"
+      ],
+      [
+        "p",
+        "ul"
+      ],
+      [
+        "r",
+        "ow"
+      ],
+      [
+        "u",
+        "b"
+      ],
+      [
+        "norm",
+        "oc"
+      ],
+      [
+        "pe",
+        "d"
+      ],
+      [
+        "per",
+        "sist"
+      ],
+      [
+        "suggest",
+        "s"
+      ],
+      [
+        "over",
+        "turned"
+      ],
+      [
+        "biph",
+        "as"
+      ],
+      [
+        "sub",
+        "acute"
+      ],
+      [
+        "vi",
+        "ew"
+      ],
+      [
+        "so",
+        "me"
+      ],
+      [
+        "significant",
+        "ly"
+      ],
+      [
+        "aV",
+        "L"
+      ],
+      [
+        "do",
+        "ub"
+      ],
+      [
+        "lah",
+        "b"
+      ],
+      [
+        "nar",
+        "row"
+      ],
+      [
+        "3",
+        "5"
+      ],
+      [
+        "E",
+        "K"
+      ],
+      [
+        "L",
+        "P"
+      ],
+      [
+        "d",
+        "le"
+      ],
+      [
+        "k",
+        "e"
+      ],
+      [
+        "m",
+        "id"
+      ],
+      [
+        "m",
+        "ore"
+      ],
+      [
+        "s",
+        "ves"
+      ],
+      [
+        "u",
+        "pr"
+      ],
+      [
+        "u",
+        "ous"
+      ],
+      [
+        "w",
+        "all"
+      ],
+      [
+        "in",
+        "con"
+      ],
+      [
+        "pe",
+        "ak"
+      ],
+      [
+        "an",
+        "e"
+      ],
+      [
+        "su",
+        "re"
+      ],
+      [
+        "ic",
+        "uous"
+      ],
+      [
+        "dev",
+        "el"
+      ],
+      [
+        "sp",
+        "icuous"
+      ],
+      [
+        "el",
+        "ong"
+      ],
+      [
+        "trigemin",
+        "y"
+      ],
+      [
+        "indic",
+        "ate"
+      ],
+      [
+        "indic",
+        "ated"
+      ],
+      [
+        "peric",
+        "ardial"
+      ],
+      [
+        "fa",
+        "ult"
+      ],
+      [
+        "EK",
+        "G"
+      ],
+      [
+        "LP",
+        "FB"
+      ],
+      [
+        "mid",
+        "dle"
+      ],
+      [
+        "incon",
+        "spicuous"
+      ],
+      [
+        "devel",
+        "o"
+      ],
+      [
+        "O",
+        "ver"
+      ],
+      [
+        "a",
+        "ch"
+      ],
+      [
+        "c",
+        "lock"
+      ],
+      [
+        "f",
+        "re"
+      ],
+      [
+        "i",
+        "li"
+      ],
+      [
+        "q",
+        "iii"
+      ],
+      [
+        "s",
+        "ec"
+      ],
+      [
+        "s",
+        "tro"
+      ],
+      [
+        "left",
+        "ward"
+      ],
+      [
+        "rep",
+        "re"
+      ],
+      [
+        "infer",
+        "o"
+      ],
+      [
+        "possib",
+        "ili"
+      ],
+      [
+        "su",
+        "ch"
+      ],
+      [
+        "ical",
+        "ly"
+      ],
+      [
+        "resp",
+        "ir"
+      ],
+      [
+        "pat",
+        "tern"
+      ],
+      [
+        "di",
+        "ff"
+      ],
+      [
+        "cor",
+        "d"
+      ],
+      [
+        "clock",
+        "wise"
+      ],
+      [
+        "fre",
+        "sh"
+      ],
+      [
+        "possibili",
+        "ty"
+      ],
+      [
+        "respir",
+        "atory"
+      ],
+      [
+        "3",
+        "0"
+      ],
+      [
+        "P",
+        "LMI"
+      ],
+      [
+        "d",
+        "d"
+      ],
+      [
+        "f",
+        "requ"
+      ],
+      [
+        "l",
+        "s"
+      ],
+      [
+        "p",
+        "ol"
+      ],
+      [
+        "s",
+        "tr"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "t",
+        "ful"
+      ],
+      [
+        "in",
+        "cre"
+      ],
+      [
+        "th",
+        "an"
+      ],
+      [
+        "norm",
+        "ocardial"
+      ],
+      [
+        "sinus",
+        "brady"
+      ],
+      [
+        "es",
+        "sive"
+      ],
+      [
+        "as",
+        "ed"
+      ],
+      [
+        "exc",
+        "essive"
+      ],
+      [
+        "typ",
+        "ical"
+      ],
+      [
+        "LA",
+        "O"
+      ],
+      [
+        "peric",
+        "ardi"
+      ],
+      [
+        "general",
+        "ly"
+      ],
+      [
+        "previous",
+        "ly"
+      ],
+      [
+        "doub",
+        "tful"
+      ],
+      [
+        "repre",
+        "sent"
+      ],
+      [
+        "ls",
+        "b"
+      ],
+      [
+        "incre",
+        "ased"
+      ],
+      [
+        "L",
+        "e"
+      ],
+      [
+        "T",
+        "OR"
+      ],
+      [
+        "c",
+        "ed"
+      ],
+      [
+        "d",
+        "ro"
+      ],
+      [
+        "m",
+        "on"
+      ],
+      [
+        "o",
+        "ve"
+      ],
+      [
+        "r",
+        "S"
+      ],
+      [
+        "s",
+        "ence"
+      ],
+      [
+        "t",
+        "is"
+      ],
+      [
+        "w",
+        "e"
+      ],
+      [
+        "us",
+        "ual"
+      ],
+      [
+        "an",
+        "ces"
+      ],
+      [
+        "ab",
+        "ove"
+      ],
+      [
+        "fir",
+        "st"
+      ],
+      [
+        "tri",
+        "fascicular"
+      ],
+      [
+        "my",
+        "oc"
+      ],
+      [
+        "min",
+        "im"
+      ],
+      [
+        "suggest",
+        "ive"
+      ],
+      [
+        "supr",
+        "aventr"
+      ],
+      [
+        "sh",
+        "ort"
+      ],
+      [
+        "show",
+        "s"
+      ],
+      [
+        "bb",
+        "b"
+      ],
+      [
+        "stro",
+        "ke"
+      ],
+      [
+        "sinusbrady",
+        "kardie"
+      ],
+      [
+        "pericardi",
+        "tis"
+      ],
+      [
+        "minim",
+        "al"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "O",
+        "lder"
+      ],
+      [
+        "Q",
+        "SIII"
+      ],
+      [
+        "S",
+        "upr"
+      ],
+      [
+        "V",
+        "2"
+      ],
+      [
+        "V",
+        "5"
+      ],
+      [
+        "c",
+        "lin"
+      ],
+      [
+        "h",
+        "av"
+      ],
+      [
+        "w",
+        "as"
+      ],
+      [
+        "th",
+        "igh"
+      ],
+      [
+        "re",
+        "view"
+      ],
+      [
+        "un",
+        "usual"
+      ],
+      [
+        "rs",
+        "b"
+      ],
+      [
+        "isch",
+        "es"
+      ],
+      [
+        "hyper",
+        "link"
+      ],
+      [
+        "the",
+        "y"
+      ],
+      [
+        "inter",
+        "pol"
+      ],
+      [
+        "lin",
+        "ing"
+      ],
+      [
+        "cardi",
+        "ological"
+      ],
+      [
+        "dig",
+        "ox"
+      ],
+      [
+        "tracing",
+        "s"
+      ],
+      [
+        "aV",
+        "F"
+      ],
+      [
+        "ir",
+        "regular"
+      ],
+      [
+        "appear",
+        "ances"
+      ],
+      [
+        "ra",
+        "ther"
+      ],
+      [
+        "gra",
+        "des"
+      ],
+      [
+        "diff",
+        "use"
+      ],
+      [
+        "str",
+        "ess"
+      ],
+      [
+        "Le",
+        "ft"
+      ],
+      [
+        "Supr",
+        "aventricular"
+      ],
+      [
+        "hav",
+        "e"
+      ],
+      [
+        "interpol",
+        "ated"
+      ],
+      [
+        "digox",
+        "in"
+      ],
+      [
+        "!",
+        "!"
+      ],
+      [
+        ",",
+        ","
+      ],
+      [
+        "2",
+        "9"
+      ],
+      [
+        "A",
+        "N"
+      ],
+      [
+        "a",
+        "g"
+      ],
+      [
+        "c",
+        "l"
+      ],
+      [
+        "c",
+        "le"
+      ],
+      [
+        "k",
+        "ung"
+      ],
+      [
+        "m",
+        "ult"
+      ],
+      [
+        "r",
+        "is"
+      ],
+      [
+        "s",
+        "en"
+      ],
+      [
+        "v",
+        "p"
+      ],
+      [
+        "w",
+        "an"
+      ],
+      [
+        "le",
+        "n"
+      ],
+      [
+        "le",
+        "ss"
+      ],
+      [
+        "block",
+        "er"
+      ],
+      [
+        "si",
+        "ological"
+      ],
+      [
+        "fl",
+        "ach"
+      ],
+      [
+        "tro",
+        "ugh"
+      ],
+      [
+        "phy",
+        "siological"
+      ],
+      [
+        "of",
+        "f"
+      ],
+      [
+        "infarct",
+        "s"
+      ],
+      [
+        "vari",
+        "able"
+      ],
+      [
+        "gross",
+        "ly"
+      ],
+      [
+        "elong",
+        "ated"
+      ],
+      [
+        "develo",
+        "p"
+      ],
+      [
+        "clin",
+        "ically"
+      ],
+      [
+        "ris",
+        "k"
+      ],
+      [
+        "wan",
+        "der"
+      ],
+      [
+        "1",
+        "9"
+      ],
+      [
+        "2",
+        "8"
+      ],
+      [
+        "E",
+        "H"
+      ],
+      [
+        "I",
+        "L"
+      ],
+      [
+        "S",
+        "T"
+      ],
+      [
+        "S",
+        "EH"
+      ],
+      [
+        "Y",
+        "P"
+      ],
+      [
+        "a",
+        "f"
+      ],
+      [
+        "a",
+        "in"
+      ],
+      [
+        "f",
+        "ro"
+      ],
+      [
+        "f",
+        "ron"
+      ],
+      [
+        "i",
+        "z"
+      ],
+      [
+        "l",
+        "d"
+      ],
+      [
+        "l",
+        "bbb"
+      ],
+      [
+        "m",
+        "us"
+      ],
+      [
+        "r",
+        "III"
+      ],
+      [
+        "th",
+        "ing"
+      ],
+      [
+        "ar",
+        "y"
+      ],
+      [
+        "tion",
+        "able"
+      ],
+      [
+        "is",
+        "o"
+      ],
+      [
+        "con",
+        "trol"
+      ],
+      [
+        "ol",
+        "ter"
+      ],
+      [
+        "ardi",
+        "um"
+      ],
+      [
+        "es",
+        "tionable"
+      ],
+      [
+        "und",
+        "er"
+      ],
+      [
+        "ther",
+        "ap"
+      ],
+      [
+        "se",
+        "le"
+      ],
+      [
+        "be",
+        "ta"
+      ],
+      [
+        "co",
+        "uld"
+      ],
+      [
+        "pa",
+        "g"
+      ],
+      [
+        "patholog",
+        "isches"
+      ],
+      [
+        "qu",
+        "estionable"
+      ],
+      [
+        "over",
+        "twisted"
+      ],
+      [
+        "mi",
+        "ld"
+      ],
+      [
+        "im",
+        "pul"
+      ],
+      [
+        "persist",
+        "s"
+      ],
+      [
+        "frequ",
+        "ent"
+      ],
+      [
+        "rS",
+        "rIII"
+      ],
+      [
+        "hyperlink",
+        "ed"
+      ],
+      [
+        "mult",
+        "iform"
+      ],
+      [
+        "sen",
+        "kung"
+      ],
+      [
+        "develop",
+        "ing"
+      ],
+      [
+        "SEH",
+        "YP"
+      ],
+      [
+        "af",
+        "ter"
+      ],
+      [
+        "fro",
+        "m"
+      ],
+      [
+        "fron",
+        "t"
+      ],
+      [
+        "mus",
+        "cle"
+      ],
+      [
+        "control",
+        "led"
+      ],
+      [
+        "therap",
+        "y"
+      ],
+      [
+        "impul",
+        "se"
+      ],
+      [
+        "%",
+        ","
+      ],
+      [
+        ")",
+        "("
+      ],
+      [
+        "2",
+        "4"
+      ],
+      [
+        "2",
+        "7"
+      ],
+      [
+        "E",
+        "lder"
+      ],
+      [
+        "I",
+        "LMI"
+      ],
+      [
+        "T",
+        "achy"
+      ],
+      [
+        "b",
+        "ec"
+      ],
+      [
+        "c",
+        "y"
+      ],
+      [
+        "d",
+        "ay"
+      ],
+      [
+        "g",
+        "th"
+      ],
+      [
+        "h",
+        "olter"
+      ],
+      [
+        "l",
+        "oss"
+      ],
+      [
+        "m",
+        "ain"
+      ],
+      [
+        "n",
+        "dro"
+      ],
+      [
+        "s",
+        "ch"
+      ],
+      [
+        "t",
+        "s"
+      ],
+      [
+        "u",
+        "ter"
+      ],
+      [
+        "v",
+        "w"
+      ],
+      [
+        "x",
+        "trocardial"
+      ],
+      [
+        "in",
+        "cl"
+      ],
+      [
+        "al",
+        "k"
+      ],
+      [
+        "re",
+        "ver"
+      ],
+      [
+        "oc",
+        "ia"
+      ],
+      [
+        "ch",
+        "alk"
+      ],
+      [
+        "de",
+        "xtrocardial"
+      ],
+      [
+        "em",
+        "b"
+      ],
+      [
+        "pro",
+        "pag"
+      ],
+      [
+        "pre",
+        "cord"
+      ],
+      [
+        "no",
+        "thing"
+      ],
+      [
+        "comp",
+        "l"
+      ],
+      [
+        "comp",
+        "uter"
+      ],
+      [
+        "sy",
+        "ndro"
+      ],
+      [
+        "tachy",
+        "arrhythmia"
+      ],
+      [
+        "complete",
+        "ly"
+      ],
+      [
+        "as",
+        "c"
+      ],
+      [
+        "ri",
+        "cular"
+      ],
+      [
+        "ISC",
+        "AS"
+      ],
+      [
+        "ISC",
+        "AL"
+      ],
+      [
+        "ury",
+        "sm"
+      ],
+      [
+        "appear",
+        "s"
+      ],
+      [
+        "gra",
+        "de"
+      ],
+      [
+        "pul",
+        "mon"
+      ],
+      [
+        "normoc",
+        "ard"
+      ],
+      [
+        "ane",
+        "ous"
+      ],
+      [
+        "ane",
+        "urysm"
+      ],
+      [
+        "Over",
+        "turned"
+      ],
+      [
+        "len",
+        "gth"
+      ],
+      [
+        "flach",
+        "e"
+      ],
+      [
+        "wander",
+        "ing"
+      ],
+      [
+        "sele",
+        "cted"
+      ],
+      [
+        "Elder",
+        "ly"
+      ],
+      [
+        "propag",
+        "ation"
+      ],
+      [
+        "precord",
+        "ial"
+      ],
+      [
+        "syndro",
+        "me"
+      ],
+      [
+        "pulmon",
+        "ary"
+      ],
+      [
+        "length",
+        "ening"
+      ],
+      [
+        "1",
+        "7"
+      ],
+      [
+        "1",
+        "8"
+      ],
+      [
+        "1",
+        "AV"
+      ],
+      [
+        "2",
+        "0"
+      ],
+      [
+        "2",
+        "2"
+      ],
+      [
+        "2",
+        "3"
+      ],
+      [
+        "I",
+        "n"
+      ],
+      [
+        "P",
+        "r"
+      ],
+      [
+        "Q",
+        "S"
+      ],
+      [
+        "T",
+        "neg"
+      ],
+      [
+        "a",
+        "u"
+      ],
+      [
+        "a",
+        "ss"
+      ],
+      [
+        "b",
+        "y"
+      ],
+      [
+        "b",
+        "ung"
+      ],
+      [
+        "c",
+        "ardial"
+      ],
+      [
+        "d",
+        "s"
+      ],
+      [
+        "f",
+        "asi"
+      ],
+      [
+        "g",
+        "i"
+      ],
+      [
+        "g",
+        "l"
+      ],
+      [
+        "h",
+        "or"
+      ],
+      [
+        "i",
+        "e"
+      ],
+      [
+        "i",
+        "o"
+      ],
+      [
+        "l",
+        "ong"
+      ],
+      [
+        "o",
+        "b"
+      ],
+      [
+        "o",
+        "pe"
+      ],
+      [
+        "p",
+        "q"
+      ],
+      [
+        "p",
+        "t"
+      ],
+      [
+        "p",
+        "le"
+      ],
+      [
+        "q",
+        "III"
+      ],
+      [
+        "r",
+        "v"
+      ],
+      [
+        "s",
+        "tri"
+      ],
+      [
+        "s",
+        "okolow"
+      ],
+      [
+        "t",
+        "ab"
+      ],
+      [
+        "t",
+        "aneous"
+      ],
+      [
+        "w",
+        "ould"
+      ],
+      [
+        "al",
+        "ly"
+      ],
+      [
+        "on",
+        "tal"
+      ],
+      [
+        "on",
+        "taneous"
+      ],
+      [
+        "er",
+        "y"
+      ],
+      [
+        "sin",
+        "ce"
+      ],
+      [
+        "re",
+        "f"
+      ],
+      [
+        "re",
+        "st"
+      ],
+      [
+        "re",
+        "main"
+      ],
+      [
+        "un",
+        "likely"
+      ],
+      [
+        "con",
+        "tri"
+      ],
+      [
+        "con",
+        "to"
+      ],
+      [
+        "en",
+        "cy"
+      ],
+      [
+        "ch",
+        "a"
+      ],
+      [
+        "ex",
+        "ce"
+      ],
+      [
+        "hyper",
+        "rotation"
+      ],
+      [
+        "pre",
+        "sence"
+      ],
+      [
+        "se",
+        "con"
+      ],
+      [
+        "li",
+        "ch"
+      ],
+      [
+        "min",
+        "ute"
+      ],
+      [
+        "be",
+        "en"
+      ],
+      [
+        "ature",
+        "s"
+      ],
+      [
+        "sus",
+        "p"
+      ],
+      [
+        "it",
+        "i"
+      ],
+      [
+        "he",
+        "bung"
+      ],
+      [
+        "qu",
+        "ery"
+      ],
+      [
+        "sp",
+        "ontaneous"
+      ],
+      [
+        "INJ",
+        "IN"
+      ],
+      [
+        "sha",
+        "ped"
+      ],
+      [
+        "ISC",
+        "IN"
+      ],
+      [
+        "partial",
+        "ly"
+      ],
+      [
+        "fe",
+        "atures"
+      ],
+      [
+        "uniform",
+        "e"
+      ],
+      [
+        "marked",
+        "ly"
+      ],
+      [
+        "normoc",
+        "ardium"
+      ],
+      [
+        "ti",
+        "me"
+      ],
+      [
+        "vp",
+        "bs"
+      ],
+      [
+        "iz",
+        "ontal"
+      ],
+      [
+        "multiform",
+        "e"
+      ],
+      [
+        "1AV",
+        "B"
+      ],
+      [
+        "cardial",
+        "e"
+      ],
+      [
+        "fasi",
+        "cular"
+      ],
+      [
+        "hor",
+        "izontal"
+      ],
+      [
+        "rv",
+        "h"
+      ],
+      [
+        "rest",
+        "ing"
+      ],
+      [
+        "conto",
+        "ur"
+      ],
+      [
+        "exce",
+        "pt"
+      ],
+      [
+        "hyperrotation",
+        "al"
+      ],
+      [
+        "1",
+        "4"
+      ],
+      [
+        "2",
+        "1"
+      ],
+      [
+        "A",
+        "MI"
+      ],
+      [
+        "Q",
+        "III"
+      ],
+      [
+        "R",
+        "III"
+      ],
+      [
+        "a",
+        "use"
+      ],
+      [
+        "b",
+        "re"
+      ],
+      [
+        "f",
+        "orm"
+      ],
+      [
+        "f",
+        "all"
+      ],
+      [
+        "f",
+        "ra"
+      ],
+      [
+        "i",
+        "v"
+      ],
+      [
+        "i",
+        "ci"
+      ],
+      [
+        "k",
+        "ele"
+      ],
+      [
+        "l",
+        "at"
+      ],
+      [
+        "m",
+        "it"
+      ],
+      [
+        "o",
+        "m"
+      ],
+      [
+        "o",
+        "t"
+      ],
+      [
+        "q",
+        "I"
+      ],
+      [
+        "r",
+        "lt"
+      ],
+      [
+        "s",
+        "al"
+      ],
+      [
+        "s",
+        "kele"
+      ],
+      [
+        "t",
+        "le"
+      ],
+      [
+        "u",
+        "ding"
+      ],
+      [
+        "u",
+        "di"
+      ],
+      [
+        "u",
+        "ced"
+      ],
+      [
+        "y",
+        "me"
+      ],
+      [
+        "z",
+        "yme"
+      ],
+      [
+        "or",
+        "ded"
+      ],
+      [
+        "al",
+        "e"
+      ],
+      [
+        "al",
+        "so"
+      ],
+      [
+        "le",
+        "s"
+      ],
+      [
+        "le",
+        "ct"
+      ],
+      [
+        "sinus",
+        "tachy"
+      ],
+      [
+        "tr",
+        "uction"
+      ],
+      [
+        "is",
+        "m"
+      ],
+      [
+        "is",
+        "ation"
+      ],
+      [
+        "oc",
+        "c"
+      ],
+      [
+        "oc",
+        "al"
+      ],
+      [
+        "an",
+        "y"
+      ],
+      [
+        "ab",
+        "sence"
+      ],
+      [
+        "en",
+        "ding"
+      ],
+      [
+        "en",
+        "zyme"
+      ],
+      [
+        "ol",
+        "ism"
+      ],
+      [
+        "st",
+        "udi"
+      ],
+      [
+        "ge",
+        "ther"
+      ],
+      [
+        "per",
+        "sistent"
+      ],
+      [
+        "ex",
+        "ten"
+      ],
+      [
+        "li",
+        "er"
+      ],
+      [
+        "to",
+        "day"
+      ],
+      [
+        "to",
+        "gether"
+      ],
+      [
+        "tal",
+        "l"
+      ],
+      [
+        "vol",
+        "v"
+      ],
+      [
+        "lit",
+        "tle"
+      ],
+      [
+        "sl",
+        "ope"
+      ],
+      [
+        "ap",
+        "art"
+      ],
+      [
+        "ca",
+        "us"
+      ],
+      [
+        "ign",
+        "ore"
+      ],
+      [
+        "rec",
+        "orded"
+      ],
+      [
+        "ear",
+        "lier"
+      ],
+      [
+        "red",
+        "uced"
+      ],
+      [
+        "obs",
+        "truction"
+      ],
+      [
+        "elong",
+        "ation"
+      ],
+      [
+        "develo",
+        "ped"
+      ],
+      [
+        "bec",
+        "ause"
+      ],
+      [
+        "incl",
+        "uding"
+      ],
+      [
+        "emb",
+        "olism"
+      ],
+      [
+        "asc",
+        "ending"
+      ],
+      [
+        "In",
+        "f"
+      ],
+      [
+        "au",
+        "ricular"
+      ],
+      [
+        "ple",
+        "ase"
+      ],
+      [
+        "ref",
+        "lect"
+      ],
+      [
+        "iti",
+        "es"
+      ],
+      [
+        "skele",
+        "tal"
+      ],
+      [
+        "sinustachy",
+        "kardie"
+      ],
+      [
+        "studi",
+        "es"
+      ],
+      [
+        "\"",
+        ","
+      ],
+      [
+        ".",
+        ")"
+      ],
+      [
+        "2",
+        "5"
+      ],
+      [
+        "2",
+        "6"
+      ],
+      [
+        "A",
+        "b"
+      ],
+      [
+        "B",
+        "ase"
+      ],
+      [
+        "C",
+        "on"
+      ],
+      [
+        "E",
+        "le"
+      ],
+      [
+        "V",
+        "3"
+      ],
+      [
+        "a",
+        "typical"
+      ],
+      [
+        "b",
+        "asic"
+      ],
+      [
+        "e",
+        "ver"
+      ],
+      [
+        "e",
+        "fe"
+      ],
+      [
+        "g",
+        "erated"
+      ],
+      [
+        "h",
+        "f"
+      ],
+      [
+        "h",
+        "ow"
+      ],
+      [
+        "h",
+        "and"
+      ],
+      [
+        "i",
+        "ves"
+      ],
+      [
+        "k",
+        "ing"
+      ],
+      [
+        "m",
+        "u"
+      ],
+      [
+        "o",
+        "un"
+      ],
+      [
+        "p",
+        "ped"
+      ],
+      [
+        "s",
+        "lower"
+      ],
+      [
+        "s",
+        "ocia"
+      ],
+      [
+        "t",
+        "im"
+      ],
+      [
+        "v",
+        "d"
+      ],
+      [
+        "w",
+        "a"
+      ],
+      [
+        "w",
+        "er"
+      ],
+      [
+        "w",
+        "he"
+      ],
+      [
+        "y",
+        "sm"
+      ],
+      [
+        "in",
+        "ted"
+      ],
+      [
+        "or",
+        "s"
+      ],
+      [
+        "on",
+        "oun"
+      ],
+      [
+        "le",
+        "ch"
+      ],
+      [
+        "ar",
+        "isation"
+      ],
+      [
+        "ed",
+        "ing"
+      ],
+      [
+        "fi",
+        "ci"
+      ],
+      [
+        "re",
+        "l"
+      ],
+      [
+        "is",
+        "c"
+      ],
+      [
+        "is",
+        "ed"
+      ],
+      [
+        "un",
+        "c"
+      ],
+      [
+        "en",
+        "ed"
+      ],
+      [
+        "abnormal",
+        "ities"
+      ],
+      [
+        "pr",
+        "onoun"
+      ],
+      [
+        "em",
+        "ent"
+      ],
+      [
+        "infar",
+        "k"
+      ],
+      [
+        "ci",
+        "tation"
+      ],
+      [
+        "ex",
+        "ag"
+      ],
+      [
+        "ex",
+        "citation"
+      ],
+      [
+        "at",
+        "ing"
+      ],
+      [
+        "se",
+        "t"
+      ],
+      [
+        "li",
+        "ft"
+      ],
+      [
+        "to",
+        "x"
+      ],
+      [
+        "with",
+        "out"
+      ],
+      [
+        "pa",
+        "use"
+      ],
+      [
+        "ic",
+        "ion"
+      ],
+      [
+        "as",
+        "ion"
+      ],
+      [
+        "sist",
+        "ant"
+      ],
+      [
+        "est",
+        "ing"
+      ],
+      [
+        "definite",
+        "ly"
+      ],
+      [
+        "dis",
+        "socia"
+      ],
+      [
+        "ri",
+        "ft"
+      ],
+      [
+        "elec",
+        "tro"
+      ],
+      [
+        "tw",
+        "o"
+      ],
+      [
+        "qs",
+        "III"
+      ],
+      [
+        "limit",
+        "s"
+      ],
+      [
+        "AV",
+        "F"
+      ],
+      [
+        "chron",
+        "ically"
+      ],
+      [
+        "overdri",
+        "ve"
+      ],
+      [
+        "ISC",
+        "IL"
+      ],
+      [
+        "po",
+        "inted"
+      ],
+      [
+        "el",
+        "le"
+      ],
+      [
+        "AL",
+        "MI"
+      ],
+      [
+        "des",
+        "c"
+      ],
+      [
+        "repol",
+        "arisation"
+      ],
+      [
+        "par",
+        "ox"
+      ],
+      [
+        "upr",
+        "ight"
+      ],
+      [
+        "frequ",
+        "ency"
+      ],
+      [
+        "ti",
+        "efe"
+      ],
+      [
+        "dro",
+        "pped"
+      ],
+      [
+        "!!",
+        "!"
+      ],
+      [
+        "Tachy",
+        "kardie"
+      ],
+      [
+        "sch",
+        "lech"
+      ],
+      [
+        "rever",
+        "ted"
+      ],
+      [
+        "gi",
+        "ven"
+      ],
+      [
+        "cha",
+        "ot"
+      ],
+      [
+        "susp",
+        "icion"
+      ],
+      [
+        "bre",
+        "eding"
+      ],
+      [
+        "fra",
+        "gl"
+      ],
+      [
+        "occ",
+        "asion"
+      ],
+      [
+        "exten",
+        "sive"
+      ],
+      [
+        "Con",
+        "sider"
+      ],
+      [
+        "how",
+        "ever"
+      ],
+      [
+        "mu",
+        "ch"
+      ],
+      [
+        "tim",
+        "es"
+      ],
+      [
+        "ysm",
+        "al"
+      ],
+      [
+        "pronoun",
+        "ced"
+      ],
+      [
+        "exag",
+        "gerated"
+      ],
+      [
+        "dissocia",
+        "tion"
+      ],
+      [
+        "parox",
+        "ysmal"
+      ],
+      [
+        "chaot",
+        "ic"
+      ],
+      [
+        ",",
+        "("
+      ],
+      [
+        ".",
+        "."
+      ],
+      [
+        "1",
+        "3"
+      ],
+      [
+        "1",
+        "12"
+      ],
+      [
+        "2",
+        "n"
+      ],
+      [
+        "3",
+        "1"
+      ],
+      [
+        "7",
+        "0"
+      ],
+      [
+        "9",
+        "0"
+      ],
+      [
+        "C",
+        "o"
+      ],
+      [
+        "H",
+        "y"
+      ],
+      [
+        "I",
+        "f"
+      ],
+      [
+        "K",
+        "not"
+      ],
+      [
+        "N",
+        "ST"
+      ],
+      [
+        "P",
+        "MI"
+      ],
+      [
+        "Q",
+        "I"
+      ],
+      [
+        "Q",
+        "ual"
+      ],
+      [
+        "Q",
+        "V5"
+      ],
+      [
+        "R",
+        "esting"
+      ],
+      [
+        "a",
+        "ur"
+      ],
+      [
+        "c",
+        "al"
+      ],
+      [
+        "c",
+        "ise"
+      ],
+      [
+        "d",
+        "y"
+      ],
+      [
+        "d",
+        "ated"
+      ],
+      [
+        "e",
+        "g"
+      ],
+      [
+        "e",
+        "t"
+      ],
+      [
+        "e",
+        "in"
+      ],
+      [
+        "e",
+        "ab"
+      ],
+      [
+        "f",
+        "fici"
+      ],
+      [
+        "g",
+        "o"
+      ],
+      [
+        "g",
+        "ing"
+      ],
+      [
+        "g",
+        "ital"
+      ],
+      [
+        "h",
+        "r"
+      ],
+      [
+        "h",
+        "rs"
+      ],
+      [
+        "h",
+        "off"
+      ],
+      [
+        "i",
+        "cular"
+      ],
+      [
+        "i",
+        "ff"
+      ],
+      [
+        "l",
+        "p"
+      ],
+      [
+        "l",
+        "ta"
+      ],
+      [
+        "m",
+        "m"
+      ],
+      [
+        "n",
+        "s"
+      ],
+      [
+        "p",
+        "ark"
+      ],
+      [
+        "r",
+        "un"
+      ],
+      [
+        "r",
+        "bbb"
+      ],
+      [
+        "s",
+        "function"
+      ],
+      [
+        "t",
+        "as"
+      ],
+      [
+        "v",
+        "o"
+      ],
+      [
+        "v",
+        "ia"
+      ],
+      [
+        "v",
+        "ect"
+      ],
+      [
+        "v",
+        "ated"
+      ],
+      [
+        "w",
+        "elle"
+      ],
+      [
+        "ä",
+        "n"
+      ],
+      [
+        "ä",
+        "t"
+      ],
+      [
+        "al",
+        "ity"
+      ],
+      [
+        "er",
+        "te"
+      ],
+      [
+        "er",
+        "ence"
+      ],
+      [
+        "er",
+        "cise"
+      ],
+      [
+        "er",
+        "go"
+      ],
+      [
+        "ar",
+        "se"
+      ],
+      [
+        "tr",
+        "em"
+      ],
+      [
+        "re",
+        "s"
+      ],
+      [
+        "re",
+        "ci"
+      ],
+      [
+        "re",
+        "ssion"
+      ],
+      [
+        "un",
+        "re"
+      ],
+      [
+        "un",
+        "cer"
+      ],
+      [
+        "un",
+        "changed"
+      ],
+      [
+        "an",
+        "k"
+      ],
+      [
+        "an",
+        "ge"
+      ],
+      [
+        "con",
+        "sistant"
+      ],
+      [
+        "ab",
+        "out"
+      ],
+      [
+        "ch",
+        "ec"
+      ],
+      [
+        "ch",
+        "ein"
+      ],
+      [
+        "pos",
+        "t"
+      ],
+      [
+        "de",
+        "lta"
+      ],
+      [
+        "pr",
+        "ocal"
+      ],
+      [
+        "block",
+        "s"
+      ],
+      [
+        "ad",
+        "v"
+      ],
+      [
+        "ig",
+        "i"
+      ],
+      [
+        "es",
+        "peci"
+      ],
+      [
+        "infer",
+        "ol"
+      ],
+      [
+        "per",
+        "i"
+      ],
+      [
+        "position",
+        "al"
+      ],
+      [
+        "ex",
+        "tended"
+      ],
+      [
+        "ex",
+        "ercise"
+      ],
+      [
+        "si",
+        "um"
+      ],
+      [
+        "se",
+        "en"
+      ],
+      [
+        "se",
+        "hr"
+      ],
+      [
+        "be",
+        "for"
+      ],
+      [
+        "su",
+        "ffici"
+      ],
+      [
+        "co",
+        "up"
+      ],
+      [
+        "co",
+        "arse"
+      ],
+      [
+        "vol",
+        "age"
+      ],
+      [
+        "lateral",
+        "ly"
+      ],
+      [
+        "high",
+        "ly"
+      ],
+      [
+        "with",
+        "in"
+      ],
+      [
+        "ver",
+        "z"
+      ],
+      [
+        "ver",
+        "ging"
+      ],
+      [
+        "ic",
+        "le"
+      ],
+      [
+        "ic",
+        "eab"
+      ],
+      [
+        "anterolateral",
+        "ly"
+      ],
+      [
+        "der",
+        "iv"
+      ],
+      [
+        "og",
+        "ression"
+      ],
+      [
+        "olong",
+        "ed"
+      ],
+      [
+        "not",
+        "iceab"
+      ],
+      [
+        "it",
+        "z"
+      ],
+      [
+        "it",
+        "or"
+      ],
+      [
+        "it",
+        "ung"
+      ],
+      [
+        "it",
+        "ät"
+      ],
+      [
+        "flutter",
+        "ing"
+      ],
+      [
+        "can",
+        "t"
+      ],
+      [
+        "ru",
+        "le"
+      ],
+      [
+        "he",
+        "ar"
+      ],
+      [
+        "he",
+        "lp"
+      ],
+      [
+        "val",
+        "ve"
+      ],
+      [
+        "qu",
+        "ality"
+      ],
+      [
+        "infarct",
+        "i"
+      ],
+      [
+        "progre",
+        "ss"
+      ],
+      [
+        "certain",
+        "ly"
+      ],
+      [
+        "lac",
+        "k"
+      ],
+      [
+        "INJ",
+        "AN"
+      ],
+      [
+        "sign",
+        "s"
+      ],
+      [
+        "ISC",
+        "AN"
+      ],
+      [
+        "sub",
+        "mit"
+      ],
+      [
+        "po",
+        "tas"
+      ],
+      [
+        "ind",
+        "iff"
+      ],
+      [
+        "part",
+        "icular"
+      ],
+      [
+        "ep",
+        "iso"
+      ],
+      [
+        "mi",
+        "tr"
+      ],
+      [
+        "ark",
+        "t"
+      ],
+      [
+        "ber",
+        "i"
+      ],
+      [
+        "chang",
+        "ing"
+      ],
+      [
+        "sa",
+        "gital"
+      ],
+      [
+        "appear",
+        "ance"
+      ],
+      [
+        "deep",
+        "ly"
+      ],
+      [
+        "doub",
+        "le"
+      ],
+      [
+        "diff",
+        "er"
+      ],
+      [
+        "mon",
+        "itor"
+      ],
+      [
+        "rS",
+        "RIII"
+      ],
+      [
+        "we",
+        "ll"
+      ],
+      [
+        "myoc",
+        "ar"
+      ],
+      [
+        "vp",
+        "b"
+      ],
+      [
+        "19",
+        "0"
+      ],
+      [
+        "iso",
+        "electric"
+      ],
+      [
+        "Tachy",
+        "cardia"
+      ],
+      [
+        "ocia",
+        "ted"
+      ],
+      [
+        "Pr",
+        "ogression"
+      ],
+      [
+        "Pr",
+        "olonged"
+      ],
+      [
+        "Tneg",
+        "III"
+      ],
+      [
+        "ass",
+        "ess"
+      ],
+      [
+        "ass",
+        "ociated"
+      ],
+      [
+        "stri",
+        "king"
+      ],
+      [
+        "contri",
+        "b"
+      ],
+      [
+        "contri",
+        "but"
+      ],
+      [
+        "secon",
+        "d"
+      ],
+      [
+        "secon",
+        "ds"
+      ],
+      [
+        "form",
+        "er"
+      ],
+      [
+        "ici",
+        "ty"
+      ],
+      [
+        "lat",
+        "ter"
+      ],
+      [
+        "volv",
+        "ing"
+      ],
+      [
+        "caus",
+        "ed"
+      ],
+      [
+        "Inf",
+        "arkt"
+      ],
+      [
+        "Ele",
+        "vated"
+      ],
+      [
+        "basic",
+        "ally"
+      ],
+      [
+        "wa",
+        "hrs"
+      ],
+      [
+        "wer",
+        "e"
+      ],
+      [
+        "whe",
+        "ther"
+      ],
+      [
+        "tox",
+        "icity"
+      ],
+      [
+        "occasion",
+        "al"
+      ],
+      [
+        "2n",
+        "d"
+      ],
+      [
+        "Co",
+        "urse"
+      ],
+      [
+        "Hy",
+        "per"
+      ],
+      [
+        "Knot",
+        "ung"
+      ],
+      [
+        "Qual",
+        "ität"
+      ],
+      [
+        "aur",
+        "icle"
+      ],
+      [
+        "dy",
+        "sfunction"
+      ],
+      [
+        "vect",
+        "or"
+      ],
+      [
+        "trem",
+        "ors"
+      ],
+      [
+        "reci",
+        "procal"
+      ],
+      [
+        "chec",
+        "k"
+      ],
+      [
+        "chein",
+        "lich"
+      ],
+      [
+        "especi",
+        "ally"
+      ],
+      [
+        "befor",
+        "e"
+      ],
+      [
+        "coup",
+        "le"
+      ],
+      [
+        "noticeab",
+        "ly"
+      ],
+      [
+        "help",
+        "ful"
+      ],
+      [
+        "submit",
+        "ted"
+      ],
+      [
+        "potas",
+        "sium"
+      ],
+      [
+        "episo",
+        "de"
+      ],
+      [
+        "wahrs",
+        "cheinlich"
+      ],
+      [
+        "(",
+        "<"
+      ],
+      [
+        ".",
+        ","
+      ],
+      [
+        ".",
+        "-"
+      ],
+      [
+        ".",
+        "),"
+      ],
+      [
+        "1",
+        "6"
+      ],
+      [
+        "2",
+        "x"
+      ],
+      [
+        "3",
+        "4"
+      ],
+      [
+        "4",
+        "0"
+      ],
+      [
+        "6",
+        "0"
+      ],
+      [
+        "7",
+        "4"
+      ],
+      [
+        "8",
+        "2"
+      ],
+      [
+        "9",
+        "10"
+      ],
+      [
+        "A",
+        "l"
+      ],
+      [
+        "A",
+        "s"
+      ],
+      [
+        "C",
+        "h"
+      ],
+      [
+        "D",
+        "rift"
+      ],
+      [
+        "E",
+        "S"
+      ],
+      [
+        "E",
+        "U"
+      ],
+      [
+        "L",
+        "T"
+      ],
+      [
+        "S",
+        "t"
+      ],
+      [
+        "V",
+        "4"
+      ],
+      [
+        "V",
+        "6"
+      ],
+      [
+        "a",
+        "ort"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "b",
+        "le"
+      ],
+      [
+        "b",
+        "en"
+      ],
+      [
+        "b",
+        "ia"
+      ],
+      [
+        "b",
+        "ase"
+      ],
+      [
+        "d",
+        "al"
+      ],
+      [
+        "d",
+        "ition"
+      ],
+      [
+        "e",
+        "per"
+      ],
+      [
+        "e",
+        "volving"
+      ],
+      [
+        "f",
+        "b"
+      ],
+      [
+        "f",
+        "oc"
+      ],
+      [
+        "g",
+        "ed"
+      ],
+      [
+        "g",
+        "rs"
+      ],
+      [
+        "g",
+        "ent"
+      ],
+      [
+        "g",
+        "än"
+      ],
+      [
+        "h",
+        "ik"
+      ],
+      [
+        "i",
+        "l"
+      ],
+      [
+        "i",
+        "um"
+      ],
+      [
+        "k",
+        "es"
+      ],
+      [
+        "k",
+        "not"
+      ],
+      [
+        "k",
+        "om"
+      ],
+      [
+        "m",
+        "ul"
+      ],
+      [
+        "m",
+        "am"
+      ],
+      [
+        "m",
+        "and"
+      ],
+      [
+        "m",
+        "ale"
+      ],
+      [
+        "n",
+        "al"
+      ],
+      [
+        "n",
+        "ec"
+      ],
+      [
+        "p",
+        "l"
+      ],
+      [
+        "p",
+        "to"
+      ],
+      [
+        "p",
+        "fl"
+      ],
+      [
+        "p",
+        "tin"
+      ],
+      [
+        "q",
+        "aVF"
+      ],
+      [
+        "r",
+        "r"
+      ],
+      [
+        "r",
+        "y"
+      ],
+      [
+        "r",
+        "ise"
+      ],
+      [
+        "s",
+        "1"
+      ],
+      [
+        "s",
+        "on"
+      ],
+      [
+        "s",
+        "ed"
+      ],
+      [
+        "s",
+        "em"
+      ],
+      [
+        "s",
+        "se"
+      ],
+      [
+        "s",
+        "sure"
+      ],
+      [
+        "t",
+        "ent"
+      ],
+      [
+        "t",
+        "ac"
+      ],
+      [
+        "t",
+        "ure"
+      ],
+      [
+        "t",
+        "ak"
+      ],
+      [
+        "u",
+        "f"
+      ],
+      [
+        "v",
+        "or"
+      ],
+      [
+        "v",
+        "ag"
+      ],
+      [
+        "w",
+        "ol"
+      ],
+      [
+        "w",
+        "at"
+      ],
+      [
+        "y",
+        "es"
+      ],
+      [
+        "z",
+        "we"
+      ],
+      [
+        "in",
+        "i"
+      ],
+      [
+        "in",
+        "to"
+      ],
+      [
+        "in",
+        "suffici"
+      ],
+      [
+        "in",
+        "son"
+      ],
+      [
+        "al",
+        "ter"
+      ],
+      [
+        "al",
+        "most"
+      ],
+      [
+        "al",
+        "tern"
+      ],
+      [
+        "th",
+        "i"
+      ],
+      [
+        "th",
+        "em"
+      ],
+      [
+        "le",
+        "itung"
+      ],
+      [
+        "norm",
+        "a"
+      ],
+      [
+        "us",
+        "ion"
+      ],
+      [
+        "ar",
+        "m"
+      ],
+      [
+        "ar",
+        "ge"
+      ],
+      [
+        "sinus",
+        "rhythm"
+      ],
+      [
+        "pe",
+        "ns"
+      ],
+      [
+        "tr",
+        "y"
+      ],
+      [
+        "ed",
+        "rift"
+      ],
+      [
+        "is",
+        "ol"
+      ],
+      [
+        "un",
+        "b"
+      ],
+      [
+        "un",
+        "ess"
+      ],
+      [
+        "ter",
+        "m"
+      ],
+      [
+        "ter",
+        "day"
+      ],
+      [
+        "an",
+        "te"
+      ],
+      [
+        "con",
+        "s"
+      ],
+      [
+        "con",
+        "fi"
+      ],
+      [
+        "ab",
+        "lt"
+      ],
+      [
+        "en",
+        "de"
+      ],
+      [
+        "en",
+        "ded"
+      ],
+      [
+        "en",
+        "ces"
+      ],
+      [
+        "med",
+        "ia"
+      ],
+      [
+        "med",
+        "ium"
+      ],
+      [
+        "rep",
+        "lac"
+      ],
+      [
+        "ia",
+        "v"
+      ],
+      [
+        "os",
+        "is"
+      ],
+      [
+        "st",
+        "at"
+      ],
+      [
+        "st",
+        "and"
+      ],
+      [
+        "pos",
+        "s"
+      ],
+      [
+        "de",
+        "p"
+      ],
+      [
+        "de",
+        "eper"
+      ],
+      [
+        "de",
+        "mand"
+      ],
+      [
+        "block",
+        "ed"
+      ],
+      [
+        "ad",
+        "dition"
+      ],
+      [
+        "em",
+        "phy"
+      ],
+      [
+        "infar",
+        "c"
+      ],
+      [
+        "per",
+        "ior"
+      ],
+      [
+        "ater",
+        "ic"
+      ],
+      [
+        "pro",
+        "min"
+      ],
+      [
+        "pro",
+        "gr"
+      ],
+      [
+        "pro",
+        "grs"
+      ],
+      [
+        "probab",
+        "l"
+      ],
+      [
+        "ex",
+        "tension"
+      ],
+      [
+        "at",
+        "es"
+      ],
+      [
+        "at",
+        "ic"
+      ],
+      [
+        "at",
+        "ives"
+      ],
+      [
+        "at",
+        "tac"
+      ],
+      [
+        "si",
+        "ch"
+      ],
+      [
+        "si",
+        "de"
+      ],
+      [
+        "si",
+        "qiii"
+      ],
+      [
+        "pre",
+        "ssure"
+      ],
+      [
+        "my",
+        "o"
+      ],
+      [
+        "se",
+        "ver"
+      ],
+      [
+        "anterior",
+        "er"
+      ],
+      [
+        "su",
+        "perior"
+      ],
+      [
+        "cardia",
+        "c"
+      ],
+      [
+        "no",
+        "dal"
+      ],
+      [
+        "com",
+        "pens"
+      ],
+      [
+        "ischa",
+        "emi"
+      ],
+      [
+        "depre",
+        "sse"
+      ],
+      [
+        "hypertro",
+        "ph"
+      ],
+      [
+        "der",
+        "ives"
+      ],
+      [
+        "intr",
+        "av"
+      ],
+      [
+        "patholog",
+        "isch"
+      ],
+      [
+        "tachycardia",
+        "c"
+      ],
+      [
+        "as",
+        "z"
+      ],
+      [
+        "brady",
+        "k"
+      ],
+      [
+        "brady",
+        "cardi"
+      ],
+      [
+        "fas",
+        "cular"
+      ],
+      [
+        "inferolateral",
+        "ly"
+      ],
+      [
+        "inter",
+        "mit"
+      ],
+      [
+        "lik",
+        "el"
+      ],
+      [
+        "sh",
+        "in"
+      ],
+      [
+        "qu",
+        "ite"
+      ],
+      [
+        "moderate",
+        "ly"
+      ],
+      [
+        "lin",
+        "edrift"
+      ],
+      [
+        "pac",
+        "ing"
+      ],
+      [
+        "over",
+        "all"
+      ],
+      [
+        "bi",
+        "pol"
+      ],
+      [
+        "bi",
+        "fascular"
+      ],
+      [
+        "sp",
+        "itz"
+      ],
+      [
+        "ap",
+        "ik"
+      ],
+      [
+        "ur",
+        "gent"
+      ],
+      [
+        "eff",
+        "e"
+      ],
+      [
+        "if",
+        "ocal"
+      ],
+      [
+        "line",
+        "wander"
+      ],
+      [
+        "respon",
+        "ding"
+      ],
+      [
+        "ok",
+        "ard"
+      ],
+      [
+        "ve",
+        "l"
+      ],
+      [
+        "broad",
+        "ened"
+      ],
+      [
+        "bigemin",
+        "ie"
+      ],
+      [
+        "INJ",
+        "IL"
+      ],
+      [
+        "ari",
+        "ly"
+      ],
+      [
+        "act",
+        "ual"
+      ],
+      [
+        "act",
+        "iv"
+      ],
+      [
+        "ISC",
+        "LA"
+      ],
+      [
+        "trigemin",
+        "us"
+      ],
+      [
+        "part",
+        "ly"
+      ],
+      [
+        "ial",
+        "ly"
+      ],
+      [
+        "me",
+        "try"
+      ],
+      [
+        "wh",
+        "en"
+      ],
+      [
+        "wh",
+        "ite"
+      ],
+      [
+        "indic",
+        "ating"
+      ],
+      [
+        "indic",
+        "ates"
+      ],
+      [
+        "ich",
+        "in"
+      ],
+      [
+        "fe",
+        "h"
+      ],
+      [
+        "im",
+        "media"
+      ],
+      [
+        "uniform",
+        "ly"
+      ],
+      [
+        "la",
+        "fb"
+      ],
+      [
+        "la",
+        "uf"
+      ],
+      [
+        "mark",
+        "able"
+      ],
+      [
+        "diagn",
+        "osis"
+      ],
+      [
+        "do",
+        "es"
+      ],
+      [
+        "overw",
+        "ound"
+      ],
+      [
+        "cor",
+        "re"
+      ],
+      [
+        "cor",
+        "responding"
+      ],
+      [
+        "general",
+        "iz"
+      ],
+      [
+        "ess",
+        "arily"
+      ],
+      [
+        "normoc",
+        "ardia"
+      ],
+      [
+        "biphas",
+        "isch"
+      ],
+      [
+        "some",
+        "times"
+      ],
+      [
+        "ke",
+        "g"
+      ],
+      [
+        "peak",
+        "ed"
+      ],
+      [
+        "Over",
+        "excited"
+      ],
+      [
+        "stro",
+        "kes"
+      ],
+      [
+        "cord",
+        "ant"
+      ],
+      [
+        "cord",
+        "ichin"
+      ],
+      [
+        "ti",
+        "p"
+      ],
+      [
+        "we",
+        "ek"
+      ],
+      [
+        "we",
+        "ak"
+      ],
+      [
+        "myoc",
+        "ard"
+      ],
+      [
+        "myoc",
+        "ardium"
+      ],
+      [
+        "short",
+        "ened"
+      ],
+      [
+        "11",
+        "1"
+      ],
+      [
+        "AN",
+        "EU"
+      ],
+      [
+        "off",
+        "set"
+      ],
+      [
+        "IL",
+        "BBB"
+      ],
+      [
+        "iso",
+        "ptin"
+      ],
+      [
+        "mild",
+        "ly"
+      ],
+      [
+        "sch",
+        "male"
+      ],
+      [
+        "incl",
+        "ude"
+      ],
+      [
+        "rever",
+        "sed"
+      ],
+      [
+        "emb",
+        "les"
+      ],
+      [
+        "normocard",
+        "es"
+      ],
+      [
+        "QS",
+        "aVL"
+      ],
+      [
+        "Tneg",
+        "V1"
+      ],
+      [
+        "long",
+        "er"
+      ],
+      [
+        "stri",
+        "p"
+      ],
+      [
+        "tab",
+        "lauf"
+      ],
+      [
+        "lich",
+        "e"
+      ],
+      [
+        "susp",
+        "ici"
+      ],
+      [
+        "fall",
+        "s"
+      ],
+      [
+        "sal",
+        "ve"
+      ],
+      [
+        "volv",
+        "ement"
+      ],
+      [
+        "caus",
+        "es"
+      ],
+      [
+        "Ab",
+        "gän"
+      ],
+      [
+        "Base",
+        "linedrift"
+      ],
+      [
+        "Base",
+        "linewander"
+      ],
+      [
+        "rel",
+        "ated"
+      ],
+      [
+        "infark",
+        "t"
+      ],
+      [
+        "infark",
+        "tablauf"
+      ],
+      [
+        "electro",
+        "de"
+      ],
+      [
+        "electro",
+        "des"
+      ],
+      [
+        "desc",
+        "end"
+      ],
+      [
+        "schlech",
+        "t"
+      ],
+      [
+        "schlech",
+        "te"
+      ],
+      [
+        "NST",
+        "_"
+      ],
+      [
+        "cal",
+        "c"
+      ],
+      [
+        "eg",
+        "k"
+      ],
+      [
+        "park",
+        "inson"
+      ],
+      [
+        "ergo",
+        "metry"
+      ],
+      [
+        "res",
+        "embles"
+      ],
+      [
+        "unre",
+        "markable"
+      ],
+      [
+        "ank",
+        "le"
+      ],
+      [
+        "adv",
+        "ised"
+      ],
+      [
+        "igi",
+        "pfl"
+      ],
+      [
+        "inferol",
+        "ateric"
+      ],
+      [
+        "deriv",
+        "atives"
+      ],
+      [
+        "mitr",
+        "al"
+      ],
+      [
+        "differ",
+        "ences"
+      ],
+      [
+        "assess",
+        "ed"
+      ],
+      [
+        "striking",
+        "ly"
+      ],
+      [
+        "contrib",
+        "u"
+      ],
+      [
+        "contribut",
+        "ing"
+      ],
+      [
+        "Hyper",
+        "twisted"
+      ],
+      [
+        "Knotung",
+        "III"
+      ],
+      [
+        "couple",
+        "ts"
+      ],
+      [
+        "2x",
+        "1"
+      ],
+      [
+        "Al",
+        "ter"
+      ],
+      [
+        "Ch",
+        "ange"
+      ],
+      [
+        "aort",
+        "ic"
+      ],
+      [
+        "bo",
+        "th"
+      ],
+      [
+        "ben",
+        "ign"
+      ],
+      [
+        "bia",
+        "trial"
+      ],
+      [
+        "base",
+        "line"
+      ],
+      [
+        "foc",
+        "us"
+      ],
+      [
+        "kom",
+        "pl"
+      ],
+      [
+        "mam",
+        "m"
+      ],
+      [
+        "nec",
+        "essarily"
+      ],
+      [
+        "sem",
+        "a"
+      ],
+      [
+        "vag",
+        "al"
+      ],
+      [
+        "wol",
+        "ff"
+      ],
+      [
+        "wat",
+        "ts"
+      ],
+      [
+        "yes",
+        "terday"
+      ],
+      [
+        "zwe",
+        "igipfl"
+      ],
+      [
+        "altern",
+        "ating"
+      ],
+      [
+        "leitung",
+        "s"
+      ],
+      [
+        "isol",
+        "ated"
+      ],
+      [
+        "replac",
+        "ement"
+      ],
+      [
+        "stat",
+        "us"
+      ],
+      [
+        "addition",
+        "al"
+      ],
+      [
+        "emphy",
+        "sema"
+      ],
+      [
+        "promin",
+        "ent"
+      ],
+      [
+        "progrs",
+        "sion"
+      ],
+      [
+        "attac",
+        "k"
+      ],
+      [
+        "compens",
+        "atory"
+      ],
+      [
+        "intermit",
+        "tent"
+      ],
+      [
+        "apik",
+        "al"
+      ],
+      [
+        "immedia",
+        "te"
+      ],
+      [
+        "generaliz",
+        "ed"
+      ],
+      [
+        "ANEU",
+        "R"
+      ],
+      [
+        "suspici",
+        "ous"
+      ],
+      [
+        "Abgän",
+        "ge"
+      ],
+      [
+        "zweigipfl",
+        "ig"
+      ]
+    ]
+  }
+}

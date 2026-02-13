@@ -3,7 +3,11 @@
 Train VQ-VAE for ECG tokenization.
 
 Usage:
+    # DiscreteVAE (Gumbel-softmax):
     python scripts/train_vae.py --data_path /path/to/ecg_data.pt --epochs 100
+
+    # VQVAE (Vector Quantization with EMA):
+    python scripts/train_vae.py --model_type vqvae --data_path /path/to/ecg_data.pt --epochs 100
 """
 
 import argparse
@@ -16,7 +20,7 @@ from torch.optim.lr_scheduler import ExponentialLR
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from text_to_ecg.models.vae import DiscreteVAE
+from text_to_ecg.models.vae import DiscreteVAE, VQVAE
 from text_to_ecg.data.dataset import ECGDataset
 from text_to_ecg.utils import distributed as distributed_utils
 
@@ -28,7 +32,12 @@ def parse_args():
     parser.add_argument('--data_path', type=str, required=True,
                         help='Path to ECG data (.pt file)')
 
-    # Model
+    # Model type
+    parser.add_argument('--model_type', type=str, default='vqvae',
+                        choices=['discrete', 'vqvae'],
+                        help='VAE type: vqvae (VQ with EMA, recommended) or discrete (Gumbel-softmax)')
+
+    # Model architecture (shared)
     parser.add_argument('--num_tokens', type=int, default=1024,
                         help='Number of codebook entries')
     parser.add_argument('--num_layers', type=int, default=4,
@@ -41,10 +50,24 @@ def parse_args():
                         help='Hidden layer dimension')
     parser.add_argument('--image_size', type=int, default=5000,
                         help='ECG sequence length')
+
+    # DiscreteVAE-specific
     parser.add_argument('--smooth_l1_loss', action='store_true',
                         help='Use smooth L1 loss instead of MSE')
     parser.add_argument('--kl_loss_weight', type=float, default=0.,
-                        help='KL divergence loss weight')
+                        help='KL divergence loss weight (DiscreteVAE only)')
+    parser.add_argument('--starting_temp', type=float, default=1.0,
+                        help='Starting Gumbel-softmax temperature')
+    parser.add_argument('--temp_min', type=float, default=0.5,
+                        help='Minimum temperature')
+    parser.add_argument('--anneal_rate', type=float, default=1e-6,
+                        help='Temperature annealing rate')
+
+    # VQVAE-specific
+    parser.add_argument('--vq_decay', type=float, default=0.8,
+                        help='EMA decay for codebook (VQVAE only, 0.8 recommended)')
+    parser.add_argument('--commitment_weight', type=float, default=0.25,
+                        help='Commitment loss weight (VQVAE only)')
 
     # Training
     parser.add_argument('--epochs', type=int, default=100,
@@ -55,12 +78,6 @@ def parse_args():
                         help='Learning rate')
     parser.add_argument('--lr_decay_rate', type=float, default=0.98,
                         help='Learning rate decay rate')
-    parser.add_argument('--starting_temp', type=float, default=1.0,
-                        help='Starting Gumbel-softmax temperature')
-    parser.add_argument('--temp_min', type=float, default=0.5,
-                        help='Minimum temperature')
-    parser.add_argument('--anneal_rate', type=float, default=1e-6,
-                        help='Temperature annealing rate')
 
     # Output
     parser.add_argument('--output_path', type=str, default='./checkpoints/vae.pt',
@@ -98,20 +115,36 @@ def main():
     )
 
     # Create model
-    vae_params = {
-        'image_size': args.image_size,
-        'num_tokens': args.num_tokens,
-        'codebook_dim': args.codebook_dim,
-        'num_layers': args.num_layers,
-        'num_resnet_blocks': args.num_resnet_blocks,
-        'hidden_dim': args.hidden_dim,
-        'channels': 12,  # 12-lead ECG
-        'smooth_l1_loss': args.smooth_l1_loss,
-        'kl_div_loss_weight': args.kl_loss_weight,
-    }
+    if args.model_type == 'vqvae':
+        vae_params = {
+            'image_size': args.image_size,
+            'num_tokens': args.num_tokens,
+            'codebook_dim': args.codebook_dim,
+            'num_layers': args.num_layers,
+            'num_resnet_blocks': args.num_resnet_blocks,
+            'hidden_dim': args.hidden_dim,
+            'channels': 12,
+            'vq_decay': args.vq_decay,
+            'commitment_weight': args.commitment_weight,
+        }
+        vae = VQVAE(**vae_params).to(device)
+        model_class = 'VQVAE'
+    else:
+        vae_params = {
+            'image_size': args.image_size,
+            'num_tokens': args.num_tokens,
+            'codebook_dim': args.codebook_dim,
+            'num_layers': args.num_layers,
+            'num_resnet_blocks': args.num_resnet_blocks,
+            'hidden_dim': args.hidden_dim,
+            'channels': 12,
+            'smooth_l1_loss': args.smooth_l1_loss,
+            'kl_div_loss_weight': args.kl_loss_weight,
+        }
+        vae = DiscreteVAE(**vae_params).to(device)
+        model_class = 'DiscreteVAE'
 
-    vae = DiscreteVAE(**vae_params).to(device)
-    print(f"Created VAE with {sum(p.numel() for p in vae.parameters()):,} parameters")
+    print(f"Created {model_class} with {sum(p.numel() for p in vae.parameters()):,} parameters")
 
     # Optimizer
     optimizer = Adam(vae.parameters(), lr=args.learning_rate)
@@ -131,7 +164,10 @@ def main():
             batch = batch.to(device)
 
             # Forward pass
-            loss, recons = vae(batch, return_loss=True, return_recons=True, temp=temp)
+            if args.model_type == 'vqvae':
+                loss = vae(batch, return_loss=True)
+            else:
+                loss, recons = vae(batch, return_loss=True, return_recons=True, temp=temp)
 
             # Backward pass
             optimizer.zero_grad()
@@ -141,22 +177,38 @@ def main():
             total_loss += loss.item()
             num_batches += 1
 
-            # Temperature annealing
-            temp = max(temp * math.exp(-args.anneal_rate), args.temp_min)
+            # Temperature annealing (DiscreteVAE only)
+            if args.model_type == 'discrete':
+                temp = max(temp * math.exp(-args.anneal_rate), args.temp_min)
             global_step += 1
 
-            pbar.set_postfix(loss=loss.item(), temp=temp)
+            pbar.set_postfix(loss=loss.item())
 
         # Learning rate decay
         scheduler.step()
 
         avg_loss = total_loss / num_batches
-        print(f"Epoch {epoch+1}: avg_loss={avg_loss:.4f}, temp={temp:.4f}, lr={scheduler.get_last_lr()[0]:.6f}")
+
+        # Check codebook utilization
+        vae.eval()
+        with torch.no_grad():
+            sample_batch = next(iter(dataloader)).to(device)
+            codes = vae.get_codebook_indices(sample_batch)
+            unique_codes = len(codes.flatten().unique())
+            total_codes = args.num_tokens
+            util_pct = 100.0 * unique_codes / total_codes
+        vae.train()
+
+        if args.model_type == 'discrete':
+            print(f"Epoch {epoch+1}: avg_loss={avg_loss:.4f}, temp={temp:.4f}, lr={scheduler.get_last_lr()[0]:.6f}, codebook_util={unique_codes}/{total_codes} ({util_pct:.1f}%)")
+        else:
+            print(f"Epoch {epoch+1}: avg_loss={avg_loss:.4f}, lr={scheduler.get_last_lr()[0]:.6f}, codebook_util={unique_codes}/{total_codes} ({util_pct:.1f}%)")
 
         # Save checkpoint
         if (epoch + 1) % args.save_every == 0 or epoch == args.epochs - 1:
             save_obj = {
                 'hparams': vae_params,
+                'model_class': model_class,
                 'weights': vae.state_dict(),
                 'epoch': epoch + 1,
             }
